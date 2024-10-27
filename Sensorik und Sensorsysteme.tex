@@ -1,0 +1,190 @@
+\documentclass{article} % Dokumenttyp "article" für Artikel
+
+\usepackage[utf8]{inputenc}  % UTF-8-Zeichencodierung
+\usepackage[T1]{fontenc}     % Europäische Zeichenunterstützung
+\usepackage[ngerman]{babel}  % Deutsche Sprachunterstützung
+\usepackage{graphicx} % Am Anfang des Dokuments einfügen, um Grafikbefehle zu laden
+\usepackage{caption}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\hypersetup{citecolor = blue}
+\usepackage{sectsty}
+\usepackage{cite}
+
+\usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, bottom=2.5cm]{geometry} % A4-Format mit definierten Rändern
+
+\setlength{\footskip}{2cm}       % Abstand zwischen Text und Fußnotenlinie
+\setlength{\skip\footins}{1cm}    % Abstand zwischen Fußnotenlinie und -text
+\interfootnotelinepenalty = 10000   % Verhindert das Teilen von Fußnoten über Seiten
+\setlength{\parindent}{0.75em} % Setzt die Einrückung auf 1em
+\sectionfont{\LARGE}      % Setzt \section auf \Large (eine Stufe größer als Standard)
+\subsectionfont{\Large}   % Setzt \subsection auf \large (ebenfalls eine Stufe größer)
+
+\subsubsectionfont{\large}
+
+\title{Sensorik und Sensorsysteme (TU Wien)}
+\author{Omar Filip El Sendiouny \\ \texttt{e1616023@student.tuwien.ac.at}}
+\vfill
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} % Entfernt die Seitenzahl von der Titelseite
+\newpage  
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic} % Beginnt die Nummerierung ab hier
+
+\section*{Einleitung} % Einleitung
+Was beigebracht wird...
+
+\vspace{1em}
+\section{Pysical Vapour Deposition} % PVD
+PVD (Physical Vapour Deposition) umfasst alle \textbf{physikalischen Verfahren zur Abscheidung dünner Schichten aus der Dampfphase}.
+Dabei werden die Ausgangsmaterialien der Schichten durch physikalische Prozesse wie Erhitzen in die Dampfphase überführt und anschließend 
+auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \textbf{zwischen 1 nm und 1 µm} und können 
+\textbf{in Ausnahmefällen bis zu 10 µm} erreichen \cite{keplinger2024}.
+
+\vspace{1em}
+\subsection{Begriffsklärung für PVD} % PVD Verfahren
+\begin{itemize}
+    \item \textbf{Monolage}: Eine Monolage (auch Monoschicht genannt) beschreibt eine Schicht, die nur aus einer einzelnen Lage von Atomen oder 
+    Molekülen besteht \cite{kittel2004}.
+    \item \textbf{Freie Weglänge}: Der Abstand, den die Atome oder Moleküle in der Dampfphase von der Verdampfungsquelle bis zum Substrat 
+    zurücklegen müssen, bevor sie auf diesem abgeschieden werden \cite{kittel2004}.
+    \item \textbf{Verdampfen}: Bezeichnet den Übergang eines Stoffes vom flüssigen in den gasförmigen Zustand \cite{kittel2004}.
+    \item \textbf{Sublimieren}: Beschreibt den direkten Übergang eines Stoffes vom festen in den gasförmigen Zustand, ohne eine flüssige Phase 
+    zu durchlaufen \cite{kittel2004}.
+    \item \textbf{Rezipient}: Vakuumkammer \cite{keplinger2024, ohring2002}.
+    \item \textbf{Substrat}: Trägerschicht in der Mikroelektronik und Halbleiterfertigung. Der Begriff Substrat bezieht sich allgemein auf das 
+    Material oder die Oberfläche, auf der ein Herstellungs- oder Beschichtungsprozess stattfindet \cite{ohring2002}.
+    \item \textbf{Wafer}: Dünne Scheibe aus einem Halbleitermaterial, wie z.B. Silizium, und dient als Substrat \cite{sze2006}.
+    \item \textbf{Tiegel}: Ein Behälter, in dem das Aufdampfmaterial lokal geschmolzen wird, häufig aus Materialien wie Graphit, Keramik oder 
+    Wolfram, die hohen Temperaturen standhalten \cite{smith1995, ohring2002}. Beim Elektronenstrahlverdampfen (E-Beam-Verfahren) wird das 
+    Aufdampfmaterial im Tiegel erhitzt und verdampft, ohne dass der gesamte Tiegel erhitzt werden muss \cite{smith1995}. Siehe \autoref{fig:Tiegel und Schiffchen} b), c) und d).
+    \item \textbf{Schiffchen}: Ein kleiner, meist bootförmiger Behälter (daher der Name), der ebenfalls zur Aufnahme des Aufdampfmaterials dient, 
+    jedoch direkt beheizt wird, häufig durch Widerstandsheizung. Schiffchen bestehen oft aus Materialien wie Molybdän oder Wolfram, da sie hohe 
+    Temperaturen aushalten können \cite{mattox1998, ohring2002}. Siehe \autoref{fig:PVD Aufdampfanlage} und \autoref{fig:Tiegel und Schiffchen} a).
+\end{itemize}
+
+\vspace{1em}
+\subsection{PVD-Verfahren} % PVD Verfahren
+Die verschiedenen PVD-Verfahren \textbf{unterscheiden sich} hauptsächlich \textbf{in der} Methode zur \textbf{Erzeugung des Dampfstrahls} 
+\cite{keplinger2024}:
+\begin{enumerate}
+    \item \textbf{Thermisches Verdampfen}
+    \item \textbf{Sputtern (Zerstäubung)}
+    \item \textbf{Laserstrahlverdampfen (pulsed laser deposition, PLD)}
+    \item \textbf{Molekularbeamepitaxie (MBE)}
+\end{enumerate}
+
+\vspace{1em}
+\subsection{Thermisches Verdampfen (Aufdampfen)} % PVD Aufdampfen
+Das thermische Aufdampfen gehört zu den ältesten Methoden zur Herstellung dünner Schichten (\autoref{fig:PVD Aufdampfanlage}). Dabei wird das 
+\textbf{Material der Aufdampfquelle auf} eine Temperatur von \textbf{500 bis 3000 °C erhitzt}, bis es einen ausreichend hohen 
+Dampfdruck\footnote{Ein hoher Dampfdruck ist beim Aufdampfen entscheidend, da er sicherstellt, dass genügend Atome oder Moleküle des Materials 
+in die Gasphase übertreten und eine dampfartige Wolke bilden. Diese Wolke ermöglicht eine ausreichende Partikelzufuhr zum Zielsubstrat, wodurch 
+sich eine gleichmäßige, dünne Schicht bildet. Bei zu geringem Dampfdruck wären nur wenige Teilchen verdampft, was zu einer ungleichmäßigen und 
+ineffizienten Beschichtung führen würde.} entwickelt \cite{keplinger2024}.
+
+\vspace{1em}
+
+Meist schmilzt das Material dabei, doch einige Stoffe, wie beispielsweise Chrom, erreichen bereits vor dem Schmelzpunkt einen ausreichend hohen 
+Dampfdruck und sublimieren, indem sie direkt aus dem festen Zustand verdampfen \cite{keplinger2024}.
+
+\vspace{1em}
+
+Der \textbf{entstehende Dampf} breitet sich aus und \textbf{kondensiert an} allen \textbf{kälteren Oberflächen} in der Vakuumkammer, 
+\textbf{einschließlich des Substrats}. Der Prozess findet im \textbf{Vakuum bei Drücken} von typischerweise 
+\textbf{unter $\mathbf{10^{-6}}$ mbar} statt \cite{keplinger2024}.
+
+\vspace{1em}
+
+Dabei ist die \textbf{freie Weglänge der Teilchen deutlich größer als} die \textbf{Distanz zwischen} der \textbf{Aufdampfquelle und} dem 
+\textbf{Substrat}. Dies führt dazu, dass die \textbf{Teilchen nur selten mit} dem \textbf{Restgas kollidieren und sich geradlinig von der Quelle 
+zum Substrat bewegen} \cite{keplinger2024}.
+
+\vspace{1em}
+
+Die \textbf{kinetische Energie der Teilchen, die auf} der \textbf{Substratoberfläche kondensieren}, beträgt etwa \textbf{0,1 bis 0,5 eV}, was im 
+Vergleich zum Sputtern (mit 0 bis 100 eV) \textbf{sehr gering} ist \cite{keplinger2024}.
+
+\vspace{2em}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/PVD Aufdampfanlage.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Schematischer Aufbau einer PVD Aufdampfanlage \cite{keplinger2024}}
+    \label{fig:PVD Aufdampfanlage}
+\end{figure}
+
+\vspace{1em}
+\subsubsection{Funktionsweise}
+Basierend auf \autoref{fig:PVD Aufdampfanlage} wird im Folgenden die Funktionsweise dieses Verfahrens erläutert \cite{keplinger2024}:
+
+\begin{enumerate}
+    \item \textbf{Vakuum}: Im Rezipient wird mit dem Pumpsystem ein Vakuum erzeugt.
+    \item \textbf{Aufheizen}: Das Aufdampfmaterial wird auf eine Temperatur von 500 bis 3000 °C erhitzt.
+    \item \textbf{Öffnen des Shutters}: Sobald ein ausreichend hoher Dampfdruck erreicht ist, wird der Shutter weggeschwenkt, um die Bedampfung 
+    des Substrats zu ermöglichen. Wird der Shutter zu früh geöffnet oder ist er während des Aufheizens nicht vorhanden, kann es zu einer 
+    ungleichmäßigen Abscheidung kommen bzw. es können unerwünschte Oxide des Aufdampfmaterials auf das Substrat abgeschieden werden. Der Weg der
+     Teilchen zum Substrat wird daher durch ein Schirmblech (Shutter) blockiert.
+    \item \textbf{Abscheidung am Substrat}: Das Aufdampfmaterial kondensiert nun mit einer konstanten Rate sowohl auf dem Substrat als auch auf 
+    dem Schwingquarz. Der Schwingquarz dient zur Messung der Schichtdicke, indem Änderungen seiner Resonanzfrequenz erfasst werden.
+\end{enumerate}
+
+\vspace{1em}
+\subsubsection{Schichtdickenmessung}
+Zur Messung der Schichtdicke wird ein \textbf{piezoelektrisches Schwingquarzplättchen} verwendet, das \textbf{nahe\footnote{Da Schwingquarz und Substrat 
+unterschiedliche Abstände zur Aufdampfquelle haben und sich zudem unterschiedlich nah an der Achse des Aufdampfstrahls befinden, ergeben sich unterschiedliche Aufdampfraten. Diese Abweichungen 
+werden durch einen experimentell zu bestimmenden Geometriefaktor (Tooling-Factor) korrigiert.} am Substrat positioniert} ist. Durch Anlegen einer Wechselspannung wird 
+das Quarzplättchen in eine (Scher-)Schwingung versetzt. Wenn das \textbf{Aufdampfmaterial auf} dem \textbf{Quarz kondensiert} und seine Masse zunimmt, \textbf{sinkt} die \textbf{Resonanzfrequenz} des 
+Quarzes. Diese Abnahme der Frequenz ist \textbf{proportional zur Dicke der abgeschiedenen Schicht} und dient als Messgrundlage. Die Resonanzfrequenz startet typischerweise bei 
+etwa 5 MHz und sollte, wenn sie auf 4 MHz fällt, zum Austausch des Quarzplättchens führen, um präzise Messwerte sicherzustellen \cite{keplinger2024}.
+
+\vspace{1em}
+\subsubsection{Erwärmung mittels Elektronenstrahlquelle (E-Beam-Verfahren)}
+
+Bei dieser Methode wird ein \textbf{Elektronenstrahl gezielt auf einen kleinen Bereich des Aufdampfmaterials fokussiert}, sodass das Material 
+\textbf{lokal aufgeschmolzen} wird, während der Großteil fest bleibt (\autoref{fig:Tiegel und Schiffchen} b), c) und d)). Der \textbf{Tiegel} selbst wird dabei 
+\textbf{nicht auf hohe Temperaturen erhitzt}, was das \textbf{Risiko einer Kontamination durch} das \textbf{Tiegelmaterial verringert und höhere Arbeitstemperaturen} als bei 
+herkömmlichen Quellen, wie Schiffchenquellen, ermöglicht (\autoref{fig:Tiegel und Schiffchen} a)). Um eine \textbf{effektive Wärmeableitung} sicherzustellen, 
+besteht der \textbf{Tiegel aus Kupfer} und wird direkt \textbf{vom Kühlwasser durchströmt}. Das \textbf{Aufdampfmaterial} muss \textbf{leitfähig} sein, da sich 
+andernfalls elektrische Ladungen ansammeln könnten, die den Elektronenstrahl ablenken könnten \cite{keplinger2024}.
+
+\vspace{1em}
+
+Ein \textbf{Permanentmagnet in der Nähe der Elektronenstrahlquelle lenkt} den \textbf{Strahl um 270° ab, sodass} die \textbf{Quelle} selbst \textbf{nicht beschichtet wird} 
+(\autoref{fig:Tiegel und Schiffchen} b) und c)). Die \textbf{Steuerung des Systems} ermöglicht zudem ein \textbf{Fokussieren oder Defokussieren des Strahls}, 
+eine \textbf{präzise Positionierung über Spulen} sowie eine \textbf{kontrollierte Leistungsanpassung} bis zu 5 kW. Durch ein leichtes Wobbeln des Strahls kann 
+ein größerer Bereich des Aufdampfmaterials überstrichen werden, was zu einem gleichmäßigen Erhitzen führt \cite{keplinger2024}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{images/Tiegel und Schiffchen.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{%
+    a) Aufdampfschiffchen, mit Aluminiumoxid (milchige Bereiche) beschichtet, um das Benetzen durch das Aufdampfmaterial zu minimieren. 
+    b) Schematischer Aufbau einer Elektronenstrahlquelle: S...Spule, A...Anode, K...Kathode, W...Wehneltzylinder, T...Tiegel mit Aufdampfmaterial, L...Wasserkühlung, M...Permanentmagnet.  
+    c) Elektronenstrahlquelle im Inneren der Vakuumkammer (Rezipient). 
+    d) Vierlochtiegel für die Elektronenstrahlquelle, der Beschichtungen aus bis zu vier verschiedenen Materialien ermöglicht \cite{keplinger2024}.
+}
+    \label{fig:Tiegel und Schiffchen}
+\end{figure}
+
+\vspace{1em}
+\section{Chemical Vapour Deposition} % CVD
+Hier kommt der Hauptinhalt. \LaTeX{} ist sehr leistungsfähig für die Erstellung wissenschaftlicher Dokumente.
+
+\vspace{1em}
+\section{Lithographie} % Lithographie
+
+\newpage
+\bibliographystyle{ieeetr}  % IEEE-Standard für das Literaturverzeichnis
+\bibliography{references}  % Ersetze "your_bib_file" durch den tatsächlichen Namen der .bib-Datei ohne die Endung .bib
+
+\end{document}
