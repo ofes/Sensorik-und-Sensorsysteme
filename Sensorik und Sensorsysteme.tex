@@ -9,13 +9,14 @@
 \hypersetup{citecolor = blue}
 \usepackage{sectsty}
 \usepackage{cite}
+\usepackage{ulem}
 
 \usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, bottom=2.5cm]{geometry} % A4-Format mit definierten Rändern
 
 \setlength{\footskip}{2cm}       % Abstand zwischen Text und Fußnotenlinie
 \setlength{\skip\footins}{1cm}    % Abstand zwischen Fußnotenlinie und -text
 \interfootnotelinepenalty = 10000   % Verhindert das Teilen von Fußnoten über Seiten
-\setlength{\parindent}{0.75em} % Setzt die Einrückung auf 1em
+\setlength{\parindent}{0.0em} % Setzt die Einrückung auf 1em
 \sectionfont{\LARGE}      % Setzt \section auf \Large (eine Stufe größer als Standard)
 \subsectionfont{\Large}   % Setzt \subsection auf \large (ebenfalls eine Stufe größer)
 
@@ -33,6 +34,7 @@
 \newpage  
 
 \tableofcontents
+\listoffigures
 \thispagestyle{empty}
 \newpage
 
@@ -45,8 +47,8 @@ Was beigebracht wird...
 \section{Pysical Vapour Deposition} % PVD
 PVD (Physical Vapour Deposition) umfasst alle \textbf{physikalischen Verfahren zur Abscheidung dünner Schichten aus der Dampfphase}.
 Dabei werden die Ausgangsmaterialien der Schichten durch physikalische Prozesse wie Erhitzen in die Dampfphase überführt und anschließend 
-auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \textbf{zwischen 1 nm und 1 µm} und können 
-\textbf{in Ausnahmefällen bis zu 10 µm} erreichen \cite{keplinger2024}.
+auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \textbf{zwischen 1~nm und 1~µm} und können 
+\textbf{in Ausnahmefällen bis zu 10~µm} erreichen \cite{keplinger2024}.
 
 \vspace{1em}
 \subsection{Begriffsklärung für PVD} % PVD Verfahren
@@ -62,12 +64,20 @@ auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \te
     \item \textbf{Substrat}: Trägerschicht in der Mikroelektronik und Halbleiterfertigung. Der Begriff Substrat bezieht sich allgemein auf das 
     Material oder die Oberfläche, auf der ein Herstellungs- oder Beschichtungsprozess stattfindet \cite{ohring2002}.
     \item \textbf{Wafer}: Dünne Scheibe aus einem Halbleitermaterial, wie z.B. Silizium, und dient als Substrat \cite{sze2006}.
-    \item \textbf{Tiegel}: Ein Behälter, in dem das Aufdampfmaterial lokal geschmolzen wird, häufig aus Materialien wie Graphit, Keramik oder 
-    Wolfram, die hohen Temperaturen standhalten \cite{smith1995, ohring2002}. Beim Elektronenstrahlverdampfen (E-Beam-Verfahren) wird das 
-    Aufdampfmaterial im Tiegel erhitzt und verdampft, ohne dass der gesamte Tiegel erhitzt werden muss \cite{smith1995}. Siehe \autoref{fig:Tiegel und Schiffchen} b), c) und d).
-    \item \textbf{Schiffchen}: Ein kleiner, meist bootförmiger Behälter (daher der Name), der ebenfalls zur Aufnahme des Aufdampfmaterials dient, 
-    jedoch direkt beheizt wird, häufig durch Widerstandsheizung. Schiffchen bestehen oft aus Materialien wie Molybdän oder Wolfram, da sie hohe 
-    Temperaturen aushalten können \cite{mattox1998, ohring2002}. Siehe \autoref{fig:PVD Aufdampfanlage} und \autoref{fig:Tiegel und Schiffchen} a).
+    \item \textbf{Tiegel} (Thermisches Verdampfen): Ein Behälter, in dem das Aufdampfmaterial lokal geschmolzen wird, häufig aus Materialien wie Graphit, 
+    Keramik oder Wolfram, die hohen Temperaturen standhalten \cite{smith1995, ohring2002}. Beim Elektronenstrahlverdampfen (E-Beam-Verfahren) wird das 
+    Aufdampfmaterial im Tiegel erhitzt und verdampft, ohne dass der gesamte Tiegel erhitzt werden muss \cite{smith1995}. Siehe
+    \autoref{fig:Tiegel und Schiffchen} b), c) und d).
+    \item \textbf{Schiffchen} (Thermisches Verdampfen): Ein kleiner, meist bootförmiger Behälter (daher der Name), der 
+    ebenfalls zur Aufnahme des Aufdampfmaterials dient, jedoch direkt beheizt wird, häufig durch Widerstandsheizung. Schiffchen bestehen oft aus 
+    Materialien wie Molybdän oder Wolfram, da sie hohe Temperaturen aushalten können \cite{mattox2010handbook, ohring2002}. Siehe \autoref{fig:PVD 
+    Aufdampfanlage} und \autoref{fig:Tiegel und Schiffchen} a).
+    \item \textbf{Target} (Sputtern): Materialquelle für die Schicht, die auf das Substrat abgeschieden werden soll \cite{keplinger2024}.
+    \item \textbf{Inerte Gase}:
+    \item \textbf{Gasentladung}:
+    \item \textbf{Ionen}:
+    \item \textbf{Kationen}:
+    \item \textbf{Anionen}:
 \end{itemize}
 
 \vspace{1em}
@@ -84,7 +94,7 @@ Die verschiedenen PVD-Verfahren \textbf{unterscheiden sich} hauptsächlich \text
 \vspace{1em}
 \subsection{Thermisches Verdampfen (Aufdampfen)} % PVD Aufdampfen
 Das thermische Aufdampfen gehört zu den ältesten Methoden zur Herstellung dünner Schichten (\autoref{fig:PVD Aufdampfanlage}). Dabei wird das 
-\textbf{Material der Aufdampfquelle auf} eine Temperatur von \textbf{500 bis 3000 °C erhitzt}, bis es einen ausreichend hohen 
+\textbf{Material der Aufdampfquelle auf} eine Temperatur von \textbf{500 bis 3000~°C erhitzt}, bis es einen ausreichend hohen 
 Dampfdruck\footnote{Ein hoher Dampfdruck ist beim Aufdampfen entscheidend, da er sicherstellt, dass genügend Atome oder Moleküle des Materials 
 in die Gasphase übertreten und eine dampfartige Wolke bilden. Diese Wolke ermöglicht eine ausreichende Partikelzufuhr zum Zielsubstrat, wodurch 
 sich eine gleichmäßige, dünne Schicht bildet. Bei zu geringem Dampfdruck wären nur wenige Teilchen verdampft, was zu einer ungleichmäßigen und 
@@ -99,7 +109,7 @@ Dampfdruck und sublimieren, indem sie direkt aus dem festen Zustand verdampfen \
 
 Der \textbf{entstehende Dampf} breitet sich aus und \textbf{kondensiert an} allen \textbf{kälteren Oberflächen} in der Vakuumkammer, 
 \textbf{einschließlich des Substrats}. Der Prozess findet im \textbf{Vakuum bei Drücken} von typischerweise 
-\textbf{unter $\mathbf{10^{-6}}$ mbar} statt \cite{keplinger2024}.
+\textbf{unter $\mathbf{10^{-6}}$~mbar} statt \cite{keplinger2024}.
 
 \vspace{1em}
 
@@ -109,16 +119,14 @@ zum Substrat bewegen} \cite{keplinger2024}.
 
 \vspace{1em}
 
-Die \textbf{kinetische Energie der Teilchen, die auf} der \textbf{Substratoberfläche kondensieren}, beträgt etwa \textbf{0,1 bis 0,5 eV}, was im 
-Vergleich zum Sputtern (mit 0 bis 100 eV) \textbf{sehr gering} ist \cite{keplinger2024}.
+Die \textbf{kinetische Energie der Teilchen, die auf} der \textbf{Substratoberfläche kondensieren}, beträgt etwa \textbf{0,1 bis 0,5~eV}, was im 
+Vergleich zum Sputtern (bis zu 100~eV) \textbf{sehr gering} ist \cite{keplinger2024}.
 
-\vspace{2em}
-
-\begin{figure}[ht]
+\begin{figure}[htb!]
     \centering
     \includegraphics[width=\textwidth]{images/PVD Aufdampfanlage.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
-    \caption{Schematischer Aufbau einer PVD Aufdampfanlage \cite{keplinger2024}}
+    \caption{Schematischer Aufbau einer PVD Aufdampfanlage \cite{keplinger2024}.}
     \label{fig:PVD Aufdampfanlage}
 \end{figure}
 
@@ -128,7 +136,7 @@ Basierend auf \autoref{fig:PVD Aufdampfanlage} wird im Folgenden die Funktionswe
 
 \begin{enumerate}
     \item \textbf{Vakuum}: Im Rezipient wird mit dem Pumpsystem ein Vakuum erzeugt.
-    \item \textbf{Aufheizen}: Das Aufdampfmaterial wird auf eine Temperatur von 500 bis 3000 °C erhitzt.
+    \item \textbf{Aufheizen}: Das Aufdampfmaterial wird auf eine Temperatur von 500 bis 3000~°C erhitzt.
     \item \textbf{Öffnen des Shutters}: Sobald ein ausreichend hoher Dampfdruck erreicht ist, wird der Shutter weggeschwenkt, um die Bedampfung 
     des Substrats zu ermöglichen. Wird der Shutter zu früh geöffnet oder ist er während des Aufheizens nicht vorhanden, kann es zu einer 
     ungleichmäßigen Abscheidung kommen bzw. es können unerwünschte Oxide des Aufdampfmaterials auf das Substrat abgeschieden werden. Der Weg der
@@ -139,42 +147,192 @@ Basierend auf \autoref{fig:PVD Aufdampfanlage} wird im Folgenden die Funktionswe
 
 \vspace{1em}
 \subsubsection{Schichtdickenmessung}
-Zur Messung der Schichtdicke wird ein \textbf{piezoelektrisches Schwingquarzplättchen} verwendet, das \textbf{nahe\footnote{Da Schwingquarz und Substrat 
-unterschiedliche Abstände zur Aufdampfquelle haben und sich zudem unterschiedlich nah an der Achse des Aufdampfstrahls befinden, ergeben sich unterschiedliche Aufdampfraten. Diese Abweichungen 
-werden durch einen experimentell zu bestimmenden Geometriefaktor (Tooling-Factor) korrigiert.} am Substrat positioniert} ist. Durch Anlegen einer Wechselspannung wird 
-das Quarzplättchen in eine (Scher-)Schwingung versetzt. Wenn das \textbf{Aufdampfmaterial auf} dem \textbf{Quarz kondensiert} und seine Masse zunimmt, \textbf{sinkt} die \textbf{Resonanzfrequenz} des 
-Quarzes. Diese Abnahme der Frequenz ist \textbf{proportional zur Dicke der abgeschiedenen Schicht} und dient als Messgrundlage. Die Resonanzfrequenz startet typischerweise bei 
-etwa 5 MHz und sollte, wenn sie auf 4 MHz fällt, zum Austausch des Quarzplättchens führen, um präzise Messwerte sicherzustellen \cite{keplinger2024}.
+Zur Messung der Schichtdicke wird ein \textbf{piezoelektrisches Schwingquarzplättchen} verwendet, das \textbf{nahe\footnote{Da Schwingquarz und 
+Substrat unterschiedliche Abstände zur Aufdampfquelle haben und sich zudem unterschiedlich nah an der Achse des Aufdampfstrahls befinden, 
+ergeben sich unterschiedliche Aufdampfraten. Diese Abweichungen werden durch einen experimentell zu bestimmenden Geometriefaktor
+(Tooling-Factor) korrigiert.} am Substrat positioniert} ist. Durch Anlegen einer Wechselspannung wird das Quarzplättchen in eine 
+(Scher-)Schwingung versetzt. \textbf{Wenn} das \textbf{Aufdampfmaterial auf} dem \textbf{Quarz kondensiert} und seine Masse zunimmt, 
+\textbf{sinkt} die \textbf{Resonanzfrequenz} des Quarzes. Diese Abnahme der Frequenz ist \textbf{proportional zur Dicke der abgeschiedenen 
+Schicht} und dient als Messgrundlage. Die Resonanzfrequenz startet typischerweise bei etwa 5~MHz und sollte, wenn sie auf 4~MHz fällt, zum 
+Austausch des Quarzplättchens führen, um präzise Messwerte sicherzustellen \cite{keplinger2024}.
 
 \vspace{1em}
 \subsubsection{Erwärmung mittels Elektronenstrahlquelle (E-Beam-Verfahren)}
 
-Bei dieser Methode wird ein \textbf{Elektronenstrahl gezielt auf einen kleinen Bereich des Aufdampfmaterials fokussiert}, sodass das Material 
-\textbf{lokal aufgeschmolzen} wird, während der Großteil fest bleibt (\autoref{fig:Tiegel und Schiffchen} b), c) und d)). Der \textbf{Tiegel} selbst wird dabei 
-\textbf{nicht auf hohe Temperaturen erhitzt}, was das \textbf{Risiko einer Kontamination durch} das \textbf{Tiegelmaterial verringert und höhere Arbeitstemperaturen} als bei 
-herkömmlichen Quellen, wie Schiffchenquellen, ermöglicht (\autoref{fig:Tiegel und Schiffchen} a)). Um eine \textbf{effektive Wärmeableitung} sicherzustellen, 
-besteht der \textbf{Tiegel aus Kupfer} und wird direkt \textbf{vom Kühlwasser durchströmt}. Das \textbf{Aufdampfmaterial} muss \textbf{leitfähig} sein, da sich 
-andernfalls elektrische Ladungen ansammeln könnten, die den Elektronenstrahl ablenken könnten \cite{keplinger2024}.
+Bei dieser Methode wird ein \textbf{Elektronenstrahl gezielt auf} einen \textbf{kleinen Bereich des Aufdampfmaterials fokussiert}, sodass das 
+Material \textbf{lokal aufgeschmolzen} wird, während der Großteil fest bleibt (\autoref{fig:Tiegel und Schiffchen} b), c) und d)). Der 
+\textbf{Tiegel} selbst wird dabei \textbf{nicht auf hohe Temperaturen erhitzt}, was das \textbf{Risiko einer Kontamination durch} das 
+\textbf{Tiegelmaterial verringert und höhere Arbeitstemperaturen} als bei herkömmlichen Quellen, wie Schiffchenquellen, ermöglicht 
+(\autoref{fig:Tiegel und Schiffchen} a)). Um eine \textbf{effektive Wärmeableitung} sicherzustellen, besteht der \textbf{Tiegel aus Kupfer} und 
+wird direkt \textbf{vom Kühlwasser durchströmt}. Das \textbf{Aufdampfmaterial} muss \textbf{leitfähig} sein, da sich andernfalls elektrische 
+Ladungen ansammeln könnten, die den Elektronenstrahl ablenken könnten \cite{keplinger2024}.
 
 \vspace{1em}
 
-Ein \textbf{Permanentmagnet in der Nähe der Elektronenstrahlquelle lenkt} den \textbf{Strahl um 270° ab, sodass} die \textbf{Quelle} selbst \textbf{nicht beschichtet wird} 
-(\autoref{fig:Tiegel und Schiffchen} b) und c)). Die \textbf{Steuerung des Systems} ermöglicht zudem ein \textbf{Fokussieren oder Defokussieren des Strahls}, 
-eine \textbf{präzise Positionierung über Spulen} sowie eine \textbf{kontrollierte Leistungsanpassung} bis zu 5 kW. Durch ein leichtes Wobbeln des Strahls kann 
-ein größerer Bereich des Aufdampfmaterials überstrichen werden, was zu einem gleichmäßigen Erhitzen führt \cite{keplinger2024}.
+Ein \textbf{Permanentmagnet in der Nähe der Elektronenstrahlquelle lenkt} den \textbf{Strahl um 270° ab, sodass} die \textbf{Quelle} selbst 
+\textbf{nicht beschichtet wird} (\autoref{fig:Tiegel und Schiffchen} b) und c)). Die \textbf{Steuerung des Systems} ermöglicht zudem ein 
+\textbf{Fokussieren oder Defokussieren des Strahls}, eine \textbf{präzise Positionierung über Spulen} sowie eine \textbf{kontrollierte 
+Leistungsanpassung} bis zu 5~kW. Durch ein leichtes Wobbeln des Strahls kann ein größerer Bereich des Aufdampfmaterials überstrichen werden, was
+ zu einem gleichmäßigen Erhitzen führt \cite{keplinger2024}.
 
-\begin{figure}[ht]
+\begin{figure}[htb!]
     \centering
-    \includegraphics[width=\textwidth]{images/Tiegel und Schiffchen.png} % Pfad und Dateiname des Bildes angeben
+    \includegraphics[width=.9\textwidth]{images/Tiegel und Schiffchen.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{%
     a) Aufdampfschiffchen, mit Aluminiumoxid (milchige Bereiche) beschichtet, um das Benetzen durch das Aufdampfmaterial zu minimieren. 
-    b) Schematischer Aufbau einer Elektronenstrahlquelle: S...Spule, A...Anode, K...Kathode, W...Wehneltzylinder, T...Tiegel mit Aufdampfmaterial, L...Wasserkühlung, M...Permanentmagnet.  
+    b) Schematischer Aufbau einer Elektronenstrahlquelle: S...Spule, A...Anode, K...Kathode, W...Wehneltzylinder, T...Tiegel mit 
+    Aufdampfmaterial, L...Wasserkühlung, M...Permanentmagnet.  
     c) Elektronenstrahlquelle im Inneren der Vakuumkammer (Rezipient). 
-    d) Vierlochtiegel für die Elektronenstrahlquelle, der Beschichtungen aus bis zu vier verschiedenen Materialien ermöglicht \cite{keplinger2024}.
-}
+    d) Vierlochtiegel für die Elektronenstrahlquelle, der Beschichtungen aus bis zu vier verschiedenen Materialien ermöglicht 
+    \cite{keplinger2024}.
+    }
     \label{fig:Tiegel und Schiffchen}
 \end{figure}
+
+\vspace{1em}
+\subsection{Sputtern (Zerstäubung)} % Sputtern (Zerstäubung)
+
+Der Sputterprozess ist ein \textbf{Abscheidungsverfahren}, bei dem \textbf{Atome aus dem Target}, der Materialquelle für die gewünschte Schicht, 
+\textbf{durch energiereiche Ionen herausgeschlagen} und \textbf{auf} dem \textbf{Substrat abgeschiede}n werden. \autoref{fig:Sputteranlage}
+zeigt den schematischen Aufbau einer Sputteranlage \cite{keplinger2024}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.85\textwidth]{images/Sputtern.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Schematischer Aufbau einer Sputteranlage \cite{keplinger2024}.}
+    \label{fig:Sputteranlage}
+\end{figure}
+
+\vspace{1em}
+\subsubsection{Funktionsweise} % Funktionsweise
+Anhand der \autoref{fig:Sputteranlage} wird die Funktionsweise der Sputteranlage näher erläutert \cite{keplinger2024}:
+
+\begin{enumerate}
+    \item In einem \textbf{inerten Gas}, typischerweise \textbf{Argon} mit einem \textbf{Druck von 0,2 bis 10 Pa}, wird \textbf{durch} eine 
+    \textbf{Gasentladung} ein \textbf{Plasma erzeugt}, das die \textbf{für} den \textbf{Sputterprozess benötigten Kationen ($\mathbf{Ar^+}$) 
+    bereitstellt}.
+    \item Durch die \textbf{Spannung zwischen Plasma und Sputtertarget} (Schichtmaterial) werden die \textbf{Ionen zum Target hin beschleunigt} 
+    und \textbf{erreichen} dabei \textbf{Energien von einigen 10~eV}.
+    \item \textbf{Trifft} ein \textbf{Ar-Ion} auf die \textbf{Targetoberfläche}, kommt es zu \textbf{elastischen und inelastischen Stößen mit} 
+    den \textbf{Targetatomen}. \textbf{Inelastische Stöße erzeugen Sekundärionen} (Sekundärelektronen) \textbf{für} das \textbf{Plasma}, während 
+    \textbf{elastische Stöße} eine \textbf{Stoßkaskade} auslösen, die \textbf{durch Impulsübertragung Atome aus} dem \textbf{Target 
+    herausschlagen} kann (\autoref{fig:Sputtern Stosskaskade}). Eine Energie von \textbf{mindestens 10 bis 30~eV} ist dafür \textbf{notwendig}, 
+    wobei die Sputtereffizienz mit steigender Energie bis zu einem Maximum von etwa 10~keV zunimmt. Danach sinkt die Effizienz, da die Ionen zu 
+    tief eindringen und weniger Energie an die Oberfläche übertragen wird. Die \textbf{Effizienz dieser Stoßkaskaden hängt} zudem 
+    \textbf{vom Massenverhältnis} zwischen \textbf{Sputterion und Targetatom ab}.
+    \item Die \textbf{herausgeschlagenen Atome bewegen} sich \textbf{in Richtung des Substrats}. Auf ihrem Weg \textbf{stoßen} sie 
+    \textbf{mehrfach mit} den \textbf{Atomen des Prozessgases zusammen}, wodurch sie einen Teil ihrer \textbf{Energie verlieren und} ihre 
+    \textbf{Winkelverteilung breiter} wird.
+    \item Die \textbf{Teilchen treffen auf} das \textbf{Substrat} (z.B. mit einer Energie von 10~eV) und \textbf{lagern sich dort ab}. 
+    Aufgrund der breiten \textbf{Winkelverteilung} werden dadurch \textbf{nicht nur} die \textbf{Oberseite}, sondern \textbf{auch} die 
+    \textbf{Seitenflächen der Strukturen auf} dem \textbf{Substrat beschichtet} (daher auch der Name ``Sputtern'' -- \textit{to sputter} = 
+    zerstäuben).
+\end{enumerate}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.55\textwidth]{images/Sputtern Stoßkaskade.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Herauslösen eines Targetatoms durch die vom Sputterion ausgelöste Stoßkaskade \cite{keplinger2024}.}
+    \label{fig:Sputtern Stosskaskade}
+\end{figure}
+
+\vspace{1em}
+\subsubsection{Sputterverfahren} % Sputterverfahren
+Im Folgenden werden ausgewählte Sputterverfahren näher erläutert und deren Funktionsweise beschrieben.
+
+\vspace{1em}
+\paragraph{\uline{DC-Sputtern:}} Hier wird die \textbf{Gasentladung mittels} einer \textbf{Gleichspannung} erzeugt. Daher muss das \textbf{Target 
+leitfähig} sein, da es sich sonst auflädt und die Gasentladung unterbrochen würde. Diese Form des Sputterns \textbf{eignet sich} somit nur 
+\textbf{für Metalle und Halbleiter} \cite{keplinger2024}.
+
+\vspace{1em}
+\paragraph{\uline{AC-Sputtern:}} Ein \textbf{hochfrequentes elektrisches Feld} wird \textbf{über} einen \textbf{Kondensator an} die \textbf{Elektroden 
+angelegt}, wodurch ein \textbf{Gleichspannungsanteil blockiert} wird. \textbf{Ionen können} dem \textbf{Feldwechsel ab etwa 100~kHz nicht mehr 
+folgen}, während \textbf{Elektronen weiterhin Energie aufnehmen} und \textbf{mehr Gasteilchen ionisieren}. Dadurch entsteht eine \textbf{höhere 
+Plasmarate als beim DC-Sputtern}, und der \textbf{Druck kann bei gleicher Sputterrate auf etwa $\mathbf{10^{-1}}$ bis $\mathbf{10^{-2}}$~Pa 
+gesenkt werden}\footnote{Da die herausgeschlagenen Targetatome aufgrund der geringeren Anzahl an Kollisionen mit den Prozessgasatomen weniger 
+gestreut werden, erreichen sie das Substrat direkter. Dadurch werden die Seitenflächen der Strukturen auf dem Substrat weniger beschichtet als 
+beim DC-Sputtern.} \cite{keplinger2024}. \\
+
+Die \textbf{Vorteile} umfassen \cite{keplinger2024}:
+
+\begin{itemize}
+    \item \textbf{Auch Isolatoren} wie \( \mathrm{Al}_2\mathrm{O}_3 \) (Aluminiumoxid) und Halbleiter \textbf{können gesputtert (zerstäubt) werden}.
+    \item Das \textbf{Substrat erhitzt sich weniger} als beim DC-Sputtern.
+    \item \textbf{Sputterraten} sind \textbf{bis zu zehnmal höher} als beim DC-Sputtern.
+\end{itemize}
+
+Ein \textbf{Nachteil} ist der \textbf{höhere apparative Aufwand} \cite{keplinger2024}.
+
+\vspace{1em}
+\paragraph{\uline{Magnetronsputtern:}} Beim Magnetronsputtern sind \textbf{Permanentmagneten hinter} der \textbf{Kathode} angebracht, die ein Magnetfeld erzeugen 
+(\autoref{fig:Magnetronsputtern}). Dieses bewirkt, dass sich die \textbf{Elektronen in Zykloidenbahnen bewegen} (\autoref{fig:Zykloiden}) und \textbf{länger in der 
+Nähe des Targets bleiben}\footnote{Dies ist effektiv, wenn die Magnetfeldlinien parallel zur Oberfläche verlaufen. Liegen sie jedoch parallel zur 
+Elektronenflugbahn (senkrecht zur Targetoberfläche), wirkt keine ablenkende Kraft auf die Elektronen.}, wodurch \textbf{mehr Gasatome ionisiert} werden und die 
+\textbf{Plasmadichte steigt}. Dies \textbf{erhöht} die \textbf{Sputterrate und ermöglicht} es, den \textbf{Druck bei gleicher Sputterrate deutlich zu senken}, was 
+\textbf{dichtere Schichten erzeugt}. Aufgrund der \textbf{kürzeren Beschichtungszeit} wird das Magnetronsputtern \textbf{in industriellen Anlagen häufig 
+verwendet} \cite{kittel2004}. \\
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/Magnetronsputteranlage.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Schematischer Aufbau einer Magnetron-Sputteranlage \cite{keplinger2024}.}
+    \label{fig:Magnetronsputtern}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/Zykloiden.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Zykloiden}
+    \label{fig:Zykloiden}
+\end{figure}
+
+Die Grundlage für diese Überlegung ist die Lorentzkraft, welche die Kraft beschreibt, die auf eine bewegte elektrische Ladung in einem elektrischen und 
+magnetischen Feld wirkt. Diese Kraft wird durch
+
+$$
+\vec{F} = e (\vec{E} + \vec{v} \times \vec{B})
+$$
+
+beschrieben. Dabei stellt \( \vec{F} \) die Lorentzkraft in Newton dar, \( e \) ist die Elementarladung mit einem Wert von etwa 
+\( 1{,}602 \times 10^{-19} \, \mathrm{C} \), \( \vec{E} \) das elektrische Feld in Volt pro Meter (V/m), \( \vec{v} \) die Geschwindigkeit der
+Ladung in Metern pro Sekunde (m/s), und \( \vec{B} \) die magnetische Flussdichte in Tesla (T). Das Kreuzprodukt \( \vec{v} \times \vec{B} \) 
+zeigt, dass die Kraft \( \vec{F} \) senkrecht sowohl zur Bewegungsrichtung \( \vec{v} \) als auch zum Magnetfeld \( \vec{B} \) steht \cite{rossnagel2003magnetron, 
+mattox2010handbook, anders2010advances, kouznetsov1999new, prechtl2005grundlagen}. 
+
+\vspace{1em}
+\paragraph{\uline{Reaktives Sputtern:}} Obwohl \textbf{dem Sputterprozess mehr Materialien zur Verfügung stehen als dem Aufdampfen}, gibt es \textbf{dennoch 
+Stoffe, bei denen sich eine Komponente ungenügend niederschlägt}. Durch die \textbf{Zugabe eines Reaktionsgases zum Plasma} können jedoch \textbf{chemische 
+Reaktionen mit den Targetatomen in der Gasphase} eingeleitet werden, \textbf{sodass sich} die \textbf{gewünschten Verbindungen abscheiden}. Ein \textbf{Beispiel} 
+ist die Bildung von \textbf{Aluminiumoxid und -nitrid}:
+
+$$
+\mathrm{2Al} + \mathrm{3O}_2 \rightarrow \mathrm{Al}_2\mathrm{O}_3
+$$
+$$
+\mathrm{2Al} + \mathrm{N}_2 \rightarrow \mathrm{2AlN}
+$$
+
+Dieses Verfahren, bekannt als reaktives Sputtern, wird oft \textbf{zur Herstellung von Oxiden, Nitriden, Oxinitriden} (z.B., \(\mathrm{SiO}_x\mathrm{N}_y\)) 
+\textbf{und Carbiden} verwendet. Es lässt sich zudem \textbf{mit anderen Sputterverfahren}, wie dem Magnetronsputtern, \textbf{kombinieren}. Ein \textbf{Vorteil} 
+des reaktiven Sputterns besteht darin, dass die \textbf{Stöchiometrie\footnote{Stöchiometrie bezieht sich auf das Verhältnis der Atome oder Moleküle in einer 
+chemischen Verbindung. In einem Material wie Aluminiumoxid (\(\mathrm{Al}_2\mathrm{O}_3\)) beschreibt die Stöchiometrie das Verhältnis von Aluminium- zu 
+Sauerstoffatomen, das hier exakt 2:3 ist. Im Kontext des reaktiven Sputterns bedeutet das, dass die Stöchiometrie der abgeschiedenen Schicht -- also das 
+Verhältnis der Elemente im abgeschiedenen Material -- durch den Druck des zugeführten Reaktionsgases beeinflusst werden kann. Das bedeutet, dass durch die Menge 
+des Reaktionsgases im Plasma das Verhältnis der chemischen Bestandteile in der abgelagerten Schicht gezielt gesteuert wird. Zum Beispiel könnte eine Erhöhung des 
+Sauerstoffdrucks im Plasma die Menge an Sauerstoff in der Schicht erhöhen, was zur Bildung einer Schicht mit einem höheren Anteil an Sauerstoff führt 
+\cite{anders2010reactive, ohring2002, mattox2010handbook, rossnagel2003magnetron}.} der abgeschiedenen Schicht durch} den \textbf{Gasdruck des Reaktionsgases 
+gezielt beeinflusst} werden kann \cite{keplinger2024}.
+
+\vspace{1em}
+\subsection{Vergleich Thermisches Verdampfen/Sputtern}
+
+%%% TODO %%%
 
 \vspace{1em}
 \section{Chemical Vapour Deposition} % CVD
