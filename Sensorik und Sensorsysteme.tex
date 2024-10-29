@@ -22,18 +22,39 @@
 
 \subsubsectionfont{\large}
 
-\title{Sensorik und Sensorsysteme (TU Wien)}
+\title{Zusammenfassung Sensorik und Sensorsysteme (TU Wien)}
 \author{Omar Filip El Sendiouny \\ \texttt{e1616023@student.tuwien.ac.at}}
 \vfill
 \date{\today}
 
 \begin{document}
 
-\maketitle
-\thispagestyle{empty} % Entfernt die Seitenzahl von der Titelseite
-\newpage  
+% Titelblatt mit Bild
+\begin{titlepage}
+    \centering
+    \vspace{2cm}
+    {\Huge \bfseries Zusammenfassung Sensorik und Sensorsysteme (TU Wien) \par}
+    
+    \vspace{1cm}
+    {\Large Omar Filip El Sendiouny \\ \texttt{e1616023@student.tuwien.ac.at} \par}
+
+    \vspace*{2cm}
+
+    % Bild hinzufügen, Breite anpassen nach Bedarf
+    \includegraphics[width=0.75\textwidth]{images/mems-module-hero.png}
+    
+    % Bild hinzufügen, Breite anpassen nach Bedarf
+    \includegraphics[width=0.75\textwidth]{images/mems-gears.png} 
+
+    \vspace*{2cm} 
+    
+    \vfill
+    
+    {\large \today \par}
+\end{titlepage}
 
 \tableofcontents
+\listoftables
 \listoffigures
 \thispagestyle{empty}
 \newpage
@@ -52,11 +73,15 @@ auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \te
 
 \vspace{1em}
 \subsection{Begriffsklärung für PVD} % PVD Verfahren
+Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zunächst die anderen Abschnitte zu lesen 
+und bei Bedarf hier nach unbekannten Begriffen zu suchen.
+
 \begin{itemize}
     \item \textbf{Monolage}: Eine Monolage (auch Monoschicht genannt) beschreibt eine Schicht, die nur aus einer einzelnen Lage von Atomen oder 
     Molekülen besteht \cite{kittel2004}.
-    \item \textbf{Freie Weglänge}: Der Abstand, den die Atome oder Moleküle in der Dampfphase von der Verdampfungsquelle bis zum Substrat 
-    zurücklegen müssen, bevor sie auf diesem abgeschieden werden \cite{kittel2004}.
+    \item \textbf{Freie Weglänge}: Die freie Weglänge eines Atoms oder Moleküls in einem Plasma oder Gas ist die durchschnittliche Strecke, 
+    die ein Teilchen (wie ein Atom, Ion oder Molekül) zurücklegt, bevor es mit einem anderen Teilchen kollidiert. Diese Weglänge hängt stark 
+    von der Teilchendichte und dem Durchmesser der beteiligten Teilchen ab. \cite{kittel2004}.
     \item \textbf{Verdampfen}: Bezeichnet den Übergang eines Stoffes vom flüssigen in den gasförmigen Zustand \cite{kittel2004}.
     \item \textbf{Sublimieren}: Beschreibt den direkten Übergang eines Stoffes vom festen in den gasförmigen Zustand, ohne eine flüssige Phase 
     zu durchlaufen \cite{kittel2004}.
@@ -64,37 +89,63 @@ auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \te
     \item \textbf{Substrat}: Trägerschicht in der Mikroelektronik und Halbleiterfertigung. Der Begriff Substrat bezieht sich allgemein auf das 
     Material oder die Oberfläche, auf der ein Herstellungs- oder Beschichtungsprozess stattfindet \cite{ohring2002}.
     \item \textbf{Wafer}: Dünne Scheibe aus einem Halbleitermaterial, wie z.B. Silizium, und dient als Substrat \cite{sze2006}.
-    \item \textbf{Tiegel} (Thermisches Verdampfen): Ein Behälter, in dem das Aufdampfmaterial lokal geschmolzen wird, häufig aus Materialien wie Graphit, 
+    \item \textbf{Tiegel} (Aufdampfen): Ein Behälter, in dem das Aufdampfmaterial lokal geschmolzen wird, häufig aus Materialien wie Graphit, 
     Keramik oder Wolfram, die hohen Temperaturen standhalten \cite{smith1995, ohring2002}. Beim Elektronenstrahlverdampfen (E-Beam-Verfahren) wird das 
     Aufdampfmaterial im Tiegel erhitzt und verdampft, ohne dass der gesamte Tiegel erhitzt werden muss \cite{smith1995}. Siehe
     \autoref{fig:Tiegel und Schiffchen} b), c) und d).
-    \item \textbf{Schiffchen} (Thermisches Verdampfen): Ein kleiner, meist bootförmiger Behälter (daher der Name), der 
+    \item \textbf{Schiffchen} (Aufdampfen): Ein kleiner, meist bootförmiger Behälter (daher der Name), der 
     ebenfalls zur Aufnahme des Aufdampfmaterials dient, jedoch direkt beheizt wird, häufig durch Widerstandsheizung. Schiffchen bestehen oft aus 
     Materialien wie Molybdän oder Wolfram, da sie hohe Temperaturen aushalten können \cite{mattox2010handbook, ohring2002}. Siehe \autoref{fig:PVD 
     Aufdampfanlage} und \autoref{fig:Tiegel und Schiffchen} a).
     \item \textbf{Target} (Sputtern): Materialquelle für die Schicht, die auf das Substrat abgeschieden werden soll \cite{keplinger2024}.
-    \item \textbf{Inerte Gase}:
-    \item \textbf{Gasentladung}:
-    \item \textbf{Ionen}:
-    \item \textbf{Kationen}:
-    \item \textbf{Anionen}:
+    \item \textbf{Inerte Gase}: Auch als \textbf{Edelgase} bekannt, sind chemisch reaktionsträge Gase, die unter normalen Bedingungen kaum mit 
+    anderen Elementen oder Verbindungen reagieren. Zu den Edelgasen zählen Helium, Neon, Argon, Krypton, Xenon und Radon. Diese geringe Reaktivität ist auf 
+    ihre stabile, vollständig besetzte Elektronenkonfiguration in der äußersten Schale zurückzuführen, die sie energetisch stabil und widerstandsfähig gegenüber 
+    chemischen Reaktionen macht \cite{atkins_physical_chemistry, zumdahl_chemistry, silberberg_chemistry}.
+    \item \textbf{Gasentladung}: Bezeichnet einen physikalischen Prozess, bei dem ein elektrisches Feld in einem gasförmigen Medium zur 
+    Ionisation der Gasmoleküle führt, wodurch leitfähige Plasmen entstehen. Die dabei entstehenden freien Elektronen und Ionen ermöglichen den Stromfluss durch 
+    das Gas, was zu sichtbaren Leuchterscheinungen führen kann. Solche Entladungen treten beispielsweise in Leuchtstofflampen, Neonröhren und in der 
+    Plasmatechnologie auf \cite{prechtl2005grundlagen, boehler1994, hutchings2018}.
+    \item \textbf{Ionen}: Elektrisch geladene Atome oder Moleküle, die durch den Verlust oder Gewinn von Elektronen entstehen. \textbf{Positiv geladene Ione}, 
+    sogenannte \textbf{Kationen}, entstehen durch den Verlust von Elektronen, während \textbf{negativ geladene Ionen}, sogenannte \textbf{Anionen}, durch den 
+    Gewinn von Elektronen entstehen. Ionen spielen eine zentrale Rolle in chemischen Reaktionen, da sie die elektrische Ladung transportieren und Reaktionen 
+    ermöglichen, die die Bildung oder Trennung von chemischen Bindungen betreffen \cite{petrucci_general_chemistry, chang_chemistry, brown_chemistry_textbook}.
+    \item \textbf{Radikale}: Radikale sind Atome oder Moleküle, die mindestens ein ungepaartes Valenzelektron besitzen, was sie extrem reaktiv macht 
+    \cite{atkins2010, feynman2011}. Da sie oft instabil sind, neigen sie dazu, mit anderen Molekülen oder Atomen zu reagieren, um eine stabile 
+    Elektronenkonfiguration zu erreichen\footnote{Im Kontext von Dünnschichtprozessen wie dem Sputtern werden Radikale oft durch das energiereiche Plasma gebildet, 
+    das Bindungen in Molekülen aufbrechen kann \cite{boehler1994, hutchings2018}. Diese Radikale können dann auf der Oberfläche der zu beschichtenden Materialien 
+    reagieren, wodurch die Schichtzusammensetzung und -struktur beeinflusst wird \cite{journal_reference}.}.
+    \item \textbf{Valenzelektron}: Valenzelektronen befinden sich in der äußersten Schale eines Atoms und bestimmen die chemischen Eigenschaften eines Elements 
+    maßgeblich. Sie ermöglichen die Bindung mit anderen Atomen, wodurch Verbindungen entstehen. Edelgase besitzen volle Valenzschalen, was sie besonders stabil und 
+    reaktionsträge macht \cite{petrucci_general_chemistry, chang_chemistry, brown_chemistry_textbook}.
+    \item \textbf{Fraktionale Verdampfung von Legierungen} (Aufdampfen): Tritt auf, wenn die unterschiedlichen Siedepunkte der Metallkomponenten dazu führen, dass 
+    zunächst die Elemente mit niedrigerem Siedepunkt verdampfen, wodurch die Zusammensetzung des verbleibenden Materials verändert wird \cite{harvard_mrsec, 
+    vem_guide}. Dadurch können die Dampfphasen eine andere Zusammensetzung als die ursprüngliche Legierung aufweisen, was zu inhomogenen Beschichtungen führen 
+    kann \cite{frontiers_mpea, mdpi_vacuum_distillation}.
+    \item \textbf{Dampfphasen}: Die gasförmigen Bestandteile, die entstehen, wenn feste oder flüssige Materialien durch Zuführung von Wärme in die Gasphase 
+    übergehen, wie es bei der Verdampfung und Sublimation der Fall ist \cite{thermopedia, thoughtco, opentextbc}.
+    \item \textbf{UHV}: ``Ultra-High Vacuum'' bezeichnet ein Vakuum mit einem Druck von unter \(10^{-9}\) mbar \cite{atkins_physical_chemistry, ohring2002, 
+    smith1995}.
 \end{itemize}
 
 \vspace{1em}
 \subsection{PVD-Verfahren} % PVD Verfahren
 Die verschiedenen PVD-Verfahren \textbf{unterscheiden sich} hauptsächlich \textbf{in der} Methode zur \textbf{Erzeugung des Dampfstrahls} 
 \cite{keplinger2024}:
+
 \begin{enumerate}
-    \item \textbf{Thermisches Verdampfen}
+    \item \textbf{Thermisches Verdampfen (Aufdampfen)}
     \item \textbf{Sputtern (Zerstäubung)}
     \item \textbf{Laserstrahlverdampfen (pulsed laser deposition, PLD)}
     \item \textbf{Molekularbeamepitaxie (MBE)}
 \end{enumerate}
 
+Im Folgenden werden lediglich die ersten beiden Methoden erläutert.
+
 \vspace{1em}
-\subsection{Thermisches Verdampfen (Aufdampfen)} % PVD Aufdampfen
+\subsection{Aufdampfen} % PVD Aufdampfen
 Das thermische Aufdampfen gehört zu den ältesten Methoden zur Herstellung dünner Schichten (\autoref{fig:PVD Aufdampfanlage}). Dabei wird das 
-\textbf{Material der Aufdampfquelle auf} eine Temperatur von \textbf{500 bis 3000~°C erhitzt}, bis es einen ausreichend hohen 
+\textbf{Material der Aufdampfquelle auf} eine Temperatur von \textbf{500 bis 3000°C erhitzt}, bis es einen ausreichend hohen 
 Dampfdruck\footnote{Ein hoher Dampfdruck ist beim Aufdampfen entscheidend, da er sicherstellt, dass genügend Atome oder Moleküle des Materials 
 in die Gasphase übertreten und eine dampfartige Wolke bilden. Diese Wolke ermöglicht eine ausreichende Partikelzufuhr zum Zielsubstrat, wodurch 
 sich eine gleichmäßige, dünne Schicht bildet. Bei zu geringem Dampfdruck wären nur wenige Teilchen verdampft, was zu einer ungleichmäßigen und 
@@ -300,7 +351,7 @@ $$
 $$
 
 beschrieben. Dabei stellt \( \vec{F} \) die Lorentzkraft in Newton dar, \( e \) ist die Elementarladung mit einem Wert von etwa 
-\( 1{,}602 \times 10^{-19} \, \mathrm{C} \), \( \vec{E} \) das elektrische Feld in Volt pro Meter (V/m), \( \vec{v} \) die Geschwindigkeit der
+\( 1{,}602 \cdot 10^{-19} \, \mathrm{C} \), \( \vec{E} \) das elektrische Feld in Volt pro Meter (V/m), \( \vec{v} \) die Geschwindigkeit der
 Ladung in Metern pro Sekunde (m/s), und \( \vec{B} \) die magnetische Flussdichte in Tesla (T). Das Kreuzprodukt \( \vec{v} \times \vec{B} \) 
 zeigt, dass die Kraft \( \vec{F} \) senkrecht sowohl zur Bewegungsrichtung \( \vec{v} \) als auch zum Magnetfeld \( \vec{B} \) steht \cite{rossnagel2003magnetron, 
 mattox2010handbook, anders2010advances, kouznetsov1999new, prechtl2005grundlagen}. 
@@ -330,9 +381,55 @@ Sauerstoffdrucks im Plasma die Menge an Sauerstoff in der Schicht erhöhen, was 
 gezielt beeinflusst} werden kann \cite{keplinger2024}.
 
 \vspace{1em}
-\subsection{Vergleich Thermisches Verdampfen/Sputtern}
+\subsection{Vergleich Aufdampfen - Sputtern}
+Abschließend werden in \autoref{tab:Vergleich Aufdampfen - Sputtern} das thermische Aufdampfen und das Sputtern gegenübergestellt \cite{keplinger2024}.
 
-%%% TODO %%%
+\begin{table}[htb!]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Erhöht den Zeilenabstand in der Tabelle
+    \begin{tabular}{|p{6cm}|p{6cm}|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{1. Dampferzeugung}} \\ \hline
+        \textbf{Aufdampfen} & \textbf{Sputtern} \\ \hline
+        Thermischer Prozess & Ionenbeschuss und Impulsübertragung \\
+        Geringe kinetische Energie (1500°C: $E \approx 0,1 \, \mathrm{eV}$) & Hohe kinetische Energie ($E = 10 - 40 \, \mathrm{eV}$) \\
+        Neutrale Teilchen & Neutrale Teilchen, Kationen, Radikale, (Anionen) \\
+        Fraktionierte Verdampfung bei Legierungen & Relativ gleichmäßiges Verdampfen aller Komponenten \\
+        Verbindungen dissoziieren & Geringe Dissoziation \\ \hline
+        \multicolumn{2}{|c|}{\textbf{2. Transport}} \\ \hline
+        \textbf{Aufdampfen} & \textbf{Sputtern} \\ \hline
+        Teilchen im Hochvakuum & Teilchen im Plasma \\
+        Keine Kollisionen & Viele Kollisionen \\
+        Große freie Weglänge & Kleine freie Weglänge \\
+        Teilchen bewegen sich geradlinig von der Quelle zum Substrat & Breite Richtungsverteilung der beim Substrat ankommenden Teilchen \\ \hline
+        \multicolumn{2}{|c|}{\textbf{3. Kondensation}} \\ \hline
+        \textbf{Aufdampfen} & \textbf{Sputtern} \\ \hline
+        Wenig Restgasatome in den Schichten & Starker Einbau von Atomen des Plasmas \\
+        Kaum Beeinflussung des Substrats & Starke Beeinflussung durch Ionen \\
+        Seitenflächen werden nicht beschichtet, ebene Schichten & Alle Flächen werden beschichtet \\
+        Mittelmäßige Haftung der Schichten & Gute Haftung \\
+        Hohe Beschichtungsraten & Geringe Beschichtungsraten \\
+        Lange Prozesszeit durch UHV & Geringe Anforderung an die Vakuumqualität \\
+        Strukturieren durch Ätzen oder Lift-oﬀ & Strukturieren hauptsächlich durch Ätzen, fallweise durch Lift-off \\ \hline
+    \end{tabular}
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Vergleich Audampfen - Sputtern}
+    \label{tab:Vergleich Aufdampfen - Sputtern}
+\end{table}
+
+\vspace{1em}
+
+``Verbindungen dissoziieren'' bedeutet, dass chemische Bindungen im Material beim Aufdampfen thermisch zerfallen\footnote{Thermischer Zerfall beschreibt den Prozess, 
+bei dem chemische Verbindungen bei hohen Temperaturen in ihre Bestandteile zerfallen, da die Bindungsenergie durch zugeführte Wärme überwunden wird. Dieser Zerfall 
+kann beim Aufdampfen auftreten und die Zusammensetzung der Schicht beeinflussen \cite{ohring2002, smith1995}.} können, was die Zusammensetzung verändert. Im 
+Gegensatz dazu tritt beim Sputtern nur eine geringe Dissoziation auf, da der Ionenbeschuss die chemische Stabilität der Verbindungen weitgehend erhält 
+\cite{ohring2002, smith1995, rossnagel2003magnetron}.
+
+\vspace{1em}
+``Strukturieren durch Ätzen oder Lift-off'' sind Verfahren zur Formgebung von Dünnschichtstrukturen. Beim Ätzen wird überschüssiges Material selektiv durch 
+chemische oder physikalische Methoden entfernt, wodurch nur die gewünschte Struktur verbleibt. Das Lift-off-Verfahren hingegen nutzt eine Maske, die nach der 
+Beschichtung entfernt wird, sodass das Material nur an den zuvor maskierten Stellen verbleibt \cite{ohring2002, smith1995, prechtl2005grundlagen}. Mehr dazu folgt 
+in den späteren Kapiteln.
 
 \vspace{1em}
 \section{Chemical Vapour Deposition} % CVD
@@ -342,6 +439,7 @@ Hier kommt der Hauptinhalt. \LaTeX{} ist sehr leistungsfähig für die Erstellun
 \section{Lithographie} % Lithographie
 This sections teaches you some more stuff ...
 
+\thispagestyle{empty}
 \newpage
 \bibliographystyle{ieeetr}  % IEEE-Standard für das Literaturverzeichnis
 \bibliography{references}  % Ersetze "your_bib_file" durch den tatsächlichen Namen der .bib-Datei ohne die Endung .bib
