@@ -487,7 +487,7 @@ Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriff
 unbekannte Begriffe nachzuschauen. \textbf{Begriffe}, die bereits \textbf{in den vorherigen Abschnitten erklärt} wurden, sind \textbf{hier nicht erneut aufgeführt}.
 
 \begin{itemize}
-    \item \textbf{Precursor}: Ausgangsstoffe (Gase) \cite{keplinger2024CVD}. 
+    \item \textbf{Precursor}: Ausgangsstoffe bzw. Vorläufersubstanzen (Gase) \cite{keplinger2024CVD}. 
     \item \textbf{Reaktanden}: Stoffe, die bei einer chemischen Reaktion miteinander reagieren, um neue Produkte zu bilden. Man könnte sie als die ``Zutaten'' 
     einer chemischen Reaktion betrachten \cite{petrucci_general_chemistry, chang_chemistry}.
     \item \textbf{Diffusionsprozess}: Ein Diffusionsprozess beschreibt die Bewegung von Teilchen von einem Bereich hoher Konzentration zu einem Bereich niedriger 
@@ -497,7 +497,8 @@ unbekannte Begriffe nachzuschauen. \textbf{Begriffe}, die bereits \textbf{in den
     \item \textbf{Erzwungene Konvenktion}: Erzwungene Konvektion bedeutet, dass der Transport von Stoffen, wie Gasen, durch eine äußere Kraft unterstützt wird, 
     zum Beispiel durch einen Ventilator oder einen Gasstrom. Dadurch gelangen die Reaktanten gezielt an ihren Bestimmungsort \cite{incropera2007, bergman2011, 
     kays2005, bejan2013}.
-    \item{Konformität}: Verhältnis der Beschichtungsdicke auf den vertikalen Flächen zu der auf den horizontalen Flächen der Strukturen am Substrat.
+    \item \textbf{Konformität}: Verhältnis der Beschichtungsdicke auf den vertikalen Flächen zu der auf den horizontalen Flächen der Strukturen am Substrat 
+    \cite{keplinger2024CVD}.
 \end{itemize}
 
 \vspace{1em}
@@ -708,6 +709,50 @@ Kanälen haben fast die gleiche Dicke wie die horizontalen Flächen}, mit einer 
 
 \vspace{1em}
 \subsection{Atomlagenabscheidung} % Atomlagenabscheidung
+Bei der Atomlagenabscheidung (\textit{atomic layer deposition}, ALD) werden \textbf{in einem zyklischen Verfahren verschiedene Gase abwechselnd in den Reaktor geleitet}. Die einzelnen \textbf{Vorläufersubstanzen bilden monomolekulare Schichten}\footnote{Siehe Monolage (Begriffsklärung für PVD).}, die das \textbf{Schichtwachstum auf eine Moleküllage begrenzen. Zwischen} den \textbf{Prozessschritten mit} den \textbf{Vorläufersubstanzen} wird der \textbf{Reaktor mit} einem \textbf{inerten Gas gespült, um unerwünschte Reaktionen} im Reaktorvolumen \textbf{zu verhindern} \cite{keplinger2024CVD}.
+
+\vspace{1em}
+
+Ein Zyklus läuft wie folgt ab \cite{keplinger2024CVD}:
+
+\begin{enumerate}
+    \item \textbf{Reaktand 1}: Bildung einer monomolekularen Schicht.
+    \item \textbf{Spülgas} (z.B. N$_2$, Ar) oder Abpumpen, um den ersten Reaktanden zu entfernen.
+    \item \textbf{Reaktand 2}: Durch die selbstbegrenzende Reaktion mit der ersten Schicht wird eine weitere monomolekulare Schicht gebildet. Dieser Prozessschritt kann auch eine Plasmabehandlung beinhalten, die die Oberfläche wieder für den ersten Schritt aktiviert.
+    \item \textbf{Spülgas}
+\end{enumerate}
+
+\vspace{1em}
+
+Durch \textbf{Zählen der Zyklen} kann eine \textbf{Genauigkeit der Schichtdicke von einer einzelnen Atomlage} erreicht werden \cite{keplinger2024CVD}.
+
+\paragraph{\uline{Beispiel:}} Als Beispiel ist in \autoref{fig:ALD} die \textbf{Bildung von Aluminiumoxid (\(\mathrm{Al_2O_3}\))} dargestellt. Im ersten Schritt wird \textbf{Trimethylaluminium (TMA) (\(\mathrm{Al(CH_3)_3}\)) in} den \textbf{Reaktor geleitet}, das sich \textbf{durch Abspaltung von Methan ($\mathrm{CH_4}$) an} die \textbf{Sauerstoffatome des Substrats anlagert}. Dieser \textbf{Prozess endet, sobald keine OH-Gruppen mehr ``sichtbar''} sind und die \textbf{Oberfläche nur noch Methylgruppen\footnote{Methylgruppen sind chemische Gruppen mit der Formel \(\mathrm{CH_3}\), die aus einem Kohlenstoffatom und drei Wasserstoffatomen bestehen. Sie sind oft Bestandteil organischer Moleküle und beeinflussen die physikalischen und chemischen Eigenschaften von Verbindungen \cite{petrucci_general_chemistry}.} aufweist}. \textbf{Nach} dem \textbf{Spülen wird Wasserdampf eingeleitet}, der \textbf{mit} den \textbf{Methylgruppen reagiert}. Dabei wird \textbf{Methan abgespalten und abgepumpt}. Der \textbf{Prozess endet, sobald keine Methylgruppen mehr vorhanden} sind und die \textbf{Oberfläche von Hydroxylgruppen\footnote{Hydroxygruppen sind funktionelle Gruppen mit der Formel \(\mathrm{OH}\), die aus einem Sauerstoff- und einem Wasserstoffatom bestehen. Sie sind charakteristisch für Alkohole und beeinflussen die Polarität und Reaktivität von Molekülen, an denen sie gebunden sind \cite{petrucci_general_chemistry}.} bedeckt} ist. Nach einem weiteren \textbf{Spülprozess} beginnt der \textbf{Zyklus erneut} mit dem Trimethylaluminium-Schritt \cite{keplinger2024CVD}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.85\textwidth]{images/Atomlagenabscheidung.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Abscheidung von \(\mathrm{Al_2O_3}\) (Aluminiumoxid) mittels ALD \cite{keplinger2024CVD}.}
+    \label{fig:ALD}
+\end{figure}
+
+\vspace{1em}
+
+\textbf{Zusammengefasst (chemisch auf den Punkt gebracht)} verläuft der Prozess wie folgt \cite{keplinger2024CVD}:
+
+Im ersten Schritt reagiert Trimethylaluminium (\(\mathrm{Al(CH_3)_3}\)) mit den OH-Gruppen auf der Oberfläche. Dabei spaltet sich Methan ($\mathrm{CH_4}$) ab (\autoref{fig:ALD} oben links):
+$$
+\mathrm{Al(CH_3)_3} + \mathrm{OH} \rightarrow \mathrm{Al(CH_3)_2O} + \mathrm{CH_4}
+$$
+Dieser Schritt läuft ab, bis keine OH-Gruppen mehr auf der Oberfläche vorhanden sind und die Oberfläche vollständig aus \(\mathrm{CH_3}\)-Gruppen besteht (\autoref{fig:ALD} oben rechts).
+
+Danach wird Wasserdampf (\(\mathrm{H_2O}\)) in den Reaktor geleitet, der mit den \(\mathrm{CH_3}\)-Gruppen reagiert. Auch in diesem Schritt spaltet sich Methan ($\mathrm{CH_4}$) ab (\autoref{fig:ALD} unten rechts):
+$$
+\mathrm{H_2O} + \mathrm{CH_3} \rightarrow \mathrm{OH} + \mathrm{CH_4}
+$$
+Dieser Schritt endet, sobald keine \(\mathrm{CH_3}\)-Gruppen mehr sichtbar sind und die Oberfläche wieder vollständig von \(\mathrm{OH}\)-Gruppen bedeckt ist -- wie zu Beginn des Zyklus.
+
+Dieser Prozess wiederholt sich und ermöglicht den schichtweisen Aufbau von Aluminiumoxid (\(\mathrm{Al_2O_3}\)) durch die Atomlagenabscheidung (ALD), wobei in jedem Zyklus eine monomolekulare Schicht entsteht.
 
 \vspace{1em}
 \section{Lithographie} % Lithographie
