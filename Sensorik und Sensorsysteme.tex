@@ -84,8 +84,8 @@ auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \te
 \textbf{in Ausnahmefällen bis zu 10~µm} erreichen \cite{keplinger2024}.
 
 \vspace{1em}
-\subsection{Begriffsklärung für PVD} % PVD Verfahren
-Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zunächst die anderen Abschnitte zu lesen 
+\subsection{Begriffsklärung für PVD} % PVD Begriffsklärung
+Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zunächst die nachfolgenden Abschnitte zu lesen 
 und bei Bedarf hier nach unbekannten Begriffen zu suchen.
 
 \begin{itemize}
@@ -357,11 +357,9 @@ verwendet} \cite{kittel2004}. \\
 
 Die Grundlage für diese Überlegung ist die Lorentzkraft, welche die Kraft beschreibt, die auf eine bewegte elektrische Ladung in einem elektrischen und 
 magnetischen Feld wirkt. Diese Kraft wird durch
-
 $$
 \vec{F} = e (\vec{E} + \vec{v} \times \vec{B})
 $$
-
 beschrieben. Dabei stellt \( \vec{F} \) die Lorentzkraft in Newton dar, \( e \) ist die Elementarladung mit einem Wert von etwa 
 \( 1{,}602 \cdot 10^{-19} \, \mathrm{C} \), \( \vec{E} \) das elektrische Feld in Volt pro Meter (V/m), \( \vec{v} \) die Geschwindigkeit der
 Ladung in Metern pro Sekunde (m/s), und \( \vec{B} \) die magnetische Flussdichte in Tesla (T). Das Kreuzprodukt \( \vec{v} \times \vec{B} \) 
@@ -373,14 +371,12 @@ mattox2010handbook, anders2010advances, kouznetsov1999new, prechtl2005grundlagen
 Stoffe, bei denen sich eine Komponente ungenügend niederschlägt}. Durch die \textbf{Zugabe eines Reaktionsgases zum Plasma} können jedoch \textbf{chemische 
 Reaktionen mit den Targetatomen in der Gasphase} eingeleitet werden, \textbf{sodass sich} die \textbf{gewünschten Verbindungen abscheiden}. Ein \textbf{Beispiel} 
 ist die Bildung von \textbf{Aluminiumoxid und -nitrid}:
-
 $$
 \mathrm{2Al} + \mathrm{3O}_2 \rightarrow \mathrm{Al}_2\mathrm{O}_3
 $$
 $$
 \mathrm{2Al} + \mathrm{N}_2 \rightarrow \mathrm{2AlN}
 $$
-
 Dieses Verfahren, bekannt als reaktives Sputtern, wird oft \textbf{zur Herstellung von Oxiden, Nitriden, Oxinitriden} (z.B., \(\mathrm{SiO}_x\mathrm{N}_y\)) 
 \textbf{und Carbiden} verwendet. Es lässt sich zudem \textbf{mit anderen Sputterverfahren}, wie dem Magnetronsputtern, \textbf{kombinieren}. Ein \textbf{Vorteil} 
 des reaktiven Sputterns besteht darin, dass die \textbf{Stöchiometrie\footnote{Stöchiometrie bezieht sich auf das Verhältnis der Atome oder Moleküle in einer 
@@ -445,7 +441,110 @@ in den späteren Kapiteln.
 
 \vspace{1em}
 \section{Chemical Vapour Deposition} % CVD
-Hier kommt der Hauptinhalt. \LaTeX{} ist sehr leistungsfähig für die Erstellung wissenschaftlicher Dokumente.
+PVD-Verfahren sind essenzielle Prozesse in der Herstellung miniaturisierter Sensoren, vor allem für metallische Schichten und Dielektrika. Diese Verfahren 
+erfordern feste Ausgangsstoffe, sind jedoch problematisch bei Materialien, die im Prozess disproportionieren\footnote{Disproportionierung ist ein Prozess, bei dem 
+ein Stoff sich aufteilt: Ein Teil gibt Elektronen ab (Oxidation) und ein anderer Teil nimmt Elektronen auf (Reduktion). Dadurch entstehen zwei neue Stoffe mit dem 
+gleichen Element, aber in verschiedenen Zuständen \cite{petrucci_general_chemistry}. In PVD-Prozessen kann dies problematisch sein, weil beim Erhitzen zum Beispiel 
+Metallteile aufbrechen und nicht als ganzes Metall in die Schicht eingebaut werden. Stattdessen bilden sich zwei verschiedene Verbindungen, die nicht alle 
+Eigenschaften des Ausgangsstoffes besitzen, was die Qualität der Schicht beeinflussen kann.}, etwa durch Schmelzen beim Aufdampfen. Dadurch können wichtige 
+Komponenten unvollständig in die Schicht eingebaut werden. Im Gegensatz dazu werden \textbf{bei} der \textbf{Chemical Vapor Deposition (CVD) Gase in den 
+Rezipienten einer Anlage geleitet}, wo sie \textbf{chemisch reagieren und} die \textbf{Reaktionsprodukte am Substrat}, oft ein Wafer, eine \textbf{Schicht bilden}. 
+Diese chemische Reaktion \textbf{erfordert Energie}, die \textbf{thermisch oder durch Gasentladung} zugeführt wird \cite{keplinger2024CVD}.
+
+\vspace{1em}
+
+Die \textbf{Unterscheidung} zwischen \textbf{CVD und PVD} ergibt sich durch die \textbf{Form der zugeführten Ausgangsstoffe (Precursor)}: Bei 
+\textbf{PVD-Prozessen} werden diese \textbf{in fester Form} und bei \textbf{CVD-Prozessen} als \textbf{Gase} zugeführt. Die thermische Oxidation eines 
+Silizium-Wafers wird nicht als CVD-Prozess betrachtet, da nur der Sauerstoff gasförmig ist, während das Silizium bereits fest im Reaktor vorhanden ist
+ \cite{keplinger2024CVD}.
+
+ \vspace{1em}
+\paragraph{Vorteile:}
+
+\begin{itemize}
+    \item \textbf{Hohe Reinheit} der Schichten, da die Ausgangsgase in hoher Reinheit verfügbar sind.
+    \item \textbf{Gute Kantenbedeckung}, auch bei ungünstiger Geometrie.
+    \item \textbf{Herstellung} vieler \textbf{verschiedener Schichtmaterialien} möglich.
+    \item \textbf{Zusammensetzung kann} während des Prozesses \textbf{angepasst werden}.
+    \item \textbf{Gute Prozesskontrolle} durch eine \textbf{Vielzahl leicht beeinflussbarer Parameter}: Gase, Flussraten, Temperatur, Druck, Frequenz und Leistung 
+    des Plasmas.
+\end{itemize}
+
+\vspace{1em}
+\paragraph{Nachteile:}
+
+\begin{itemize}
+    \item Relativ \textbf{hohe Temperaturen} sind oft \textbf{erforderlich}, wodurch \textbf{mechanische Spannungen} in die Schicht eingebaut werden. Dies führt 
+    zu einer \textbf{hohen thermischen Belastung des Wafers} und der darauf befindlichen Strukturen, was Dotierprofile ändern oder Metallschichten zerstören kann.
+    \item \textbf{Schwierige Handhabung} der häufig \textbf{giftigen und brennbaren Gase}.
+    \item \textbf{Für viele gewünschte Schichten} sind \textbf{keine gasförmigen Precursoren verfügbar}.
+    \item Die \textbf{Vielzahl relevanter Parameter erfordert hohe Sachkenntnis} des Betreibers der Anlage, insbesondere bei Nichtstandard-Prozessen.
+\end{itemize}
+
+\vspace{1em}
+\subsection{Begriffsklärung für CVD} % CVD  Begriffsklärung
+Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zuerst die nahcfolgenden Abschnitte zu lesen und hier bei Bedarf 
+unbekannte Begriffe nachzuschauen. \textbf{Begriffe}, die bereits \textbf{in den vorherigen Abschnitten erklärt} wurden, sind \textbf{hier nicht erneut aufgeführt}.
+
+\begin{itemize}
+    \item \textbf{Precursor}: Ausgangsstoffe (Gase) \cite{keplinger2024CVD}. 
+    \item \textbf{Reaktanden}: Stoffe, die bei einer chemischen Reaktion miteinander reagieren, um neue Produkte zu bilden. Man könnte sie als die ``Zutaten'' 
+    einer chemischen Reaktion betrachten \cite{petrucci_general_chemistry, chang_chemistry}.
+    \item \textbf{Diffusionsprozess}: Ein Diffusionsprozess beschreibt die Bewegung von Teilchen von einem Bereich hoher Konzentration zu einem Bereich niedriger 
+    Konzentration, bis die Teilchen gleichmäßig verteilt sind \footnote{Man kann es sich vorstellen wie Tinte, die sich langsam in einem Glas Wasser verteilt, ohne 
+    dass man umrühren muss.} \cite{bergman2011, incropera2007}. In der Wissenschaft beschreibt ``diffundieren'' den Prozess, bei dem Teilchen sich aufgrund eines 
+    Konzentrationsgefälles bewegen \cite{crank1975}.
+    \item \textbf{Erzwungene Konvenktion}: Erzwungene Konvektion bedeutet, dass der Transport von Stoffen, wie Gasen, durch eine äußere Kraft unterstützt wird, 
+    zum Beispiel durch einen Ventilator oder einen Gasstrom. Dadurch gelangen die Reaktanten gezielt an ihren Bestimmungsort \cite{incropera2007, bergman2011, 
+    kays2005, bejan2013}.
+\end{itemize}
+
+\vspace{1em}
+\subsection{Funktionsweise} % CVD Funktionsweise
+Die Schichtbildung basiert auf einer \textbf{Reihe von Teilprozessen}, die je nach Reaktionsgasen komplex ablaufen können (\autoref{fig:Schichtbildung CVD}). 
+Hier werden \textbf{beispielhaft} die Teilprozesse zur \textbf{Bildung von Siliziumnitrid beschrieben}, das häufig als \textbf{Isolationsschicht} dient 
+\cite{keplinger2024CVD}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.65\textwidth]{images/Schichtbildung CVD.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Prozesse der Schichtbildung bei der CVD-Methode: 1...Gaszufuhr von SiH$_4$ und NH$_3$, 2...Diffusion der Reaktanten durch die Grenzschicht, 
+    3...Adsorption der Reaktanten an der Waferoberfläche, 4...chemische Reaktion, 5...Oberflächendiffusion der Reaktionsprodukte, 6...Desorption der Nebenprodukte 
+    und 7...Abtransport durch den Gasstrom \cite{keplinger2024CVD}.}
+    \label{fig:Schichtbildung CVD}
+\end{figure}
+
+\begin{enumerate}
+    \item \textbf{Gaszufuhr}: Die Reaktanden SiH$_4$ (Silan) und NH$_3$ (Ammoniak) werden in die Reaktionskammer geleitet und strömen über das Substrat. Dabei 
+    gelangen die Ausgangsstoffe durch erzwungene Konvektion zum Substrat \cite{keplinger2024CVD}.
+    \item \textbf{Diffusion}: Die Geschwindigkeit des Gases nimmt zur Oberfläche hin innerhalb der Prandtlschen Grenzschicht\footnote{Die Prandtlsche Grenzschicht 
+    ist der Bereich in der Nähe einer Oberfläche, in dem die Strömungsgeschwindigkeit eines Fluids von der maximalen Geschwindigkeit bis auf Null abnimmt. 
+    Innerhalb dieser Schicht verlangsamt sich das Fluid aufgrund der Reibungskräfte an der Grenzfläche \cite{white2006}.} bis auf Null ab. Deshalb müssen die 
+    Reaktanden diese Schicht durch einen Diffusionsprozess überwinden\footnote{Die Reaktanden diffundieren durch die Prandtlsche Grenzschicht zur Oberfläche 
+    \cite{bergman2011, incropera2007}.} \cite{keplinger2024CVD}.
+    \item \textbf{Adsorption}: Die Moleküle, die zur Oberfläche hin diffundieren, ``kleben'' an der Oberfläche fest (adsorbieren). Dort bleiben sie aber nicht an 
+    einer festen Stelle, sondern bewegen sich je nach Temperatur mehr oder weniger stark über die Oberfläche \cite{keplinger2024CVD, bergman2011, incropera2007}.
+    \item \textbf{Reaktion}: Die Ausgangsstoffe reagieren an der Oberfläche. Bei der Bildung von Siliziumnitrid folgt die Reaktion der chemischen Gleichung:
+    $$
+    3\mathrm{SiH}_4 + 4\mathrm{NH}_3 \rightarrow \mathrm{Si}_3\mathrm{N}_4 + 12\mathrm{H}_2
+    $$
+    Ein Teil der Reaktion kann jedoch auch schon in der Gasphase ablaufen. Das ist meist unerwünscht, weil dabei feste Partikel entstehen können, die sich dann als 
+    Staub ablagern. Um sicherzustellen, dass die Reaktion vor allem an der Oberfläche stattfindet, hält man den Prozessdruck typischerweise zwischen 0,01 und 
+    10~mbar oder verdünnt die Gase mit einem Trägergas\footnote{Durch das Reduzieren des Drucks oder die Zugabe eines Trägergases wird die Dichte der 
+    Ausgangsstoffe verringert, sodass die Moleküle seltener aufeinanderstoßen. Dadurch haben die Reaktanten eine höhere Chance, die Oberfläche zu erreichen und
+     dort zu reagieren, statt bereits in der Gasphase zu reagieren.} \cite{keplinger2024CVD}.
+    \item \textbf{Oberflächendiﬀusion}: Durch diesen Vorgang wird das Reaktionsprodukt Si$_3$N$_4$ (Siliziumnitrid) in die Schicht eingebaut\footnote{Damit ist gemeint, dass das Reaktionsprodukt in die Oberfläche diffundiert. Es wandert also in die Schicht hinein und verteilt sich.} und möglichst bis an die Schichtkante transportiert \cite{keplinger2024CVD}.
+    \item \textbf{Desorption}: Bei der chemischen Reaktion entstehen nicht nur die gewünschten Schichtbestandteile, sondern auch Nebenprodukte (wie hier H$_2$), 
+    die an der Oberfläche ``kleben'' (adsorbiert sind) bleiben. Diese müssen sich wieder lösen (desorbieren) und dann durch die Grenzschicht ``hindurchwandern'' 
+    (diffundieren), um entfernt zu werden \cite{keplinger2024CVD}.
+    \item \textbf{Abtransport}: Im letzten Schritt werden die Nebenprodukte vom konvektiven Gasfluss mitgenommen und abtransportiert \cite{keplinger2024CVD}.
+\end{enumerate}
+
+Je nach \textbf{Beschichtungsparametern}, insbesondere der \textbf{Temperatur}, können auch \textbf{Nebenprodukte in die Schicht eingebaut} werden, was die 
+\textbf{Schichtqualität erheblich beeinflusst}. \textbf{Siliziumnitride}, die \textbf{bei niedrigen Temperaturen abgeschieden} werden, e\textbf{nthalten mehr 
+Wasserstoff} und sind daher \textbf{weniger ätzresistent} als Hochtemperaturnitride. Auch die \textbf{Oberflächendiffusion hängt stark von} der \textbf{Temperatur 
+ab}: \textbf{Niedrigere Temperaturen} führen zu geringerer Beweglichkeit auf der Oberfläche und somit zu \textbf{poröseren Schichten} \cite{keplinger2024CVD}.
 
 \vspace{1em}
 \section{Lithographie} % Lithographie
