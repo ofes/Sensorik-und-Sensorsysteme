@@ -497,6 +497,7 @@ unbekannte Begriffe nachzuschauen. \textbf{Begriffe}, die bereits \textbf{in den
     \item \textbf{Erzwungene Konvenktion}: Erzwungene Konvektion bedeutet, dass der Transport von Stoffen, wie Gasen, durch eine äußere Kraft unterstützt wird, 
     zum Beispiel durch einen Ventilator oder einen Gasstrom. Dadurch gelangen die Reaktanten gezielt an ihren Bestimmungsort \cite{incropera2007, bergman2011, 
     kays2005, bejan2013}.
+    \item{Konformität}: Verhältnis der Beschichtungsdicke auf den vertikalen Flächen zu der auf den horizontalen Flächen der Strukturen am Substrat.
 \end{itemize}
 
 \vspace{1em}
@@ -534,7 +535,9 @@ Hier werden \textbf{beispielhaft} die Teilprozesse zur \textbf{Bildung von Siliz
     10~mbar oder verdünnt die Gase mit einem Trägergas\footnote{Durch das Reduzieren des Drucks oder die Zugabe eines Trägergases wird die Dichte der 
     Ausgangsstoffe verringert, sodass die Moleküle seltener aufeinanderstoßen. Dadurch haben die Reaktanten eine höhere Chance, die Oberfläche zu erreichen und
      dort zu reagieren, statt bereits in der Gasphase zu reagieren.} \cite{keplinger2024CVD}.
-    \item \textbf{Oberflächendiﬀusion}: Durch diesen Vorgang wird das Reaktionsprodukt Si$_3$N$_4$ (Siliziumnitrid) in die Schicht eingebaut\footnote{Damit ist gemeint, dass das Reaktionsprodukt in die Oberfläche diffundiert. Es wandert also in die Schicht hinein und verteilt sich.} und möglichst bis an die Schichtkante transportiert \cite{keplinger2024CVD}.
+    \item \textbf{Oberflächendiﬀusion}: Durch diesen Vorgang wird das Reaktionsprodukt Si$_3$N$_4$ (Siliziumnitrid) in die Schicht eingebaut\footnote{Damit ist 
+    gemeint, dass das Reaktionsprodukt in die Oberfläche diffundiert. Es wandert also in die Schicht hinein und verteilt sich.} und möglichst bis an die 
+    Schichtkante transportiert \cite{keplinger2024CVD}.
     \item \textbf{Desorption}: Bei der chemischen Reaktion entstehen nicht nur die gewünschten Schichtbestandteile, sondern auch Nebenprodukte (wie hier H$_2$), 
     die an der Oberfläche ``kleben'' (adsorbiert sind) bleiben. Diese müssen sich wieder lösen (desorbieren) und dann durch die Grenzschicht ``hindurchwandern'' 
     (diffundieren), um entfernt zu werden \cite{keplinger2024CVD}.
@@ -545,6 +548,166 @@ Je nach \textbf{Beschichtungsparametern}, insbesondere der \textbf{Temperatur}, 
 \textbf{Schichtqualität erheblich beeinflusst}. \textbf{Siliziumnitride}, die \textbf{bei niedrigen Temperaturen abgeschieden} werden, e\textbf{nthalten mehr 
 Wasserstoff} und sind daher \textbf{weniger ätzresistent} als Hochtemperaturnitride. Auch die \textbf{Oberflächendiffusion hängt stark von} der \textbf{Temperatur 
 ab}: \textbf{Niedrigere Temperaturen} führen zu geringerer Beweglichkeit auf der Oberfläche und somit zu \textbf{poröseren Schichten} \cite{keplinger2024CVD}.
+
+\vspace{1em}
+\subsection{CVD-Anlagen} % CVD-Anlagen
+Die verschiedenen CVD-Anlagen können nach unterschiedlichen Kriterien wie Betriebs- oder Konstruktionsparametern klassifiziert werden. Es gibt zahlreiche mögliche 
+Kombinationen, wobei jedoch nicht alle theoretischen Optionen vollständig genutzt werden. Einige dieser Kriterien werden im Folgenden genauer besprochen 
+\cite{keplinger2024CVD}:
+
+\begin{itemize}
+    \item \textbf{Verbrauch an Reaktanden}
+    \item \textbf{Reaktionsort}
+    \item \textbf{Energiezufuhr}
+    \item \textbf{Erwärmte Anlagenteile}
+    \item \textbf{Druck}
+\end{itemize}
+
+\vspace{1em}
+\subsubsection{Verbrauch an Reaktanden} % Verbruach an Reaktanden
+Ein wichtiges Kriterium ist der Verbrauch der Reaktanden, der darüber entscheidet, \textbf{welcher CVD-Reaktor für welchen Anwendungsfall} geeignet ist. Man 
+unterschiedet zwischen Differential- und Integralreaktoren \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Differnetialreaktor:}} \textbf{Fast die gesamte Menge der Ausgangsstoffe, die in die Reaktionskammer eintritt, verlässt diese auch wieder}. 
+Lediglich eine \textbf{vergleichsweise kleine (differentielle) Menge wird tatsächlich verbraucht} und abgeschieden. Aus Sicht des Materialeinsatzes ist 
+\textbf{dieser Reaktortyp} zwar \textbf{unökonomisch}, jedoch bleiben die \textbf{Konzentrationen im Reaktor konstant}, was \textbf{gleichmäßige Beschichtungen} 
+ermöglicht \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Integralreaktor:}} \textbf{Entlang des Gasstroms} entsteht ein \textbf{deutlicher Konzentrationsgradient}, wobei \textbf{stromabwärts} ein 
+\textbf{Mangel an Reaktanden} auftritt (\textit{starved reactor}). Diese Reaktoren sind aufgrund der \textbf{hohen Abscheideraten gut für} die \textbf{Produktion} 
+geeignet. \textbf{Bei hohen Temperaturen und entsprechend hoher Oberflächenbeweglichkeit} können \textbf{auch hier homogene Schichten} erzielt werden.
+
+\vspace{1em}
+\subsubsection{Reaktionsort} % Reaktionsort
+Bei diesem Kriterium wird unterschieden, \textbf{an welchem Ort in der CVD-Anlage die Reaktanden miteinander reagieren} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Homogene CVD:}} Die \textbf{Reaktanden reagieren bereits in der Gasphase}, wobei das \textbf{Reaktionsprodukt durch} die 
+\textbf{Grenzschicht zum Substrat diffundiert} und sich \textbf{dort abschiedet}. Solche CVD-Prozesse führen häufig zu \textbf{schlecht haftenden Schichten} mit 
+deutlich \textbf{mehr Defekten} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Heterogene CVD:}} Die Schicht bildet sich durch die \textbf{chemische Reaktion direkt an der Substratoberfläche}. Aufgrund der 
+\textbf{besseren Schichteigenschaften} wird diese Variante \textbf{in der Mikrosystemtechnik bevorzugt} \cite{keplinger2024CVD}.
+
+\vspace{1em}
+\subsubsection{Energiezufuhr} % Energiezufuhr
+Ein weiteres wesentliches Kriterium ist die Energiezufuhr, die bestimmt, \textbf{wie die für die Reaktion benötigte Energie bereitgestellt 
+wird} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Thermische Anregung:}} Das \textbf{Substrat} wird \textbf{mithilfe von Öfen oder Heizplatten auf} die erforderliche \textbf{Reaktionstemperatur 
+gebracht} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Plasma:}} Durch eine \textbf{Gasentladung} entsteht ein Plasma, das den \textbf{Großteil der Energie für die chemische Reaktion} bereitstellt, 
+weshalb man von \textbf{PECVD (\textit{plasma enhanced} CVD)} spricht. Die \textbf{thermische Belastung der Oberfläche und des Sunstrats} bleibt dabei 
+\textbf{gering}\footnote{In der Physik bezeichnet man ein Plasma als ein teilweise oder vollständig ionisiertes Gas. Plasmen werden in ``heiß'' und ``kalt'' 
+unterteilt, je nachdem, ob thermisches Gleichgewicht zwischen den Teilchen besteht. In einem heißen Plasma haben Elektronen und Ionen die gleiche Temperatur 
+(typischerweise $kT > 5000$ K), die notwendig ist, um Elektronen aus Atomen herauszuschlagen. In einem kalten Plasma hingegen ist nur die Temperatur der Elektronen 
+hoch, während die Ionen und neutralen Gasteilchen deutlich kühler bleiben. Das liegt daran, dass Elektronen etwa 100.000-mal leichter als Ionen sind und somit kaum 
+Energie mit diesen austauschen können, ähnlich wie ein Tischtennisball, der eine Billardkugel trifft. Aufgrund des geringen Drucks in Plasmaanlagen ist die freie 
+Weglänge groß, was zu wenigen Kollisionen führt, bevor die Teilchen die Anlage verlassen. Bei der Anregung des Plasmas durch eine Gasentladung werden die 
+Elektronen erhitzt, ohne das Gas insgesamt zu erwärmen. Die hochenergetischen Elektronen ionisieren oder dissoziieren das Restgas und ermöglichen chemische 
+Reaktionen, die normalerweise bei niedrigen Temperaturen nicht stattfinden würden, wodurch die thermische Belastung des Substrats und der Oberflächen gering 
+bleibt \cite{keplinger2024CVD}.} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+
+Das \textbf{Plasma kann kapazitiv} durch parallel angeordnete Elektroden (Parallelplattenanlage) -- zu sehen in \autoref{fig:PECVD} -- \textbf{oder induktiv} 
+durch eine Spule um die Reaktorkammer (ICP-Anlage, \textit{inductive coupled plasma}) \textbf{angeregt werden}. Dabei wird häufig die industriefreigegebene 
+Frequenz von 13,56~MHz verwendet, und die Anlagen sind aufgrund ihrer \textbf{starken elektromagnetischen Strahlung} abgeschirmt \cite{keplinger2024CVD}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/PECVD-Anlage.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Schematischer Aufbau einer PECVD-Anlage, bei der das Plasma durch eine Gasentladung erzeugt wird (Parallelplattenanlage). Die 
+    Elektronentemperatur beträgt $T_\mathrm{el} = 10\,000{-}90\,000 \, \mathrm{K}$ (1–8 eV), die Ionentemperatur $T_\mathrm{ion} = 500{-}1\,000 \, \mathrm{K}$, 
+    und der Druck liegt bei $p = 0.1{-}10 \, \mathrm{mbar}$ \cite{keplinger2024CVD}.}
+    \label{fig:PECVD}
+\end{figure}
+
+\vspace{0.0em}
+\paragraph{\uline{Laser:}} Durch die \textbf{gezielte lokale Erwärmung des Substrats mittels Laser (LCVD)} können \textbf{Schichten schreibend auf} das 
+\textbf{Substrat aufgetragen} und sogar \textbf{dreidimensionale Strukturen} erzeugt werden (\autoref{fig:LCVD}). Wie bei den meisten schreibenden Verfahren eignet 
+sich der LCVD-Prozess \textbf{gut für Prototypen und Forschungszwecke}, ist jedoch \textbf{weniger geeignet für industrielle Anwendungen} \cite{keplinger2024CVD}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.55\textwidth]{images/Laser CVD.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Laser-unterstützte CVD: Der Laser erwärmt das Substrat punktuell, wodurch die chemische Reaktion und Schichtabscheidung nur im Bereich des Laserflecks 
+    stattfinden \cite{keplinger2024CVD}.}
+    \label{fig:LCVD}
+\end{figure}
+
+\vspace{1em}
+\subsubsection{Erwärmte Anlagenteile} % Erwärmte Anlagenteile
+Bei einer CVD-Anlage ist ebenfalls zu berücksichtigen, welche \textbf{Teile des Reaktors} erwärmt werden \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Hot-Wall-Reaktor:}} Der \textbf{Substrathalter (Susceptor) mit} den \textbf{Substraten und die Reaktorkammer werden durch} 
+einen \textbf{Ofen mit Widerstandsheizung erwärmt} (\autoref{fig:Hot-Wall-Reaktor}). Die \textbf{Wafer stehen frei} und können 
+\textbf{dicht gepackt} werden, wodurch die \textbf{Beschichtung} (z.B. Polysilizium) \textbf{auf beiden Seiten bei Temperaturen zwischen 400 
+und 1000°C} erfolgt. Allerdings werden \textbf{auch die Reaktorwände beschichtet}, was durch \textbf{Partikelbildung} zu Problemen führen 
+kann \cite{keplinger2024CVD}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.65\textwidth]{images/Hot-wall-reactor.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Schematische Anordnung beim Hot-wall-Reaktor \cite{keplinger2024CVD}.}
+    \label{fig:Hot-Wall-Reaktor}
+\end{figure}
+
+\vspace{0.0em}
+\paragraph{\uline{Cold-Wall-Reaktor:}} Der \textbf{Waferhalter} wird hier entweder \textbf{resistiv, induktiv oder durch Strahlungslampen 
+erhitzt}, während die \textbf{Reaktorwände kalt} bleiben (\autoref{fig:Cold-Wall-Reaktor}). Dies führt zu \textbf{geringeren Ablagerungen an 
+den Wänden} und dadurch zu \textbf{weniger Partikelkontaminationen} im Vergleich zum Hot-Wall-Reaktor \cite{keplinger2024CVD}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.60\textwidth]{images/Cold-wall-reactor.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Schematischer Aufbau des Cold-wall-Reaktors \cite{keplinger2024CVD}.}
+    \label{fig:Cold-Wall-Reaktor}
+\end{figure}
+
+\vspace{1em}
+\subsubsection{Druck} % Druck
+Schließlich ist auch der Druck zu berücksichtigen, \textbf{unter dem die Reaktionen stattfinden} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+\paragraph{\uline{Atmospheric Pressure CVD (APCVD):}} Bei diesem Verfahren erfolgt die \textbf{Abscheidung einer Oxidschicht unter 
+Atmosphärendruck} und ohne Evakuierung der Anlage bei einer Temperatur von z.B. \textbf{400°C}. Die Oxidschicht bildet sich über \textbf{folgende chemische 
+Reaktionen}\footnote{Bei diesen Reaktionen handelt es sich um Oxidationsreaktionen, bei denen aus dem Ausgangsstoff Silan (\(\mathrm{SiH}_4\)) und Sauerstoff 
+(\(\mathrm{O}_2\)) Siliziumdioxid (\(\mathrm{SiO}_2\)) gebildet wird \cite{keplinger2024CVD}. Dies geschieht über zwei mögliche Reaktionswege: 1. 
+\(\mathrm{SiH}_4 + 2 \, \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\mathrm{O}\): Silan reagiert mit zwei Molekülen Sauerstoff und bildet 
+Siliziumdioxid sowie Wasser (\(\mathrm{H}_2\mathrm{O}\)) als Nebenprodukt. 2. \(\mathrm{SiH}_4 + \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\): 
+Hier reagiert Silan mit einem Molekül Sauerstoff, wodurch ebenfalls Siliziumdioxid entsteht, jedoch ist das Nebenprodukt Wasserstoffgas (\(\mathrm{H}_2\)). Beide 
+Reaktionen finden bei typischen CVD-Prozesstemperaturen statt und führen zur Bildung einer Siliziumdioxidschicht (\(\mathrm{SiO}_2\)) auf dem Substrat. Die Wahl 
+der Reaktion hängt von den Prozessbedingungen wie Temperatur und Sauerstoffkonzentration ab \cite{keplinger2024CVD}.}:
+$$
+\mathrm{SiH}_4 + 2 \, \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\mathrm{O}
+$$
+$$
+\mathrm{SiH}_4 + \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2
+$$
+Aufgrund der \textbf{niedrigen Prozesstemperatur} werden die \textbf{Seitenwände (Flanken) der Strukturen weniger stark beschichtet als die horizontalen Bereiche}, 
+was zu einer \textbf{geringen Konformität}\footnote{Die Konformität beschreibt das Verhältnis der Beschichtungsdicke an den Seitenwänden zur Beschichtungsdicke in 
+horizontalen Bereichen \cite{keplinger2024CVD}.} führt \cite{keplinger2024CVD}.
+    
+\vspace{0.0em}
+\paragraph{\uline{Low Pressure CVD (LPCVD):}} Werden die \textbf{Schichten in} einem \textbf{evakuierten Reaktor abgeschieden}, handelt es sich um Low Pressure 
+CVD. Die \textbf{Drücke} liegen typischerweise im Bereich von \textbf{10 bis 100 Pa}. Ein häufiges \textbf{Anwendungsbeispiel} ist die \textbf{Abscheidung dünner 
+Schichten aus Polysilizium oder Siliziumnitrid}. Diese Schichten weisen eine \textbf{nahezu perfekte Konformität} auf, d.h., die \textbf{vertikalen Schichten in 
+Kanälen haben fast die gleiche Dicke wie die horizontalen Flächen}, mit einer \textbf{Konformität von bis zu 0,98} \cite{keplinger2024CVD}.
+
+\vspace{1em}
+\subsection{Atomlagenabscheidung} % Atomlagenabscheidung
 
 \vspace{1em}
 \section{Lithographie} % Lithographie
