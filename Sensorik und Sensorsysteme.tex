@@ -61,89 +61,76 @@
 
 \pagenumbering{arabic} % Beginnt die Nummerierung ab hier
 
+
+
+% Einleitung --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 \section*{Einleitung} % Einleitung
-Diese Zusammenfassung der Vorlesung \textit{Sensorik und Sensorsysteme} (366.071) an der TU Wien dient als Lernhilfe und wurde sorgfältig erstellt. Dennoch sind 
-Fehler möglich, da sie menschlich sind. Leserinnen und Leser sind daher eingeladen, auf eventuelle Unstimmigkeiten zu achten und diese an 
-\texttt{e1616023@student.tuwien.ac.at} zu melden. Alternativ können Korrekturen direkt im Repository auf GitHub vorgenommen werden: \\ 
-\url{https://github.com/ofes/sensorik-und-sensorsysteme}. Bei Bedarf einer Zugriffsberechtigung gerne eine Nachricht an \url{https://github.com/ofes} senden.
+
+Diese Zusammenfassung der Vorlesung \textit{Sensorik und Sensorsysteme} (366.071) an der TU Wien dient als Lernhilfe und wurde sorgfältig erstellt. Dennoch sind Fehler möglich. Leserinnen und Leser sind daher eingeladen, auf eventuelle Unstimmigkeiten zu achten und diese an \\ \texttt{e1616023@student.tuwien.ac.at} zu melden. Alternativ können Korrekturen direkt im Repository auf GitHub vorgenommen werden: \\ \url{https://github.com/ofes/sensorik-und-sensorsysteme}. Bei Bedarf einer Zugriffsberechtigung gerne eine Nachricht an \url{https://github.com/ofes} senden.
 
 \vspace{1em}
 
-Im ersten Abschnitt dieser Zusammenfassung werden grundlegende Herstellungsmethoden der Mikrosystemtechnik erläutert. Anschließend folgt eine Vorstellung 
-ausgewählter MEMS-Sensoren (mikroelektromechanische Systeme) sowie ihrer Funktionsweisen.
+Im ersten Abschnitt dieser Zusammenfassung werden grundlegende Herstellungsmethoden der Mikrosystemtechnik erläutert. Anschließend folgt eine Vorstellung ausgewählter MEMS-Sensoren (mikroelektromechanische Systeme) sowie ihrer Funktionsweisen.
 
 \vspace{1em}
 
 Viel Erfolg beim Lernen!
 
-\vspace{1em}
-\section{Pysical Vapour Deposition} % PVD
-PVD (Physical Vapour Deposition) umfasst alle \textbf{physikalischen Verfahren zur Abscheidung dünner Schichten aus der Dampfphase}.
-Dabei werden die Ausgangsmaterialien der Schichten durch physikalische Prozesse wie Erhitzen in die Dampfphase überführt und anschließend 
-auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \textbf{zwischen 1~nm und 1~µm} und können 
-\textbf{in Ausnahmefällen bis zu 10~µm} erreichen \cite{keplinger2024}.
+
+
+% Pysical Vapour Deposition -----------------------------------------------------------------------------------------------------------------------------------------------
+
 
 \vspace{1em}
+
+\section{Pysical Vapour Deposition} % PVD
+
+PVD (Physical Vapour Deposition) umfasst alle \textbf{physikalischen Verfahren zur Abscheidung dünner Schichten aus der Dampfphase}. Dabei werden die Ausgangsmaterialien der Schichten durch physikalische Prozesse wie Erhitzen in die Dampfphase überführt und anschließend auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \textbf{zwischen 1~nm und 1~µm} und können \textbf{in Ausnahmefällen bis zu 10~µm} erreichen \cite{keplinger2024}.
+
+
+
+% Pysical Vapour Deposition -> Begriffsklärung PVD ------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
 \subsection{Begriffsklärung für PVD} % PVD Begriffsklärung
-Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zunächst die nachfolgenden Abschnitte zu lesen 
-und bei Bedarf hier nach unbekannten Begriffen zu suchen.
+
+Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zunächst die nachfolgenden Abschnitte zu lesen und bei Bedarf hier nach unbekannten Begriffen zu suchen.
 
 \begin{itemize}
-    \item \textbf{Monolage}: Eine Monolage (auch Monoschicht genannt) beschreibt eine Schicht, die nur aus einer einzelnen Lage von Atomen oder 
-    Molekülen besteht \cite{kittel2004}.
-    \item \textbf{Freie Weglänge}: Die freie Weglänge eines Atoms oder Moleküls in einem Plasma oder Gas ist die durchschnittliche Strecke, 
-    die ein Teilchen (wie ein Atom, Ion oder Molekül) zurücklegt, bevor es mit einem anderen Teilchen kollidiert. Diese Weglänge hängt stark 
-    von der Teilchendichte und dem Durchmesser der beteiligten Teilchen ab. \cite{kittel2004}.
+    \item \textbf{Monolage}: Eine Monolage (auch Monoschicht genannt) beschreibt eine Schicht, die nur aus einer einzelnen Lage von Atomen oder Molekülen besteht \cite{kittel2004}.
+    \item \textbf{Freie Weglänge}: Die freie Weglänge eines Atoms oder Moleküls in einem Plasma oder Gas ist die durchschnittliche Strecke, die ein Teilchen (wie ein Atom, Ion oder Molekül) zurücklegt, bevor es mit einem anderen Teilchen kollidiert. Diese Weglänge hängt stark von der Teilchendichte und dem Durchmesser der beteiligten Teilchen ab \cite{kittel2004}.
     \item \textbf{Verdampfen}: Bezeichnet den Übergang eines Stoffes vom flüssigen in den gasförmigen Zustand \cite{kittel2004}.
-    \item \textbf{Sublimieren}: Beschreibt den direkten Übergang eines Stoffes vom festen in den gasförmigen Zustand, ohne eine flüssige Phase 
-    zu durchlaufen \cite{kittel2004}.
+    \item \textbf{Sublimieren}: Beschreibt den direkten Übergang eines Stoffes vom festen in den gasförmigen Zustand, ohne eine flüssige Phase zu durchlaufen \cite{kittel2004}.
     \item \textbf{Rezipient}: Vakuumkammer \cite{keplinger2024, ohring2002}.
-    \item \textbf{Substrat}: Trägerschicht in der Mikroelektronik und Halbleiterfertigung. Der Begriff Substrat bezieht sich allgemein auf das 
-    Material oder die Oberfläche, auf der ein Herstellungs- oder Beschichtungsprozess stattfindet \cite{ohring2002}.
+    \item \textbf{Substrat}: Trägerschicht in der Mikroelektronik und Halbleiterfertigung. Der Begriff Substrat bezieht sich allgemein auf das Material oder die Oberfläche, auf der ein Herstellungs- oder Beschichtungsprozess stattfindet \cite{ohring2002}.
     \item \textbf{Wafer}: Dünne Scheibe aus einem Halbleitermaterial, wie z.B. Silizium, und dient als Substrat \cite{sze2006}.
-    \item \textbf{Tiegel} (Aufdampfen): Ein Behälter, in dem das Aufdampfmaterial lokal geschmolzen wird, häufig aus Materialien wie Graphit, 
-    Keramik oder Wolfram, die hohen Temperaturen standhalten \cite{smith1995, ohring2002}. Beim Elektronenstrahlverdampfen (E-Beam-Verfahren) wird das 
-    Aufdampfmaterial im Tiegel erhitzt und verdampft, ohne dass der gesamte Tiegel erhitzt werden muss \cite{smith1995}. Siehe
-    \autoref{fig:Tiegel und Schiffchen} b), c) und d).
-    \item \textbf{Schiffchen} (Aufdampfen): Ein kleiner, meist bootförmiger Behälter (daher der Name), der 
-    ebenfalls zur Aufnahme des Aufdampfmaterials dient, jedoch direkt beheizt wird, häufig durch Widerstandsheizung. Schiffchen bestehen oft aus 
-    Materialien wie Molybdän oder Wolfram, da sie hohe Temperaturen aushalten können \cite{mattox2010handbook, ohring2002}. Siehe \autoref{fig:PVD 
-    Aufdampfanlage} und \autoref{fig:Tiegel und Schiffchen} a).
+    \item \textbf{Tiegel} (Aufdampfen): Ein Behälter, in dem das Aufdampfmaterial lokal geschmolzen wird, häufig aus Materialien wie Graphit, Keramik oder Wolfram, die hohen Temperaturen standhalten \cite{smith1995, ohring2002}. Beim Elektronenstrahlverdampfen (E-Beam-Verfahren) wird das Aufdampfmaterial im Tiegel erhitzt und verdampft, ohne dass der gesamte Tiegel erhitzt werden muss \cite{smith1995}. Siehe \autoref{fig:Tiegel und Schiffchen} b), c) und d).
+    \item \textbf{Schiffchen} (Aufdampfen): Ein kleiner, meist bootförmiger Behälter (daher der Name), der ebenfalls zur Aufnahme des Aufdampfmaterials dient, jedoch direkt beheizt wird, häufig durch Widerstandsheizung. Schiffchen bestehen oft aus Materialien wie Molybdän oder Wolfram, da sie hohe Temperaturen aushalten können \cite{mattox2010handbook, ohring2002}. Siehe \autoref{fig:PVD Aufdampfanlage} und \autoref{fig:Tiegel und Schiffchen} a).
     \item \textbf{Target} (Sputtern): Materialquelle für die Schicht, die auf das Substrat abgeschieden werden soll \cite{keplinger2024}.
-    \item \textbf{Inerte Gase}: Auch als \textbf{Edelgase} bekannt, sind chemisch reaktionsträge Gase, die unter normalen Bedingungen kaum mit 
-    anderen Elementen oder Verbindungen reagieren. Zu den Edelgasen zählen Helium, Neon, Argon, Krypton, Xenon und Radon. Diese geringe Reaktivität ist auf 
-    ihre stabile, vollständig besetzte Elektronenkonfiguration in der äußersten Schale zurückzuführen, die sie energetisch stabil und widerstandsfähig gegenüber 
-    chemischen Reaktionen macht \cite{atkins_physical_chemistry, zumdahl_chemistry, silberberg_chemistry}.
-    \item \textbf{Gasentladung}: Bezeichnet einen physikalischen Prozess, bei dem ein elektrisches Feld in einem gasförmigen Medium zur 
-    Ionisation der Gasmoleküle führt, wodurch leitfähige Plasmen entstehen. Die dabei entstehenden freien Elektronen und Ionen ermöglichen den Stromfluss durch 
-    das Gas, was zu sichtbaren Leuchterscheinungen führen kann. Solche Entladungen treten beispielsweise in Leuchtstofflampen, Neonröhren und in der 
-    Plasmatechnologie auf \cite{prechtl2005grundlagen, boehler1994, hutchings2018}.
-    \item \textbf{Ionen}: Elektrisch geladene Atome oder Moleküle, die durch den Verlust oder Gewinn von Elektronen entstehen. \textbf{Positiv geladene Ione}, 
-    sogenannte \textbf{Kationen}, entstehen durch den Verlust von Elektronen, während \textbf{negativ geladene Ionen}, sogenannte \textbf{Anionen}, durch den 
-    Gewinn von Elektronen entstehen. Ionen spielen eine zentrale Rolle in chemischen Reaktionen, da sie die elektrische Ladung transportieren und Reaktionen 
-    ermöglichen, die die Bildung oder Trennung von chemischen Bindungen betreffen \cite{petrucci_general_chemistry, chang_chemistry, brown_chemistry_textbook}.
-    \item \textbf{Radikale}: Radikale sind Atome oder Moleküle, die mindestens ein ungepaartes Valenzelektron besitzen, was sie extrem reaktiv macht 
-    \cite{atkins2010, feynman2011}. Da sie oft instabil sind, neigen sie dazu, mit anderen Molekülen oder Atomen zu reagieren, um eine stabile 
-    Elektronenkonfiguration zu erreichen\footnote{Im Kontext von Dünnschichtprozessen wie dem Sputtern werden Radikale oft durch das energiereiche Plasma gebildet, 
-    das Bindungen in Molekülen aufbrechen kann \cite{boehler1994, hutchings2018}. Diese Radikale können dann auf der Oberfläche der zu beschichtenden Materialien 
-    reagieren, wodurch die Schichtzusammensetzung und -struktur beeinflusst wird \cite{journal_reference}.}.
-    \item \textbf{Valenzelektron}: Valenzelektronen befinden sich in der äußersten Schale eines Atoms und bestimmen die chemischen Eigenschaften eines Elements 
-    maßgeblich. Sie ermöglichen die Bindung mit anderen Atomen, wodurch Verbindungen entstehen. Edelgase besitzen volle Valenzschalen, was sie besonders stabil und 
-    reaktionsträge macht \cite{petrucci_general_chemistry, chang_chemistry, brown_chemistry_textbook}.
-    \item \textbf{Fraktionale Verdampfung von Legierungen} (Aufdampfen): Tritt auf, wenn die unterschiedlichen Siedepunkte der Metallkomponenten dazu führen, dass 
-    zunächst die Elemente mit niedrigerem Siedepunkt verdampfen, wodurch die Zusammensetzung des verbleibenden Materials verändert wird \cite{harvard_mrsec, 
-    vem_guide}. Dadurch können die Dampfphasen eine andere Zusammensetzung als die ursprüngliche Legierung aufweisen, was zu inhomogenen Beschichtungen führen 
-    kann \cite{frontiers_mpea, mdpi_vacuum_distillation}.
-    \item \textbf{Dampfphasen}: Die gasförmigen Bestandteile, die entstehen, wenn feste oder flüssige Materialien durch Zuführung von Wärme in die Gasphase 
-    übergehen, wie es bei der Verdampfung und Sublimation der Fall ist \cite{thermopedia, thoughtco, opentextbc}.
-    \item \textbf{UHV}: ``Ultra-High Vacuum'' bezeichnet ein Vakuum mit einem Druck von unter \(10^{-9}\) mbar \cite{atkins_physical_chemistry, ohring2002, 
-    smith1995}.
+    \item \textbf{Inerte Gase}: Auch als \textbf{Edelgase} bekannt, sind chemisch reaktionsträge Gase, die unter normalen Bedingungen kaum mit anderen Elementen oder Verbindungen reagieren. Zu den Edelgasen zählen Helium, Neon, Argon, Krypton, Xenon und Radon. Diese geringe Reaktivität ist auf ihre stabile, vollständig besetzte Elektronenkonfiguration in der äußersten Schale zurückzuführen, die sie energetisch stabil und widerstandsfähig gegenüber chemischen Reaktionen macht \cite{atkins_physical_chemistry, zumdahl_chemistry, silberberg_chemistry}.
+    \item \textbf{Gasentladung}: Bezeichnet einen physikalischen Prozess, bei dem ein elektrisches Feld in einem gasförmigen Medium zur Ionisation der Gasmoleküle führt, wodurch leitfähige Plasmen entstehen. Die dabei entstehenden freien Elektronen und Ionen ermöglichen den Stromfluss durch das Gas, was zu sichtbaren Leuchterscheinungen führen kann. Solche Entladungen treten beispielsweise in Leuchtstofflampen, Neonröhren und in der Plasmatechnologie auf \cite{prechtl2005grundlagen, boehler1994, hutchings2018}.
+    \item \textbf{Ionen}: Elektrisch geladene Atome oder Moleküle, die durch den Verlust oder Gewinn von Elektronen entstehen. \textbf{Positiv geladene Ionen}, sogenannte \textbf{Kationen}, entstehen durch den Verlust von Elektronen, während \textbf{negativ geladene Ionen}, sogenannte \textbf{Anionen}, durch den Gewinn von Elektronen entstehen. Ionen spielen eine zentrale Rolle in chemischen Reaktionen, da sie die elektrische Ladung transportieren und Reaktionen ermöglichen, die die Bildung oder Trennung von chemischen Bindungen betreffen \cite{petrucci_general_chemistry, chang_chemistry, brown_chemistry_textbook}.
+    \item \textbf{Radikale}: Radikale sind Atome oder Moleküle, die mindestens ein ungepaartes Valenzelektron besitzen, was sie extrem reaktiv macht \cite{atkins2010, feynman2011}. Da sie oft instabil sind, neigen sie dazu, mit anderen Molekülen oder Atomen zu reagieren, um eine stabile Elektronenkonfiguration zu erreichen\footnote{Im Kontext von Dünnschichtprozessen wie dem Sputtern werden Radikale oft durch das energiereiche Plasma gebildet, das Bindungen in Molekülen aufbrechen kann \cite{boehler1994, hutchings2018}. Diese Radikale können dann auf der Oberfläche der zu beschichtenden Materialien reagieren, wodurch die Schichtzusammensetzung und -struktur beeinflusst wird \cite{journal_reference}.}.
+    \item \textbf{Valenzelektron}: Valenzelektronen befinden sich in der äußersten Schale eines Atoms und bestimmen die chemischen Eigenschaften eines Elements maßgeblich. Sie ermöglichen die Bindung mit anderen Atomen, wodurch Verbindungen entstehen. Edelgase besitzen volle Valenzschalen, was sie besonders stabil und reaktionsträge macht \cite{petrucci_general_chemistry, chang_chemistry, brown_chemistry_textbook}.
+    \item \textbf{Fraktionale Verdampfung von Legierungen} (Aufdampfen): Tritt auf, wenn die unterschiedlichen Siedepunkte der Metallkomponenten dazu führen, dass zunächst die Elemente mit niedrigerem Siedepunkt verdampfen, wodurch die Zusammensetzung des verbleibenden Materials verändert wird \cite{harvard_mrsec, vem_guide}. Dadurch können die Dampfphasen eine andere Zusammensetzung als die ursprüngliche Legierung aufweisen, was zu inhomogenen Beschichtungen führen kann \cite{frontiers_mpea, mdpi_vacuum_distillation}.
+    \item \textbf{Dampfphasen}: Die gasförmigen Bestandteile, die entstehen, wenn feste oder flüssige Materialien durch Zuführung von Wärme in die Gasphase übergehen, wie es bei der Verdampfung und Sublimation der Fall ist \cite{thermopedia, thoughtco, opentextbc}.
+    \item \textbf{UHV}: ``Ultra-High Vacuum'' bezeichnet ein Vakuum mit einem Druck von unter \(10^{-9}\) mbar \cite{atkins_physical_chemistry, ohring2002, smith1995}.
 \end{itemize}
 
+
+
+% Pysical Vapour Deposition -> PVD-Verfahren ------------------------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsection{PVD-Verfahren} % PVD Verfahren
-Die verschiedenen PVD-Verfahren \textbf{unterscheiden sich} hauptsächlich \textbf{in der} Methode zur \textbf{Erzeugung des Dampfstrahls} 
-\cite{keplinger2024}:
+
+Die verschiedenen PVD-Verfahren \textbf{unterscheiden sich} hauptsächlich \textbf{in der} Methode zur \textbf{Erzeugung des Dampfstrahls} \cite{keplinger2024}:
 
 \begin{enumerate}
     \item \textbf{Thermisches Verdampfen (Aufdampfen)}
@@ -154,171 +141,160 @@ Die verschiedenen PVD-Verfahren \textbf{unterscheiden sich} hauptsächlich \text
 
 Im Folgenden werden lediglich die ersten beiden Methoden erläutert.
 
+
+
+% Pysical Vapour Deposition -> Aufdampfen ---------------------------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsection{Aufdampfen} % PVD Aufdampfen
-Das thermische Aufdampfen gehört zu den ältesten Methoden zur Herstellung dünner Schichten (\autoref{fig:PVD Aufdampfanlage}). Dabei wird das 
-\textbf{Material der Aufdampfquelle auf} eine Temperatur von \textbf{500 bis 3000°C erhitzt}, bis es einen ausreichend hohen 
-Dampfdruck\footnote{Ein hoher Dampfdruck ist beim Aufdampfen entscheidend, da er sicherstellt, dass genügend Atome oder Moleküle des Materials 
-in die Gasphase übertreten und eine dampfartige Wolke bilden. Diese Wolke ermöglicht eine ausreichende Partikelzufuhr zum Zielsubstrat, wodurch 
-sich eine gleichmäßige, dünne Schicht bildet. Bei zu geringem Dampfdruck wären nur wenige Teilchen verdampft, was zu einer ungleichmäßigen und 
-ineffizienten Beschichtung führen würde.} entwickelt \cite{keplinger2024}.
+
+Das thermische Aufdampfen gehört zu den ältesten Methoden zur Herstellung dünner Schichten (\autoref{fig:PVD Aufdampfanlage}). Dabei wird das \textbf{Material der Aufdampfquelle auf} eine Temperatur von \textbf{500 bis 3000°C erhitzt}, bis es einen ausreichend hohen Dampfdruck\footnote{Ein hoher Dampfdruck ist beim Aufdampfen entscheidend, da er sicherstellt, dass genügend Atome oder Moleküle des Materials in die Gasphase übertreten und eine dampfartige Wolke bilden. Diese Wolke ermöglicht eine ausreichende Partikelzufuhr zum Zielsubstrat, wodurch sich eine gleichmäßige, dünne Schicht bildet. Bei zu geringem Dampfdruck wären nur wenige Teilchen verdampft, was zu einer ungleichmäßigen und ineffizienten Beschichtung führen würde.} entwickelt \cite{keplinger2024}.
 
 \vspace{1em}
 
-Meist schmilzt das Material dabei, doch einige Stoffe, wie beispielsweise Chrom, erreichen bereits vor dem Schmelzpunkt einen ausreichend hohen 
-Dampfdruck und sublimieren, indem sie direkt aus dem festen Zustand verdampfen \cite{keplinger2024}.
+Meist schmilzt das Material dabei, doch einige Stoffe, wie beispielsweise Chrom, erreichen bereits vor dem Schmelzpunkt einen ausreichend hohen Dampfdruck und sublimieren, indem sie direkt aus dem festen Zustand verdampfen \cite{keplinger2024}.
 
 \vspace{1em}
 
-Der \textbf{entstehende Dampf} breitet sich aus und \textbf{kondensiert an} allen \textbf{kälteren Oberflächen} in der Vakuumkammer, 
-\textbf{einschließlich des Substrats}. Der Prozess findet im \textbf{Vakuum bei Drücken} von typischerweise 
-\textbf{unter $\mathbf{10^{-6}}$~mbar} statt \cite{keplinger2024}.
+Der \textbf{entstehende Dampf} breitet sich aus und \textbf{kondensiert an} allen \textbf{kälteren Oberflächen} in der Vakuumkammer, \textbf{einschließlich des Substrats}. Der Prozess findet im \textbf{Vakuum bei Drücken} von typischerweise \textbf{unter $\mathbf{10^{-6}}$~mbar} statt \cite{keplinger2024}.
 
 \vspace{1em}
 
-Dabei ist die \textbf{freie Weglänge der Teilchen deutlich größer als} die \textbf{Distanz zwischen} der \textbf{Aufdampfquelle und} dem 
-\textbf{Substrat}. Dies führt dazu, dass die \textbf{Teilchen nur selten mit} dem \textbf{Restgas kollidieren und sich geradlinig von der Quelle 
-zum Substrat bewegen} \cite{keplinger2024}.
+Dabei ist die \textbf{freie Weglänge der Teilchen deutlich größer als} die \textbf{Distanz zwischen} der \textbf{Aufdampfquelle und} dem \textbf{Substrat}. Dies führt dazu, dass die \textbf{Teilchen nur selten mit} dem \textbf{Restgas kollidieren und sich geradlinig von der Quelle zum Substrat bewegen} \cite{keplinger2024}.
 
 \vspace{1em}
 
-Die \textbf{kinetische Energie der Teilchen, die auf} der \textbf{Substratoberfläche kondensieren}, beträgt etwa \textbf{0,1 bis 0,5~eV}, was im 
-Vergleich zum Sputtern (bis zu 100~eV) \textbf{sehr gering} ist \cite{keplinger2024}.
+Die \textbf{kinetische Energie der Teilchen, die auf} der \textbf{Substratoberfläche kondensieren}, beträgt etwa \textbf{0,1 bis 0,5~eV}, was im Vergleich zum Sputtern (bis zu 100~eV) \textbf{sehr gering} ist \cite{keplinger2024}.
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=\textwidth]{images/PVD Aufdampfanlage.png} % Pfad und Dateiname des Bildes angeben
+    \includegraphics[width=.9\textwidth]{images/PVD Aufdampfanlage.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{Schematischer Aufbau einer PVD Aufdampfanlage \cite{keplinger2024}.}
     \label{fig:PVD Aufdampfanlage}
 \end{figure}
 
+
+
+% Pysical Vapour Deposition -> Aufdampfen -> Funktionsweise ---------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsubsection{Funktionsweise}
+
 Basierend auf \autoref{fig:PVD Aufdampfanlage} wird im Folgenden die Funktionsweise dieses Verfahrens erläutert \cite{keplinger2024}:
 
 \begin{enumerate}
-    \item \textbf{Vakuum}: Im Rezipient wird mit dem Pumpsystem ein Vakuum erzeugt.
+    \item \textbf{Vakuum}: Im Rezipienten wird mit dem Pumpsystem ein Vakuum erzeugt.
     \item \textbf{Aufheizen}: Das Aufdampfmaterial wird auf eine Temperatur von 500 bis 3000~°C erhitzt.
-    \item \textbf{Öffnen des Shutters}: Sobald ein ausreichend hoher Dampfdruck erreicht ist, wird der Shutter weggeschwenkt, um die Bedampfung 
-    des Substrats zu ermöglichen. Wird der Shutter zu früh geöffnet oder ist er während des Aufheizens nicht vorhanden, kann es zu einer 
-    ungleichmäßigen Abscheidung kommen bzw. es können unerwünschte Oxide des Aufdampfmaterials auf das Substrat abgeschieden werden. Der Weg der
-     Teilchen zum Substrat wird daher durch ein Schirmblech (Shutter) blockiert.
-    \item \textbf{Abscheidung am Substrat}: Das Aufdampfmaterial kondensiert nun mit einer konstanten Rate sowohl auf dem Substrat als auch auf 
-    dem Schwingquarz. Der Schwingquarz dient zur Messung der Schichtdicke, indem Änderungen seiner Resonanzfrequenz erfasst werden.
+    \item \textbf{Öffnen des Shutters}: Sobald ein ausreichend hoher Dampfdruck erreicht ist, wird der Shutter weggeschwenkt, um die Bedampfung des Substrats zu ermöglichen. Wird der Shutter zu früh geöffnet oder ist er während des Aufheizens nicht vorhanden, kann es zu einer ungleichmäßigen Abscheidung kommen bzw. es können unerwünschte Oxide des Aufdampfmaterials auf das Substrat abgeschieden werden. Der Weg der Teilchen zum Substrat wird daher durch ein Schirmblech (Shutter) blockiert.
+    \item \textbf{Abscheidung am Substrat}: Das Aufdampfmaterial kondensiert nun mit einer konstanten Rate sowohl auf dem Substrat als auch auf dem Schwingquarz. Der Schwingquarz dient zur Messung der Schichtdicke, indem Änderungen seiner Resonanzfrequenz erfasst werden.
 \end{enumerate}
 
-\vspace{1em}
-\subsubsection{Schichtdickenmessung}
-Zur Messung der Schichtdicke wird ein \textbf{piezoelektrisches Schwingquarzplättchen} verwendet, das \textbf{nahe\footnote{Da Schwingquarz und 
-Substrat unterschiedliche Abstände zur Aufdampfquelle haben und sich zudem unterschiedlich nah an der Achse des Aufdampfstrahls befinden, 
-ergeben sich unterschiedliche Aufdampfraten. Diese Abweichungen werden durch einen experimentell zu bestimmenden Geometriefaktor
-(Tooling-Factor) korrigiert.} am Substrat positioniert} ist. Durch Anlegen einer Wechselspannung wird das Quarzplättchen in eine 
-(Scher-)Schwingung versetzt. \textbf{Wenn} das \textbf{Aufdampfmaterial auf} dem \textbf{Quarz kondensiert} und seine Masse zunimmt, 
-\textbf{sinkt} die \textbf{Resonanzfrequenz} des Quarzes. Diese Abnahme der Frequenz ist \textbf{proportional zur Dicke der abgeschiedenen 
-Schicht} und dient als Messgrundlage. Die Resonanzfrequenz startet typischerweise bei etwa 5~MHz und sollte, wenn sie auf 4~MHz fällt, zum 
-Austausch des Quarzplättchens führen, um präzise Messwerte sicherzustellen \cite{keplinger2024}.
+
+
+% Pysical Vapour Deposition -> Aufdampfen -> Schichtdickenmessung ---------------------------------------------------------------------------------------------------------
+
 
 \vspace{1em}
+
+\subsubsection{Schichtdickenmessung}
+
+Zur Messung der Schichtdicke wird ein \textbf{piezoelektrisches Schwingquarzplättchen} verwendet, das \textbf{nahe\footnote{Da Schwingquarz und Substrat unterschiedliche Abstände zur Aufdampfquelle haben und sich zudem unterschiedlich nah an der Achse des Aufdampfstrahls befinden, ergeben sich unterschiedliche Aufdampfraten. Diese Abweichungen werden durch einen experimentell zu bestimmenden Geometriefaktor (Tooling-Factor) korrigiert.} am Substrat positioniert} ist. Durch Anlegen einer Wechselspannung wird das Quarzplättchen in eine (Scher-)Schwingung versetzt. \textbf{Wenn} das \textbf{Aufdampfmaterial auf} dem \textbf{Quarz kondensiert} und seine Masse zunimmt, \textbf{sinkt} die \textbf{Resonanzfrequenz} des Quarzes. Diese Abnahme der Frequenz ist \textbf{proportional zur Dicke der abgeschiedenen Schicht} und dient als Messgrundlage. Die Resonanzfrequenz startet typischerweise bei etwa 5~MHz und sollte, wenn sie auf 4~MHz fällt, zum Austausch des Quarzplättchens führen, um präzise Messwerte sicherzustellen \cite{keplinger2024}.
+
+
+
+% Pysical Vapour Deposition -> Aufdampfen -> Erwärmung mittels Elektronenstrahlquelle (E-Beam-Verfahren) ------------------------------------------------------------------
+
+
+\vspace{1em}
+
 \subsubsection{Erwärmung mittels Elektronenstrahlquelle (E-Beam-Verfahren)}
 
-Bei dieser Methode wird ein \textbf{Elektronenstrahl gezielt auf} einen \textbf{kleinen Bereich des Aufdampfmaterials fokussiert}, sodass das 
-Material \textbf{lokal aufgeschmolzen} wird, während der Großteil fest bleibt (\autoref{fig:Tiegel und Schiffchen} b), c) und d)). Der 
-\textbf{Tiegel} selbst wird dabei \textbf{nicht auf hohe Temperaturen erhitzt}, was das \textbf{Risiko einer Kontamination durch} das 
-\textbf{Tiegelmaterial verringert und höhere Arbeitstemperaturen} als bei herkömmlichen Quellen, wie Schiffchenquellen, ermöglicht 
-(\autoref{fig:Tiegel und Schiffchen} a)). Um eine \textbf{effektive Wärmeableitung} sicherzustellen, besteht der \textbf{Tiegel aus Kupfer} und 
-wird direkt \textbf{vom Kühlwasser durchströmt}. Das \textbf{Aufdampfmaterial} muss \textbf{leitfähig} sein, da sich andernfalls elektrische 
-Ladungen ansammeln könnten, die den Elektronenstrahl ablenken könnten \cite{keplinger2024}.
+Bei dieser Methode wird ein \textbf{Elektronenstrahl gezielt auf} einen \textbf{kleinen Bereich des Aufdampfmaterials fokussiert}, sodass das Material \textbf{lokal aufgeschmolzen} wird, während der Großteil fest bleibt (\autoref{fig:Tiegel und Schiffchen} b), c) und d)). Der \textbf{Tiegel} selbst wird dabei \textbf{nicht auf hohe Temperaturen erhitzt}, was das \textbf{Risiko einer Kontamination durch} das \textbf{Tiegelmaterial verringert und höhere Arbeitstemperaturen} als bei herkömmlichen Quellen, wie Schiffchenquellen, ermöglicht (\autoref{fig:Tiegel und Schiffchen} a)). Um eine \textbf{effektive Wärmeableitung} sicherzustellen, besteht der \textbf{Tiegel aus Kupfer} und wird direkt \textbf{vom Kühlwasser durchströmt}. Das \textbf{Aufdampfmaterial} muss \textbf{leitfähig} sein, da sich andernfalls elektrische Ladungen ansammeln könnten, die den Elektronenstrahl ablenken könnten \cite{keplinger2024}.
 
 \vspace{1em}
 
-Ein \textbf{Permanentmagnet in der Nähe der Elektronenstrahlquelle lenkt} den \textbf{Strahl um 270° ab, sodass} die \textbf{Quelle} selbst 
-\textbf{nicht beschichtet wird} (\autoref{fig:Tiegel und Schiffchen} b) und c)). Die \textbf{Steuerung des Systems} ermöglicht zudem ein 
-\textbf{Fokussieren oder Defokussieren des Strahls}, eine \textbf{präzise Positionierung über Spulen} sowie eine \textbf{kontrollierte 
-Leistungsanpassung} bis zu 5~kW. Durch ein leichtes Wobbeln des Strahls kann ein größerer Bereich des Aufdampfmaterials überstrichen werden, was
- zu einem gleichmäßigen Erhitzen führt \cite{keplinger2024}.
+Ein \textbf{Permanentmagnet in der Nähe der Elektronenstrahlquelle lenkt} den \textbf{Strahl um 270° ab, sodass} die \textbf{Quelle} selbst \textbf{nicht beschichtet wird} (\autoref{fig:Tiegel und Schiffchen} b) und c)). Die \textbf{Steuerung des Systems} ermöglicht zudem ein \textbf{Fokussieren oder Defokussieren des Strahls}, eine \textbf{präzise Positionierung über Spulen} sowie eine \textbf{kontrollierte Leistungsanpassung} bis zu 5~kW. Durch ein leichtes Wobbeln des Strahls kann ein größerer Bereich des Aufdampfmaterials überstrichen werden, was zu einem gleichmäßigen Erhitzen führt \cite{keplinger2024}.
 
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=.9\textwidth]{images/Tiegel und Schiffchen.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{%
-    a) Aufdampfschiffchen, mit Aluminiumoxid (milchige Bereiche) beschichtet, um das Benetzen durch das Aufdampfmaterial zu minimieren. 
-    b) Schematischer Aufbau einer Elektronenstrahlquelle: S...Spule, A...Anode, K...Kathode, W...Wehneltzylinder, T...Tiegel mit 
-    Aufdampfmaterial, L...Wasserkühlung, M...Permanentmagnet.  
-    c) Elektronenstrahlquelle im Inneren der Vakuumkammer (Rezipient). 
-    d) Vierlochtiegel für die Elektronenstrahlquelle, der Beschichtungen aus bis zu vier verschiedenen Materialien ermöglicht 
+    a) Aufdampfschiffchen, mit Aluminiumoxid (milchige Bereiche) beschichtet, um das Benetzen durch das Aufdampfmaterial zu minimieren. b) Schematischer Aufbau einer Elektronenstrahlquelle: S...Spule, A...Anode, K...Kathode, W...Wehneltzylinder, T...Tiegel mit Aufdampfmaterial, L...Wasserkühlung, M...Permanentmagnet. c) Elektronenstrahlquelle im Inneren der Vakuumkammer (Rezipient). d) Vierlochtiegel für die Elektronenstrahlquelle, der Beschichtungen aus bis zu vier verschiedenen Materialien ermöglicht 
     \cite{keplinger2024}.
     }
     \label{fig:Tiegel und Schiffchen}
 \end{figure}
 
+
+
+% Pysical Vapour Deposition -> Sputtern (Zerstäubung) ---------------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsection{Sputtern (Zerstäubung)} % Sputtern (Zerstäubung)
 
-Der Sputterprozess ist ein \textbf{Abscheidungsverfahren}, bei dem \textbf{Atome aus dem Target}, der Materialquelle für die gewünschte Schicht, 
-\textbf{durch energiereiche Ionen herausgeschlagen} und \textbf{auf} dem \textbf{Substrat abgeschiede}n werden. \autoref{fig:Sputteranlage}
-zeigt den schematischen Aufbau einer Sputteranlage \cite{keplinger2024}.
+Der Sputterprozess ist ein \textbf{Abscheidungsverfahren}, bei dem \textbf{Atome aus dem Target}, der Materialquelle für die gewünschte Schicht, \textbf{durch energiereiche Ionen herausgeschlagen} und \textbf{auf} dem \textbf{Substrat abgeschieden} werden. \autoref{fig:Sputteranlage} zeigt den schematischen Aufbau einer Sputteranlage \cite{keplinger2024}.
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=.85\textwidth]{images/Sputtern.png} % Pfad und Dateiname des Bildes angeben
+    \includegraphics[width=.7\textwidth]{images/Sputtern.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{Schematischer Aufbau einer Sputteranlage \cite{keplinger2024}.}
     \label{fig:Sputteranlage}
 \end{figure}
 
+
+
+% Pysical Vapour Deposition -> Sputtern (Zerstäubung) -> Funktionsweise ---------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsubsection{Funktionsweise} % Funktionsweise
+
 Anhand der \autoref{fig:Sputteranlage} wird die Funktionsweise der Sputteranlage näher erläutert \cite{keplinger2024}:
 
 \begin{enumerate}
-    \item In einem \textbf{inerten Gas}, typischerweise \textbf{Argon} mit einem \textbf{Druck von 0,2 bis 10 Pa}, wird \textbf{durch} eine 
-    \textbf{Gasentladung} ein \textbf{Plasma erzeugt}, das die \textbf{für} den \textbf{Sputterprozess benötigten Kationen ($\mathbf{Ar^+}$) 
-    bereitstellt}.
-    \item Durch die \textbf{Spannung zwischen Plasma und Sputtertarget} (Schichtmaterial) werden die \textbf{Ionen zum Target hin beschleunigt} 
-    und \textbf{erreichen} dabei \textbf{Energien von einigen 10~eV}.
-    \item \textbf{Trifft} ein \textbf{Ar-Ion} auf die \textbf{Targetoberfläche}, kommt es zu \textbf{elastischen und inelastischen Stößen mit} 
-    den \textbf{Targetatomen}. \textbf{Inelastische Stöße erzeugen Sekundärionen} (Sekundärelektronen) \textbf{für} das \textbf{Plasma}, während 
-    \textbf{elastische Stöße} eine \textbf{Stoßkaskade} auslösen, die \textbf{durch Impulsübertragung Atome aus} dem \textbf{Target 
-    herausschlagen} kann (\autoref{fig:Sputtern Stosskaskade}). Eine Energie von \textbf{mindestens 10 bis 30~eV} ist dafür \textbf{notwendig}, 
-    wobei die Sputtereffizienz mit steigender Energie bis zu einem Maximum von etwa 10~keV zunimmt. Danach sinkt die Effizienz, da die Ionen zu 
-    tief eindringen und weniger Energie an die Oberfläche übertragen wird. Die \textbf{Effizienz dieser Stoßkaskaden hängt} zudem 
-    \textbf{vom Massenverhältnis} zwischen \textbf{Sputterion und Targetatom ab}.
-    \item Die \textbf{herausgeschlagenen Atome bewegen} sich \textbf{in Richtung des Substrats}. Auf ihrem Weg \textbf{stoßen} sie 
-    \textbf{mehrfach mit} den \textbf{Atomen des Prozessgases zusammen}, wodurch sie einen Teil ihrer \textbf{Energie verlieren und} ihre 
-    \textbf{Winkelverteilung breiter} wird.
-    \item Die \textbf{Teilchen treffen auf} das \textbf{Substrat} (z.B. mit einer Energie von 10~eV) und \textbf{lagern sich dort ab}. 
-    Aufgrund der breiten \textbf{Winkelverteilung} werden dadurch \textbf{nicht nur} die \textbf{Oberseite}, sondern \textbf{auch} die 
-    \textbf{Seitenflächen der Strukturen auf} dem \textbf{Substrat beschichtet} (daher auch der Name ``Sputtern'' -- \textit{to sputter} = 
-    zerstäuben).
+    \item In einem \textbf{inerten Gas}, typischerweise \textbf{Argon} mit einem \textbf{Druck von 0,2 bis 10 Pa}, wird \textbf{durch} eine \textbf{Gasentladung} ein \textbf{Plasma erzeugt}, das die \textbf{für} den \textbf{Sputterprozess benötigten Kationen ($\mathbf{Ar^+}$) bereitstellt}.
+    \item Durch die \textbf{Spannung zwischen Plasma und Sputtertarget} (Schichtmaterial) werden die \textbf{Ionen zum Target hin beschleunigt} und \textbf{erreichen} dabei \textbf{Energien von einigen 10~eV}.
+    \item \textbf{Trifft} ein \textbf{Ar-Ion} auf die \textbf{Targetoberfläche}, kommt es zu \textbf{elastischen und inelastischen Stößen mit} den \textbf{Targetatomen}. \textbf{Inelastische Stöße erzeugen Sekundärionen} (Sekundärelektronen) \textbf{für} das \textbf{Plasma}, während \textbf{elastische Stöße} eine \textbf{Stoßkaskade} auslösen, die \textbf{durch Impulsübertragung Atome aus} dem \textbf{Target herausschlagen} kann (\autoref{fig:Sputtern Stosskaskade}). Eine Energie von \textbf{mindestens 10 bis 30~eV} ist dafür \textbf{notwendig}, wobei die Sputtereffizienz mit steigender Energie bis zu einem Maximum von etwa 10~keV zunimmt. Danach sinkt die Effizienz, da die Ionen zu tief eindringen und weniger Energie an die Oberfläche übertragen wird. Die \textbf{Effizienz dieser Stoßkaskaden hängt} zudem \textbf{vom Massenverhältnis} zwischen \textbf{Sputterion und Targetatom ab}.
+    \item Die \textbf{herausgeschlagenen Atome bewegen} sich \textbf{in Richtung des Substrats}. Auf ihrem Weg \textbf{stoßen} sie \textbf{mehrfach mit} den \textbf{Atomen des Prozessgases zusammen}, wodurch sie einen Teil ihrer \textbf{Energie verlieren und} ihre \textbf{Winkelverteilung breiter} wird.
+    \item Die \textbf{Teilchen treffen auf} das \textbf{Substrat} (z.B. mit einer Energie von 10~eV) und \textbf{lagern sich dort ab}. Aufgrund der breiten \textbf{Winkelverteilung} werden dadurch \textbf{nicht nur} die \textbf{Oberseite}, sondern \textbf{auch} die \textbf{Seitenflächen der Strukturen auf} dem \textbf{Substrat beschichtet} (daher auch der Name ``Sputtern'' -- \textit{to sputter} = zerstäuben).
 \end{enumerate}
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=.55\textwidth]{images/Sputtern Stoßkaskade.png} % Pfad und Dateiname des Bildes angeben
-    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \includegraphics[width=.5\textwidth]{images/Sputtern Stoßkaskade.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.6\textwidth} % Setzt die Bildnummer fett
     \caption{Herauslösen eines Targetatoms durch die vom Sputterion ausgelöste Stoßkaskade \cite{keplinger2024}.}
     \label{fig:Sputtern Stosskaskade}
 \end{figure}
 
+
+
+% Pysical Vapour Deposition -> Sputtern (Zerstäubung) -> Sputterverfahren -------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsubsection{Sputterverfahren} % Sputterverfahren
+
 Im Folgenden werden ausgewählte Sputterverfahren näher erläutert und deren Funktionsweise beschrieben.
 
-\vspace{1em}
-\paragraph{\uline{DC-Sputtern:}} Hier wird die \textbf{Gasentladung mittels} einer \textbf{Gleichspannung} erzeugt. Daher muss das \textbf{Target 
-leitfähig} sein, da es sich sonst auflädt und die Gasentladung unterbrochen würde. Diese Form des Sputterns \textbf{eignet sich} somit nur 
-\textbf{für Metalle und Halbleiter} \cite{keplinger2024}.
+\vspace{0.0em}
 
-\vspace{1em}
-\paragraph{\uline{AC-Sputtern:}} Ein \textbf{hochfrequentes elektrisches Feld} wird \textbf{über} einen \textbf{Kondensator an} die \textbf{Elektroden 
-angelegt}, wodurch ein \textbf{Gleichspannungsanteil blockiert} wird. \textbf{Ionen können} dem \textbf{Feldwechsel ab etwa 100~kHz nicht mehr 
-folgen}, während \textbf{Elektronen weiterhin Energie aufnehmen} und \textbf{mehr Gasteilchen ionisieren}. Dadurch entsteht eine \textbf{höhere 
-Plasmarate als beim DC-Sputtern}, und der \textbf{Druck kann bei gleicher Sputterrate auf etwa $\mathbf{10^{-1}}$ bis $\mathbf{10^{-2}}$~Pa 
-gesenkt werden}\footnote{Da die herausgeschlagenen Targetatome aufgrund der geringeren Anzahl an Kollisionen mit den Prozessgasatomen weniger 
-gestreut werden, erreichen sie das Substrat direkter. Dadurch werden die Seitenflächen der Strukturen auf dem Substrat weniger beschichtet als 
-beim DC-Sputtern.} \cite{keplinger2024}. \\
+\paragraph{\uline{DC-Sputtern:}} Hier wird die \textbf{Gasentladung mittels} einer \textbf{Gleichspannung} erzeugt. Daher muss das \textbf{Target leitfähig} sein, da es sich sonst auflädt und die Gasentladung unterbrochen würde. Diese Form des Sputterns \textbf{eignet sich} somit nur \textbf{für Metalle und Halbleiter} \cite{keplinger2024}.
+
+\vspace{0.0em}
+
+\paragraph{\uline{AC-Sputtern:}} Ein \textbf{hochfrequentes elektrisches Feld} wird \textbf{über} einen \textbf{Kondensator an} die \textbf{Elektroden angelegt}, wodurch ein \textbf{Gleichspannungsanteil blockiert} wird. \textbf{Ionen können} dem \textbf{Feldwechsel ab etwa 100~kHz nicht mehr folgen}, während \textbf{Elektronen weiterhin Energie aufnehmen} und \textbf{mehr Gasteilchen ionisieren}. Dadurch entsteht eine \textbf{höhere Plasmarate als beim DC-Sputtern}, und der \textbf{Druck kann bei gleicher Sputterrate auf etwa $\mathbf{10^{-1}}$ bis $\mathbf{10^{-2}}$~Pa gesenkt werden}\footnote{Da die herausgeschlagenen Targetatome aufgrund der geringeren Anzahl an Kollisionen mit den Prozessgasatomen weniger gestreut werden, erreichen sie das Substrat direkter. Dadurch werden die Seitenflächen der Strukturen auf dem Substrat weniger beschichtet als beim DC-Sputtern.} \cite{keplinger2024}. \\
 
 Die \textbf{Vorteile} umfassen \cite{keplinger2024}:
 
@@ -330,18 +306,13 @@ Die \textbf{Vorteile} umfassen \cite{keplinger2024}:
 
 Ein \textbf{Nachteil} ist der \textbf{höhere apparative Aufwand} \cite{keplinger2024}.
 
-\vspace{1em}
-\paragraph{\uline{Magnetronsputtern:}} Beim Magnetronsputtern sind \textbf{Permanentmagneten hinter} der \textbf{Kathode} angebracht, die ein Magnetfeld erzeugen 
-(\autoref{fig:Magnetronsputtern}). Dieses bewirkt, dass sich die \textbf{Elektronen in Zykloidenbahnen bewegen} (\autoref{fig:Zykloiden}) und \textbf{länger in der 
-Nähe des Targets bleiben}\footnote{Dies ist effektiv, wenn die Magnetfeldlinien parallel zur Oberfläche verlaufen. Liegen sie jedoch parallel zur 
-Elektronenflugbahn (senkrecht zur Targetoberfläche), wirkt keine ablenkende Kraft auf die Elektronen.}, wodurch \textbf{mehr Gasatome ionisiert} werden und die 
-\textbf{Plasmadichte steigt}. Dies \textbf{erhöht} die \textbf{Sputterrate und ermöglicht} es, den \textbf{Druck bei gleicher Sputterrate deutlich zu senken}, was 
-\textbf{dichtere Schichten erzeugt}. Aufgrund der \textbf{kürzeren Beschichtungszeit} wird das Magnetronsputtern \textbf{in industriellen Anlagen häufig 
-verwendet} \cite{kittel2004}. \\
+\vspace{0.0em}
+
+\paragraph{\uline{Magnetronsputtern:}} Beim Magnetronsputtern sind \textbf{Permanentmagneten hinter} der \textbf{Kathode} angebracht, die ein Magnetfeld erzeugen (\autoref{fig:Magnetronsputtern}). Dieses bewirkt, dass sich die \textbf{Elektronen in Zykloidenbahnen bewegen} (\autoref{fig:Zykloiden}) und \textbf{länger in der Nähe des Targets bleiben}\footnote{Dies ist effektiv, wenn die Magnetfeldlinien parallel zur Oberfläche verlaufen. Liegen sie jedoch parallel zur Elektronenflugbahn (senkrecht zur Targetoberfläche), wirkt keine ablenkende Kraft auf die Elektronen.}, wodurch \textbf{mehr Gasatome ionisiert} werden und die \textbf{Plasmadichte steigt}. Dies \textbf{erhöht} die \textbf{Sputterrate und ermöglicht} es, den \textbf{Druck bei gleicher Sputterrate deutlich zu senken}, was \textbf{dichtere Schichten erzeugt}. Aufgrund der \textbf{kürzeren Beschichtungszeit} wird das Magnetronsputtern \textbf{in industriellen Anlagen häufig verwendet} \cite{kittel2004}. \\
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=.75\textwidth]{images/Magnetronsputteranlage.png} % Pfad und Dateiname des Bildes angeben
+    \includegraphics[width=.65\textwidth]{images/Magnetronsputteranlage.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{Schematischer Aufbau einer Magnetron-Sputteranlage \cite{keplinger2024}.}
     \label{fig:Magnetronsputtern}
@@ -351,45 +322,36 @@ verwendet} \cite{kittel2004}. \\
     \centering
     \includegraphics[width=.75\textwidth]{images/Zykloiden.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
-    \caption{Zykloiden}
+    \caption{Zykloiden \cite{hoegel2024}}
     \label{fig:Zykloiden}
 \end{figure}
 
-Die Grundlage für diese Überlegung ist die Lorentzkraft, welche die Kraft beschreibt, die auf eine bewegte elektrische Ladung in einem elektrischen und 
-magnetischen Feld wirkt. Diese Kraft wird durch
+Die Grundlage für diese Überlegung ist die Lorentzkraft, welche die Kraft beschreibt, die auf eine bewegte elektrische Ladung in einem elektrischen und magnetischen Feld wirkt. Diese Kraft wird durch
 $$
 \vec{F} = e (\vec{E} + \vec{v} \times \vec{B})
 $$
-beschrieben. Dabei stellt \( \vec{F} \) die Lorentzkraft in Newton dar, \( e \) ist die Elementarladung mit einem Wert von etwa 
-\( 1{,}602 \cdot 10^{-19} \, \mathrm{C} \), \( \vec{E} \) das elektrische Feld in Volt pro Meter (V/m), \( \vec{v} \) die Geschwindigkeit der
-Ladung in Metern pro Sekunde (m/s), und \( \vec{B} \) die magnetische Flussdichte in Tesla (T). Das Kreuzprodukt \( \vec{v} \times \vec{B} \) 
-zeigt, dass die Kraft \( \vec{F} \) senkrecht sowohl zur Bewegungsrichtung \( \vec{v} \) als auch zum Magnetfeld \( \vec{B} \) steht \cite{rossnagel2003magnetron, 
-mattox2010handbook, anders2010advances, kouznetsov1999new, prechtl2005grundlagen}. 
+beschrieben. Dabei stellt \( \vec{F} \) die Lorentzkraft in Newton dar, \( e \) ist die Elementarladung mit einem Wert von etwa \( 1{,}602 \cdot 10^{-19} \, \mathrm{C}\), \( \vec{E} \) das elektrische Feld in Volt pro Meter (V/m), \( \vec{v} \) die Geschwindigkeit der Ladung in Metern pro Sekunde (m/s), und \( \vec{B} \) die magnetische Flussdichte in Tesla (T). Das Kreuzprodukt \( \vec{v} \times \vec{B} \) zeigt, dass die Kraft \( \vec{F} \) senkrecht sowohl zur Bewegungsrichtung \( \vec{v} \) als auch zum Magnetfeld \( \vec{B} \) steht \cite{rossnagel2003magnetron, mattox2010handbook, anders2010advances, kouznetsov1999new, prechtl2005grundlagen}.
 
-\vspace{1em}
-\paragraph{\uline{Reaktives Sputtern:}} Obwohl \textbf{dem Sputterprozess mehr Materialien zur Verfügung stehen als dem Aufdampfen}, gibt es \textbf{dennoch 
-Stoffe, bei denen sich eine Komponente ungenügend niederschlägt}. Durch die \textbf{Zugabe eines Reaktionsgases zum Plasma} können jedoch \textbf{chemische 
-Reaktionen mit den Targetatomen in der Gasphase} eingeleitet werden, \textbf{sodass sich} die \textbf{gewünschten Verbindungen abscheiden}. Ein \textbf{Beispiel} 
-ist die Bildung von \textbf{Aluminiumoxid und -nitrid}:
+\vspace{0.0em}
+
+\paragraph{\uline{Reaktives Sputtern:}} Obwohl \textbf{dem Sputterprozess mehr Materialien zur Verfügung stehen als dem Aufdampfen}, gibt es \textbf{dennoch Stoffe, bei denen sich eine Komponente ungenügend niederschlägt}. Durch die \textbf{Zugabe eines Reaktionsgases zum Plasma} können jedoch \textbf{chemische Reaktionen mit den Targetatomen in der Gasphase} eingeleitet werden, \textbf{sodass sich} die \textbf{gewünschten Verbindungen abscheiden}. Ein \textbf{Beispiel} ist die Bildung von \textbf{Aluminiumoxid und -nitrid}:
 $$
 \mathrm{2Al} + \mathrm{3O}_2 \rightarrow \mathrm{Al}_2\mathrm{O}_3
 $$
 $$
 \mathrm{2Al} + \mathrm{N}_2 \rightarrow \mathrm{2AlN}
 $$
-Dieses Verfahren, bekannt als reaktives Sputtern, wird oft \textbf{zur Herstellung von Oxiden, Nitriden, Oxinitriden} (z.B., \(\mathrm{SiO}_x\mathrm{N}_y\)) 
-\textbf{und Carbiden} verwendet. Es lässt sich zudem \textbf{mit anderen Sputterverfahren}, wie dem Magnetronsputtern, \textbf{kombinieren}. Ein \textbf{Vorteil} 
-des reaktiven Sputterns besteht darin, dass die \textbf{Stöchiometrie\footnote{Stöchiometrie bezieht sich auf das Verhältnis der Atome oder Moleküle in einer 
-chemischen Verbindung. In einem Material wie Aluminiumoxid (\(\mathrm{Al}_2\mathrm{O}_3\)) beschreibt die Stöchiometrie das Verhältnis von Aluminium- zu 
-Sauerstoffatomen, das hier exakt 2:3 ist. Im Kontext des reaktiven Sputterns bedeutet das, dass die Stöchiometrie der abgeschiedenen Schicht -- also das 
-Verhältnis der Elemente im abgeschiedenen Material -- durch den Druck des zugeführten Reaktionsgases beeinflusst werden kann. Das bedeutet, dass durch die Menge 
-des Reaktionsgases im Plasma das Verhältnis der chemischen Bestandteile in der abgelagerten Schicht gezielt gesteuert wird. Zum Beispiel könnte eine Erhöhung des 
-Sauerstoffdrucks im Plasma die Menge an Sauerstoff in der Schicht erhöhen, was zur Bildung einer Schicht mit einem höheren Anteil an Sauerstoff führt 
-\cite{anders2010reactive, ohring2002, mattox2010handbook, rossnagel2003magnetron}.} der abgeschiedenen Schicht durch} den \textbf{Gasdruck des Reaktionsgases 
-gezielt beeinflusst} werden kann \cite{keplinger2024}.
+Dieses Verfahren, bekannt als reaktives Sputtern, wird oft \textbf{zur Herstellung von Oxiden, Nitriden, Oxinitriden} (z.B., \(\mathrm{SiO}_x\mathrm{N}_y\)) \textbf{und Carbiden} verwendet. Es lässt sich zudem \textbf{mit anderen Sputterverfahren}, wie dem Magnetronsputtern, \textbf{kombinieren}. Ein \textbf{Vorteil} des reaktiven Sputterns besteht darin, dass die \textbf{Stöchiometrie\footnote{Stöchiometrie bezieht sich auf das Verhältnis der Atome oder Moleküle in einer chemischen Verbindung. In einem Material wie Aluminiumoxid (\(\mathrm{Al}_2\mathrm{O}_3\)) beschreibt die Stöchiometrie das Verhältnis von Aluminium- zu Sauerstoffatomen, das hier exakt 2:3 ist. Im Kontext des reaktiven Sputterns bedeutet das, dass die Stöchiometrie der abgeschiedenen Schicht -- also das Verhältnis der Elemente im abgeschiedenen Material -- durch den Druck des zugeführten Reaktionsgases beeinflusst werden kann. Das bedeutet, dass durch die Menge des Reaktionsgases im Plasma das Verhältnis der chemischen Bestandteile in der abgelagerten Schicht gezielt gesteuert wird. Zum Beispiel könnte eine Erhöhung des Sauerstoffdrucks im Plasma die Menge an Sauerstoff in der Schicht erhöhen, was zur Bildung einer Schicht mit einem höheren Anteil an Sauerstoff führt \cite{anders2010reactive, ohring2002, mattox2010handbook, rossnagel2003magnetron}.} der abgeschiedenen Schicht durch} den \textbf{Gasdruck des Reaktionsgases gezielt beeinflusst} werden kann \cite{keplinger2024}.
+
+
+
+% Pysical Vapour Deposition -> Vergleich Aufdampfen - Sputtern ------------------------------------------------------------------------------------------------------------
+
 
 \vspace{1em}
+
 \subsection{Vergleich Aufdampfen - Sputtern}
+
 Abschließend werden in \autoref{tab:Vergleich Aufdampfen - Sputtern} das thermische Aufdampfen und das Sputtern gegenübergestellt.
 
 \begin{table}[htb!]
@@ -425,40 +387,31 @@ Abschließend werden in \autoref{tab:Vergleich Aufdampfen - Sputtern} das thermi
     \label{tab:Vergleich Aufdampfen - Sputtern}
 \end{table}
 
+\vspace{1em} % KEEP?
+
+``Verbindungen dissoziieren'' bedeutet, dass chemische Bindungen im Material beim Aufdampfen thermisch zerfallen\footnote{Thermischer Zerfall beschreibt den Prozess, bei dem chemische Verbindungen bei hohen Temperaturen in ihre Bestandteile zerfallen, da die Bindungsenergie durch zugeführte Wärme überwunden wird. Dieser Zerfall kann beim Aufdampfen auftreten und die Zusammensetzung der Schicht beeinflussen \cite{ohring2002, smith1995}.} können, was die Zusammensetzung verändert. Im Gegensatz dazu tritt beim Sputtern nur eine geringe Dissoziation auf, da der Ionenbeschuss die chemische Stabilität der Verbindungen weitgehend erhält \cite{ohring2002, smith1995, rossnagel2003magnetron}.
+
+\vspace{1em} % KEEP?
+
+``Strukturieren durch Ätzen oder Lift-off'' sind Verfahren zur Formgebung von Dünnschichtstrukturen. Beim Ätzen wird überschüssiges Material selektiv durch chemische oder physikalische Methoden entfernt, wodurch nur die gewünschte Struktur verbleibt. Das Lift-off-Verfahren hingegen nutzt eine Maske, die nach der Beschichtung entfernt wird, sodass das Material nur an den zuvor maskierten Stellen verbleibt \cite{ohring2002, smith1995, prechtl2005grundlagen}. Mehr dazu folgt in den späteren Kapiteln.
+
+
+
+% Chemical Vapour Deposition ----------------------------------------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
 
-``Verbindungen dissoziieren'' bedeutet, dass chemische Bindungen im Material beim Aufdampfen thermisch zerfallen\footnote{Thermischer Zerfall beschreibt den Prozess, 
-bei dem chemische Verbindungen bei hohen Temperaturen in ihre Bestandteile zerfallen, da die Bindungsenergie durch zugeführte Wärme überwunden wird. Dieser Zerfall 
-kann beim Aufdampfen auftreten und die Zusammensetzung der Schicht beeinflussen \cite{ohring2002, smith1995}.} können, was die Zusammensetzung verändert. Im 
-Gegensatz dazu tritt beim Sputtern nur eine geringe Dissoziation auf, da der Ionenbeschuss die chemische Stabilität der Verbindungen weitgehend erhält 
-\cite{ohring2002, smith1995, rossnagel2003magnetron}.
-
-\vspace{1em}
-``Strukturieren durch Ätzen oder Lift-off'' sind Verfahren zur Formgebung von Dünnschichtstrukturen. Beim Ätzen wird überschüssiges Material selektiv durch 
-chemische oder physikalische Methoden entfernt, wodurch nur die gewünschte Struktur verbleibt. Das Lift-off-Verfahren hingegen nutzt eine Maske, die nach der 
-Beschichtung entfernt wird, sodass das Material nur an den zuvor maskierten Stellen verbleibt \cite{ohring2002, smith1995, prechtl2005grundlagen}. Mehr dazu folgt 
-in den späteren Kapiteln.
-
-\vspace{1em}
 \section{Chemical Vapour Deposition} % CVD
-PVD-Verfahren sind essenzielle Prozesse in der Herstellung miniaturisierter Sensoren, vor allem für metallische Schichten und Dielektrika. Diese Verfahren 
-erfordern feste Ausgangsstoffe, sind jedoch problematisch bei Materialien, die im Prozess disproportionieren\footnote{Disproportionierung ist ein Prozess, bei dem 
-ein Stoff sich aufteilt: Ein Teil gibt Elektronen ab (Oxidation) und ein anderer Teil nimmt Elektronen auf (Reduktion). Dadurch entstehen zwei neue Stoffe mit dem 
-gleichen Element, aber in verschiedenen Zuständen \cite{petrucci_general_chemistry}. In PVD-Prozessen kann dies problematisch sein, weil beim Erhitzen zum Beispiel 
-Metallteile aufbrechen und nicht als ganzes Metall in die Schicht eingebaut werden. Stattdessen bilden sich zwei verschiedene Verbindungen, die nicht alle 
-Eigenschaften des Ausgangsstoffes besitzen, was die Qualität der Schicht beeinflussen kann.}, etwa durch Schmelzen beim Aufdampfen. Dadurch können wichtige 
-Komponenten unvollständig in die Schicht eingebaut werden. Im Gegensatz dazu werden \textbf{bei} der \textbf{Chemical Vapor Deposition (CVD) Gase in den 
-Rezipienten einer Anlage geleitet}, wo sie \textbf{chemisch reagieren und} die \textbf{Reaktionsprodukte am Substrat}, oft ein Wafer, eine \textbf{Schicht bilden}. 
-Diese chemische Reaktion \textbf{erfordert Energie}, die \textbf{thermisch oder durch Gasentladung} zugeführt wird \cite{keplinger2024CVD}.
+
+PVD-Verfahren sind essenzielle Prozesse in der Herstellung miniaturisierter Sensoren, vor allem für metallische Schichten und Dielektrika. Diese Verfahren erfordern feste Ausgangsstoffe, sind jedoch problematisch bei Materialien, die im Prozess disproportionieren\footnote{Disproportionierung ist ein Prozess, bei dem ein Stoff sich aufteilt: Ein Teil gibt Elektronen ab (Oxidation) und ein anderer Teil nimmt Elektronen auf (Reduktion). Dadurch entstehen zwei neue Stoffe mit dem gleichen Element, aber in verschiedenen Zuständen \cite{petrucci_general_chemistry}. In PVD-Prozessen kann dies problematisch sein, weil beim Erhitzen zum Beispiel Metallteile aufbrechen und nicht als ganzes Metall in die Schicht eingebaut werden. Stattdessen bilden sich zwei verschiedene Verbindungen, die nicht alle Eigenschaften des Ausgangsstoffes besitzen, was die Qualität der Schicht beeinflussen kann.}, etwa durch Schmelzen beim Aufdampfen. Dadurch können wichtige Komponenten unvollständig in die Schicht eingebaut werden. Im Gegensatz dazu werden \textbf{bei} der \textbf{Chemical Vapor Deposition (CVD) Gase in den Rezipienten einer Anlage geleitet}, wo sie \textbf{chemisch reagieren und} die \textbf{Reaktionsprodukte am Substrat}, oft ein Wafer, eine \textbf{Schicht bilden}. Diese chemische Reaktion \textbf{erfordert Energie}, die \textbf{thermisch oder durch Gasentladung} zugeführt wird \cite{keplinger2024CVD}.
 
 \vspace{1em}
 
-Die \textbf{Unterscheidung} zwischen \textbf{CVD und PVD} ergibt sich durch die \textbf{Form der zugeführten Ausgangsstoffe (Precursor)}: Bei 
-\textbf{PVD-Prozessen} werden diese \textbf{in fester Form} und bei \textbf{CVD-Prozessen} als \textbf{Gase} zugeführt. Die thermische Oxidation eines 
-Silizium-Wafers wird nicht als CVD-Prozess betrachtet, da nur der Sauerstoff gasförmig ist, während das Silizium bereits fest im Reaktor vorhanden ist
- \cite{keplinger2024CVD}.
+Die \textbf{Unterscheidung} zwischen \textbf{CVD und PVD} ergibt sich durch die \textbf{Form der zugeführten Ausgangsstoffe (Precursor)}: Bei \textbf{PVD-Prozessen} werden diese \textbf{in fester Form} und bei \textbf{CVD-Prozessen} als \textbf{Gase} zugeführt. Die thermische Oxidation eines Silizium-Wafers wird nicht als CVD-Prozess betrachtet, da nur der Sauerstoff gasförmig ist, während das Silizium bereits fest im Reaktor vorhanden ist \cite{keplinger2024CVD}.
 
- \vspace{1em}
+\vspace{0.0em}
+
 \paragraph{Vorteile:}
 
 \begin{itemize}
@@ -466,95 +419,83 @@ Silizium-Wafers wird nicht als CVD-Prozess betrachtet, da nur der Sauerstoff gas
     \item \textbf{Gute Kantenbedeckung}, auch bei ungünstiger Geometrie.
     \item \textbf{Herstellung} vieler \textbf{verschiedener Schichtmaterialien} möglich.
     \item \textbf{Zusammensetzung kann} während des Prozesses \textbf{angepasst werden}.
-    \item \textbf{Gute Prozesskontrolle} durch eine \textbf{Vielzahl leicht beeinflussbarer Parameter}: Gase, Flussraten, Temperatur, Druck, Frequenz und Leistung 
-    des Plasmas.
+    \item \textbf{Gute Prozesskontrolle} durch eine \textbf{Vielzahl leicht beeinflussbarer Parameter}: Gase, Flussraten, Temperatur, Druck, Frequenz und Leistung des Plasmas.
 \end{itemize}
 
-\vspace{1em}
+\vspace{0.0em}
+
 \paragraph{Nachteile:}
 
 \begin{itemize}
-    \item Relativ \textbf{hohe Temperaturen} sind oft \textbf{erforderlich}, wodurch \textbf{mechanische Spannungen} in die Schicht eingebaut werden. Dies führt 
-    zu einer \textbf{hohen thermischen Belastung des Wafers} und der darauf befindlichen Strukturen, was Dotierprofile ändern oder Metallschichten zerstören kann.
+    \item Relativ \textbf{hohe Temperaturen} sind oft \textbf{erforderlich}, wodurch \textbf{mechanische Spannungen} in die Schicht eingebaut werden. Dies führt zu einer \textbf{hohen thermischen Belastung des Wafers} und der darauf befindlichen Strukturen, was Dotierprofile ändern oder Metallschichten zerstören kann.
     \item \textbf{Schwierige Handhabung} der häufig \textbf{giftigen und brennbaren Gase}.
     \item \textbf{Für viele gewünschte Schichten} sind \textbf{keine gasförmigen Precursoren verfügbar}.
     \item Die \textbf{Vielzahl relevanter Parameter erfordert hohe Sachkenntnis} des Betreibers der Anlage, insbesondere bei Nichtstandard-Prozessen.
 \end{itemize}
 
+
+
+% Chemical Vapour Deposition ->  Begriffsklärung für CVD ------------------------------------------------------------------------------------------------------------------
+
 \vspace{1em}
+
 \subsection{Begriffsklärung für CVD} % CVD  Begriffsklärung
-Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zuerst die nahcfolgenden Abschnitte zu lesen und hier bei Bedarf 
-unbekannte Begriffe nachzuschauen. \textbf{Begriffe}, die bereits \textbf{in den vorherigen Abschnitten erklärt} wurden, sind \textbf{hier nicht erneut aufgeführt}.
+
+Dieser Abschnitt bietet eine Einführung in wichtige, häufig verwendete Begriffe. Es empfiehlt sich, zuerst die nahcfolgenden Abschnitte zu lesen und hier bei Bedarf unbekannte Begriffe nachzuschauen. \textbf{Begriffe}, die bereits \textbf{in den vorherigen Abschnitten erklärt} wurden, sind \textbf{hier nicht erneut aufgeführt}.
 
 \begin{itemize}
     \item \textbf{Precursor}: Ausgangsstoffe bzw. Vorläufersubstanzen (Gase) \cite{keplinger2024CVD}. 
-    \item \textbf{Reaktanden}: Stoffe, die bei einer chemischen Reaktion miteinander reagieren, um neue Produkte zu bilden. Man könnte sie als die ``Zutaten'' 
-    einer chemischen Reaktion betrachten \cite{petrucci_general_chemistry, chang_chemistry}.
-    \item \textbf{Diffusionsprozess}: Ein Diffusionsprozess beschreibt die Bewegung von Teilchen von einem Bereich hoher Konzentration zu einem Bereich niedriger 
-    Konzentration, bis die Teilchen gleichmäßig verteilt sind \footnote{Man kann es sich vorstellen wie Tinte, die sich langsam in einem Glas Wasser verteilt, ohne 
-    dass man umrühren muss.} \cite{bergman2011, incropera2007}. In der Wissenschaft beschreibt ``diffundieren'' den Prozess, bei dem Teilchen sich aufgrund eines 
-    Konzentrationsgefälles bewegen \cite{crank1975}.
-    \item \textbf{Erzwungene Konvenktion}: Erzwungene Konvektion bedeutet, dass der Transport von Stoffen, wie Gasen, durch eine äußere Kraft unterstützt wird, 
-    zum Beispiel durch einen Ventilator oder einen Gasstrom. Dadurch gelangen die Reaktanten gezielt an ihren Bestimmungsort \cite{incropera2007, bergman2011, 
-    kays2005, bejan2013}.
-    \item \textbf{Konformität}: Verhältnis der Beschichtungsdicke auf den vertikalen Flächen zu der auf den horizontalen Flächen der Strukturen am Substrat 
-    \cite{keplinger2024CVD}.
+    \item \textbf{Reaktanden}: Stoffe, die bei einer chemischen Reaktion miteinander reagieren, um neue Produkte zu bilden. Man könnte sie als die ``Zutaten'' einer chemischen Reaktion betrachten \cite{petrucci_general_chemistry, chang_chemistry}.
+    \item \textbf{Diffusionsprozess}: Ein Diffusionsprozess beschreibt die Bewegung von Teilchen von einem Bereich hoher Konzentration zu einem Bereich niedriger Konzentration, bis die Teilchen gleichmäßig verteilt sind \footnote{Man kann es sich vorstellen wie Tinte, die sich langsam in einem Glas Wasser verteilt, ohne dass man umrühren muss.} \cite{bergman2011, incropera2007}. In der Wissenschaft beschreibt ``diffundieren'' den Prozess, bei dem Teilchen sich aufgrund eines Konzentrationsgefälles bewegen \cite{crank1975}.
+    \item \textbf{Erzwungene Konvektion}: Erzwungene Konvektion bedeutet, dass der Transport von Stoffen, wie Gasen, durch eine äußere Kraft unterstützt wird, zum Beispiel durch einen Ventilator oder einen Gasstrom. Dadurch gelangen die Reaktanten gezielt an ihren Bestimmungsort \cite{incropera2007, bergman2011, kays2005, bejan2013}.
+    \item \textbf{Konformität}: Verhältnis der Beschichtungsdicke auf den vertikalen Flächen zu der auf den horizontalen Flächen der Strukturen am Substrat \cite{keplinger2024CVD}.
 \end{itemize}
 
+
+
+% Chemical Vapour Deposition -> Funktionsweise ----------------------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsection{Funktionsweise} % CVD Funktionsweise
-Die Schichtbildung basiert auf einer \textbf{Reihe von Teilprozessen}, die je nach Reaktionsgasen komplex ablaufen können (\autoref{fig:Schichtbildung CVD}). 
-Hier werden \textbf{beispielhaft} die Teilprozesse zur \textbf{Bildung von Siliziumnitrid beschrieben}, das häufig als \textbf{Isolationsschicht} dient 
-\cite{keplinger2024CVD}.
+
+Die Schichtbildung basiert auf einer \textbf{Reihe von Teilprozessen}, die je nach Reaktionsgasen komplex ablaufen können (\autoref{fig:Schichtbildung CVD}). Hier werden \textbf{beispielhaft} die Teilprozesse zur \textbf{Bildung von Siliziumnitrid beschrieben}, das häufig als \textbf{Isolationsschicht} dient \cite{keplinger2024CVD}.
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=.65\textwidth]{images/Schichtbildung CVD.png} % Pfad und Dateiname des Bildes angeben
-    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
-    \caption{Prozesse der Schichtbildung bei der CVD-Methode: 1...Gaszufuhr von SiH$_4$ und NH$_3$, 2...Diffusion der Reaktanten durch die Grenzschicht, 
-    3...Adsorption der Reaktanten an der Waferoberfläche, 4...chemische Reaktion, 5...Oberflächendiffusion der Reaktionsprodukte, 6...Desorption der Nebenprodukte 
-    und 7...Abtransport durch den Gasstrom \cite{keplinger2024CVD}.}
+    \includegraphics[width=.6\textwidth]{images/Schichtbildung CVD.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.7\textwidth} % Setzt die Bildnummer fett
+    \caption{Prozesse der Schichtbildung bei der CVD-Methode: 1...Gaszufuhr von SiH$_4$ und NH$_3$, 2...Diffusion der Reaktanten durch die Grenzschicht, 3...Adsorption der Reaktanten an der Waferoberfläche, 4...chemische Reaktion, 5...Oberflächendiffusion der Reaktionsprodukte, 6...Desorption der Nebenprodukte und 7...Abtransport durch den Gasstrom \cite{keplinger2024CVD}.}
     \label{fig:Schichtbildung CVD}
 \end{figure}
 
 \begin{enumerate}
-    \item \textbf{Gaszufuhr}: Die Reaktanden SiH$_4$ (Silan) und NH$_3$ (Ammoniak) werden in die Reaktionskammer geleitet und strömen über das Substrat. Dabei 
-    gelangen die Ausgangsstoffe durch erzwungene Konvektion zum Substrat \cite{keplinger2024CVD}.
-    \item \textbf{Diffusion}: Die Geschwindigkeit des Gases nimmt zur Oberfläche hin innerhalb der Prandtlschen Grenzschicht\footnote{Die Prandtlsche Grenzschicht 
-    ist der Bereich in der Nähe einer Oberfläche, in dem die Strömungsgeschwindigkeit eines Fluids von der maximalen Geschwindigkeit bis auf Null abnimmt. 
-    Innerhalb dieser Schicht verlangsamt sich das Fluid aufgrund der Reibungskräfte an der Grenzfläche \cite{white2006}.} bis auf Null ab. Deshalb müssen die 
-    Reaktanden diese Schicht durch einen Diffusionsprozess überwinden\footnote{Die Reaktanden diffundieren durch die Prandtlsche Grenzschicht zur Oberfläche 
-    \cite{bergman2011, incropera2007}.} \cite{keplinger2024CVD}.
-    \item \textbf{Adsorption}: Die Moleküle, die zur Oberfläche hin diffundieren, ``kleben'' an der Oberfläche fest (adsorbieren). Dort bleiben sie aber nicht an 
-    einer festen Stelle, sondern bewegen sich je nach Temperatur mehr oder weniger stark über die Oberfläche \cite{keplinger2024CVD, bergman2011, incropera2007}.
+    \item \textbf{Gaszufuhr}: Die Reaktanden SiH$_4$ (Silan) und NH$_3$ (Ammoniak) werden in die Reaktionskammer geleitet und strömen über das Substrat. Dabei gelangen die Ausgangsstoffe durch erzwungene Konvektion zum Substrat \cite{keplinger2024CVD}.
+    \item \textbf{Diffusion}: Die Geschwindigkeit des Gases nimmt zur Oberfläche hin innerhalb der Prandtlschen Grenzschicht\footnote{Die Prandtlsche Grenzschicht ist der Bereich in der Nähe einer Oberfläche, in dem die Strömungsgeschwindigkeit eines Fluids von der maximalen Geschwindigkeit bis auf Null abnimmt. Innerhalb dieser Schicht verlangsamt sich das Fluid aufgrund der Reibungskräfte an der Grenzfläche \cite{white2006}.} bis auf Null ab. Deshalb müssen die Reaktanden diese Schicht durch einen Diffusionsprozess überwinden\footnote{Die Reaktanden diffundieren durch die Prandtlsche Grenzschicht zur Oberfläche \cite{bergman2011, incropera2007}.} \cite{keplinger2024CVD}.
+    \item \textbf{Adsorption}: Die Moleküle, die zur Oberfläche hin diffundieren, ``kleben'' an der Oberfläche fest (adsorbieren). Dort bleiben sie aber nicht an einer festen Stelle, sondern bewegen sich je nach Temperatur mehr oder weniger stark über die Oberfläche \cite{keplinger2024CVD, bergman2011, incropera2007}.
     \item \textbf{Reaktion}: Die Ausgangsstoffe reagieren an der Oberfläche. Bei der Bildung von Siliziumnitrid folgt die Reaktion der chemischen Gleichung:
     $$
     3\mathrm{SiH}_4 + 4\mathrm{NH}_3 \rightarrow \mathrm{Si}_3\mathrm{N}_4 + 12\mathrm{H}_2
     $$
-    Ein Teil der Reaktion kann jedoch auch schon in der Gasphase ablaufen. Das ist meist unerwünscht, weil dabei feste Partikel entstehen können, die sich dann als 
-    Staub ablagern. Um sicherzustellen, dass die Reaktion vor allem an der Oberfläche stattfindet, hält man den Prozessdruck typischerweise zwischen 0,01 und 
-    10~mbar oder verdünnt die Gase mit einem Trägergas\footnote{Durch das Reduzieren des Drucks oder die Zugabe eines Trägergases wird die Dichte der 
-    Ausgangsstoffe verringert, sodass die Moleküle seltener aufeinanderstoßen. Dadurch haben die Reaktanten eine höhere Chance, die Oberfläche zu erreichen und
-     dort zu reagieren, statt bereits in der Gasphase zu reagieren.} \cite{keplinger2024CVD}.
-    \item \textbf{Oberflächendiﬀusion}: Durch diesen Vorgang wird das Reaktionsprodukt Si$_3$N$_4$ (Siliziumnitrid) in die Schicht eingebaut\footnote{Damit ist 
-    gemeint, dass das Reaktionsprodukt in die Oberfläche diffundiert. Es wandert also in die Schicht hinein und verteilt sich.} und möglichst bis an die 
-    Schichtkante transportiert \cite{keplinger2024CVD}.
-    \item \textbf{Desorption}: Bei der chemischen Reaktion entstehen nicht nur die gewünschten Schichtbestandteile, sondern auch Nebenprodukte (wie hier H$_2$), 
-    die an der Oberfläche ``kleben'' (adsorbiert sind) bleiben. Diese müssen sich wieder lösen (desorbieren) und dann durch die Grenzschicht ``hindurchwandern'' 
-    (diffundieren), um entfernt zu werden \cite{keplinger2024CVD}.
+    Ein Teil der Reaktion kann jedoch auch schon in der Gasphase ablaufen. Das ist meist unerwünscht, weil dabei feste Partikel entstehen können, die sich dann als Staub ablagern. Um sicherzustellen, dass die Reaktion vor allem an der Oberfläche stattfindet, hält man den Prozessdruck typischerweise zwischen 0,01 und 10~mbar oder verdünnt die Gase mit einem Trägergas\footnote{Durch das Reduzieren des Drucks oder die Zugabe eines Trägergases wird die Dichte der Ausgangsstoffe verringert, sodass die Moleküle seltener aufeinanderstoßen. Dadurch haben die Reaktanten eine höhere Chance, die Oberfläche zu erreichen und dort zu reagieren, statt bereits in der Gasphase zu reagieren.} \cite{keplinger2024CVD}.
+    \item \textbf{Oberflächendiﬀusion}: Durch diesen Vorgang wird das Reaktionsprodukt Si$_3$N$_4$ (Siliziumnitrid) in die Schicht eingebaut\footnote{Damit ist gemeint, dass das Reaktionsprodukt in die Oberfläche diffundiert. Es wandert also in die Schicht hinein und verteilt sich.} und möglichst bis an die Schichtkante transportiert \cite{keplinger2024CVD}.
+    \item \textbf{Desorption}: Bei der chemischen Reaktion entstehen nicht nur die gewünschten Schichtbestandteile, sondern auch Nebenprodukte (wie hier H$_2$), die an der Oberfläche ``kleben'' (adsorbiert sind) bleiben. Diese müssen sich wieder lösen (desorbieren) und dann durch die Grenzschicht ``hindurchwandern'' (diffundieren), um entfernt zu werden \cite{keplinger2024CVD}.
     \item \textbf{Abtransport}: Im letzten Schritt werden die Nebenprodukte vom konvektiven Gasfluss mitgenommen und abtransportiert \cite{keplinger2024CVD}.
 \end{enumerate}
 
-Je nach \textbf{Beschichtungsparametern}, insbesondere der \textbf{Temperatur}, können auch \textbf{Nebenprodukte in die Schicht eingebaut} werden, was die 
-\textbf{Schichtqualität erheblich beeinflusst}. \textbf{Siliziumnitride}, die \textbf{bei niedrigen Temperaturen abgeschieden} werden, e\textbf{nthalten mehr 
-Wasserstoff} und sind daher \textbf{weniger ätzresistent} als Hochtemperaturnitride. Auch die \textbf{Oberflächendiffusion hängt stark von} der \textbf{Temperatur 
-ab}: \textbf{Niedrigere Temperaturen} führen zu geringerer Beweglichkeit auf der Oberfläche und somit zu \textbf{poröseren Schichten} \cite{keplinger2024CVD}.
+Je nach \textbf{Beschichtungsparametern}, insbesondere der \textbf{Temperatur}, können auch \textbf{Nebenprodukte in die Schicht eingebaut} werden, was die \textbf{Schichtqualität erheblich beeinflusst}. \textbf{Siliziumnitride}, die \textbf{bei niedrigen Temperaturen abgeschieden} werden, e\textbf{nthalten mehr Wasserstoff} und sind daher \textbf{weniger ätzresistent} als Hochtemperaturnitride. Auch die \textbf{Oberflächendiffusion hängt stark von} der \textbf{Temperatur ab}: \textbf{Niedrigere Temperaturen} führen zu geringerer Beweglichkeit auf der Oberfläche und somit zu \textbf{poröseren Schichten} \cite{keplinger2024CVD}.
+
+
+
+% Chemical Vapour Deposition -> CVD-Anlagen -------------------------------------------------------------------------------------------------------------------------------
+
 
 \vspace{1em}
+
 \subsection{CVD-Anlagen} % CVD-Anlagen
-Die verschiedenen CVD-Anlagen können nach unterschiedlichen Kriterien wie Betriebs- oder Konstruktionsparametern klassifiziert werden. Es gibt zahlreiche mögliche 
-Kombinationen, wobei jedoch nicht alle theoretischen Optionen vollständig genutzt werden. Einige dieser Kriterien werden im Folgenden genauer besprochen 
-\cite{keplinger2024CVD}:
+
+Die verschiedenen CVD-Anlagen können nach unterschiedlichen Kriterien wie Betriebs- oder Konstruktionsparametern klassifiziert werden. Es gibt zahlreiche mögliche Kombinationen, wobei jedoch nicht alle theoretischen Optionen vollständig genutzt werden. Einige dieser Kriterien werden im Folgenden genauer besprochen \cite{keplinger2024CVD}:
 
 \begin{itemize}
     \item \textbf{Verbrauch an Reaktanden}
@@ -564,151 +505,159 @@ Kombinationen, wobei jedoch nicht alle theoretischen Optionen vollständig genut
     \item \textbf{Druck}
 \end{itemize}
 
+
+
+% Chemical Vapour Deposition -> CVD-Anlagen -> Verbruach an Reaktanden ----------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsubsection{Verbrauch an Reaktanden} % Verbruach an Reaktanden
-Ein wichtiges Kriterium ist der Verbrauch der Reaktanden, der darüber entscheidet, \textbf{welcher CVD-Reaktor für welchen Anwendungsfall} geeignet ist. Man 
-unterschiedet zwischen Differential- und Integralreaktoren \cite{keplinger2024CVD}.
+
+Ein wichtiges Kriterium ist der Verbrauch der Reaktanden, der darüber entscheidet, \textbf{welcher CVD-Reaktor für welchen Anwendungsfall} geeignet ist. Man unterschiedet zwischen Differential- und Integralreaktoren \cite{keplinger2024CVD}.
 
 \vspace{0.0em}
-\paragraph{\uline{Differnetialreaktor:}} \textbf{Fast die gesamte Menge der Ausgangsstoffe, die in die Reaktionskammer eintritt, verlässt diese auch wieder}. 
-Lediglich eine \textbf{vergleichsweise kleine (differentielle) Menge wird tatsächlich verbraucht} und abgeschieden. Aus Sicht des Materialeinsatzes ist 
-\textbf{dieser Reaktortyp} zwar \textbf{unökonomisch}, jedoch bleiben die \textbf{Konzentrationen im Reaktor konstant}, was \textbf{gleichmäßige Beschichtungen} 
-ermöglicht \cite{keplinger2024CVD}.
+
+\paragraph{\uline{Differnetialreaktor:}} \textbf{Fast die gesamte Menge der Ausgangsstoffe, die in die Reaktionskammer eintritt, verlässt diese auch wieder}. Lediglich eine \textbf{vergleichsweise kleine (differentielle) Menge wird tatsächlich verbraucht} und abgeschieden. Aus Sicht des Materialeinsatzes ist \textbf{dieser Reaktortyp} zwar \textbf{unökonomisch}, jedoch bleiben die \textbf{Konzentrationen im Reaktor konstant}, was \textbf{gleichmäßige Beschichtungen} ermöglicht \cite{keplinger2024CVD}.
 
 \vspace{0.0em}
-\paragraph{\uline{Integralreaktor:}} \textbf{Entlang des Gasstroms} entsteht ein \textbf{deutlicher Konzentrationsgradient}, wobei \textbf{stromabwärts} ein 
-\textbf{Mangel an Reaktanden} auftritt (\textit{starved reactor}). Diese Reaktoren sind aufgrund der \textbf{hohen Abscheideraten gut für} die \textbf{Produktion} 
-geeignet. \textbf{Bei hohen Temperaturen und entsprechend hoher Oberflächenbeweglichkeit} können \textbf{auch hier homogene Schichten} erzielt werden.
+
+\paragraph{\uline{Integralreaktor:}} \textbf{Entlang des Gasstroms} entsteht ein \textbf{deutlicher Konzentrationsgradient}, wobei \textbf{stromabwärts} ein \textbf{Mangel an Reaktanden} auftritt (\textit{starved reactor}). Diese Reaktoren sind aufgrund der \textbf{hohen Abscheideraten gut für} die \textbf{Produktion} geeignet. \textbf{Bei hohen Temperaturen und entsprechend hoher Oberflächenbeweglichkeit} können \textbf{auch hier homogene Schichten} erzielt werden.
+
+
+
+% Chemical Vapour Deposition -> CVD-Anlagen -> Reaktionsort ---------------------------------------------------------------------------------------------------------------
+
 
 \vspace{1em}
+
 \subsubsection{Reaktionsort} % Reaktionsort
+
 Bei diesem Kriterium wird unterschieden, \textbf{an welchem Ort in der CVD-Anlage die Reaktanden miteinander reagieren} \cite{keplinger2024CVD}.
 
 \vspace{0.0em}
+
 \paragraph{\uline{Homogene CVD:}} Die \textbf{Reaktanden reagieren bereits in der Gasphase}, wobei das \textbf{Reaktionsprodukt durch} die 
 \textbf{Grenzschicht zum Substrat diffundiert} und sich \textbf{dort abschiedet}. Solche CVD-Prozesse führen häufig zu \textbf{schlecht haftenden Schichten} mit 
 deutlich \textbf{mehr Defekten} \cite{keplinger2024CVD}.
 
 \vspace{0.0em}
-\paragraph{\uline{Heterogene CVD:}} Die Schicht bildet sich durch die \textbf{chemische Reaktion direkt an der Substratoberfläche}. Aufgrund der 
-\textbf{besseren Schichteigenschaften} wird diese Variante \textbf{in der Mikrosystemtechnik bevorzugt} \cite{keplinger2024CVD}.
+
+\paragraph{\uline{Heterogene CVD:}} Die Schicht bildet sich durch die \textbf{chemische Reaktion direkt an der Substratoberfläche}. Aufgrund der \textbf{besseren Schichteigenschaften} wird diese Variante \textbf{in der Mikrosystemtechnik bevorzugt} \cite{keplinger2024CVD}.
+
+
+
+% Chemical Vapour Deposition -> CVD-Anlagen -> Energiezufuhr --------------------------------------------------------------------------------------------------------------
+
 
 \vspace{1em}
+
 \subsubsection{Energiezufuhr} % Energiezufuhr
-Ein weiteres wesentliches Kriterium ist die Energiezufuhr, die bestimmt, \textbf{wie die für die Reaktion benötigte Energie bereitgestellt 
-wird} \cite{keplinger2024CVD}.
 
-\vspace{0.0em}
-\paragraph{\uline{Thermische Anregung:}} Das \textbf{Substrat} wird \textbf{mithilfe von Öfen oder Heizplatten auf} die erforderliche \textbf{Reaktionstemperatur 
-gebracht} \cite{keplinger2024CVD}.
-
-\vspace{0.0em}
-\paragraph{\uline{Plasma:}} Durch eine \textbf{Gasentladung} entsteht ein Plasma, das den \textbf{Großteil der Energie für die chemische Reaktion} bereitstellt, 
-weshalb man von \textbf{PECVD (\textit{plasma enhanced} CVD)} spricht. Die \textbf{thermische Belastung der Oberfläche und des Sunstrats} bleibt dabei 
-\textbf{gering}\footnote{In der Physik bezeichnet man ein Plasma als ein teilweise oder vollständig ionisiertes Gas. Plasmen werden in ``heiß'' und ``kalt'' 
-unterteilt, je nachdem, ob thermisches Gleichgewicht zwischen den Teilchen besteht. In einem heißen Plasma haben Elektronen und Ionen die gleiche Temperatur 
-(typischerweise $kT > 5000$ K), die notwendig ist, um Elektronen aus Atomen herauszuschlagen. In einem kalten Plasma hingegen ist nur die Temperatur der Elektronen 
-hoch, während die Ionen und neutralen Gasteilchen deutlich kühler bleiben. Das liegt daran, dass Elektronen etwa 100.000-mal leichter als Ionen sind und somit kaum 
-Energie mit diesen austauschen können, ähnlich wie ein Tischtennisball, der eine Billardkugel trifft. Aufgrund des geringen Drucks in Plasmaanlagen ist die freie 
-Weglänge groß, was zu wenigen Kollisionen führt, bevor die Teilchen die Anlage verlassen. Bei der Anregung des Plasmas durch eine Gasentladung werden die 
-Elektronen erhitzt, ohne das Gas insgesamt zu erwärmen. Die hochenergetischen Elektronen ionisieren oder dissoziieren das Restgas und ermöglichen chemische 
-Reaktionen, die normalerweise bei niedrigen Temperaturen nicht stattfinden würden, wodurch die thermische Belastung des Substrats und der Oberflächen gering 
-bleibt \cite{keplinger2024CVD}.} \cite{keplinger2024CVD}.
+Ein weiteres wesentliches Kriterium ist die Energiezufuhr, die bestimmt, \textbf{wie die für die Reaktion benötigte Energie bereitgestellt wird} \cite{keplinger2024CVD}.
 
 \vspace{0.0em}
 
-Das \textbf{Plasma kann kapazitiv} durch parallel angeordnete Elektroden (Parallelplattenanlage) -- zu sehen in \autoref{fig:PECVD} -- \textbf{oder induktiv} 
-durch eine Spule um die Reaktorkammer (ICP-Anlage, \textit{inductive coupled plasma}) \textbf{angeregt werden}. Dabei wird häufig die industriefreigegebene 
-Frequenz von 13,56~MHz verwendet, und die Anlagen sind aufgrund ihrer \textbf{starken elektromagnetischen Strahlung} abgeschirmt \cite{keplinger2024CVD}.
+\paragraph{\uline{Thermische Anregung:}} Das \textbf{Substrat} wird \textbf{mithilfe von Öfen oder Heizplatten auf} die erforderliche \textbf{Reaktionstemperatur gebracht} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+
+\paragraph{\uline{Plasma:}} Durch eine \textbf{Gasentladung} entsteht ein Plasma, das den \textbf{Großteil der Energie für die chemische Reaktion} bereitstellt, weshalb man von \textbf{PECVD (\textit{plasma enhanced} CVD)} spricht. Die \textbf{thermische Belastung der Oberfläche und des Sunstrats} bleibt dabei \textbf{gering}\footnote{In der Physik bezeichnet man ein Plasma als ein teilweise oder vollständig ionisiertes Gas. Plasmen werden in ``heiß'' und ``kalt'' unterteilt, je nachdem, ob thermisches Gleichgewicht zwischen den Teilchen besteht. In einem heißen Plasma haben Elektronen und Ionen die gleiche Temperatur (typischerweise $kT > 5000$ K), die notwendig ist, um Elektronen aus Atomen herauszuschlagen. In einem kalten Plasma hingegen ist nur die Temperatur der Elektronen hoch, während die Ionen und neutralen Gasteilchen deutlich kühler bleiben. Das liegt daran, dass Elektronen etwa 100.000-mal leichter als Ionen sind und somit kaum Energie mit diesen austauschen können, ähnlich wie ein Tischtennisball, der eine Billardkugel trifft. Aufgrund des geringen Drucks in Plasmaanlagen ist die freie Weglänge groß, was zu wenigen Kollisionen führt, bevor die Teilchen die Anlage verlassen. Bei der Anregung des Plasmas durch eine Gasentladung werden die Elektronen erhitzt, ohne das Gas insgesamt zu erwärmen. Die hochenergetischen Elektronen ionisieren oder dissoziieren das Restgas und ermöglichen chemische Reaktionen, die normalerweise bei niedrigen Temperaturen nicht stattfinden würden, wodurch die thermische Belastung des Substrats und der Oberflächen gering bleibt \cite{keplinger2024CVD}.} \cite{keplinger2024CVD}.
+
+\vspace{0.0em}
+
+Das \textbf{Plasma kann kapazitiv} durch parallel angeordnete Elektroden (Parallelplattenanlage) -- zu sehen in \autoref{fig:PECVD} -- \textbf{oder induktiv} durch eine Spule um die Reaktorkammer (ICP-Anlage, \textit{inductive coupled plasma}) \textbf{angeregt werden}. Dabei wird häufig die industriefreigegebene Frequenz von 13,56~MHz verwendet, und die Anlagen sind aufgrund ihrer \textbf{starken elektromagnetischen Strahlung} abgeschirmt \cite{keplinger2024CVD}.
 
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=\textwidth]{images/PECVD-Anlage.png} % Pfad und Dateiname des Bildes angeben
-    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
-    \caption{Schematischer Aufbau einer PECVD-Anlage, bei der das Plasma durch eine Gasentladung erzeugt wird (Parallelplattenanlage). Die 
-    Elektronentemperatur beträgt $T_\mathrm{el} = 10\,000{-}90\,000 \, \mathrm{K}$ (1–8 eV), die Ionentemperatur $T_\mathrm{ion} = 500{-}1\,000 \, \mathrm{K}$, 
-    und der Druck liegt bei $p = 0.1{-}10 \, \mathrm{mbar}$ \cite{keplinger2024CVD}.}
+    \captionsetup{labelfont=bf, width=.9\textwidth} % Setzt die Bildnummer fett
+    \caption{Schematischer Aufbau einer PECVD-Anlage, bei der das Plasma durch eine Gasentladung erzeugt wird (Parallelplattenanlage). Die Elektronentemperatur beträgt $T_\mathrm{el} = 10\,000{-}90\,000 \, \mathrm{K}$ (1–8 eV), die Ionentemperatur $T_\mathrm{ion} = 500{-}1\,000 \, \mathrm{K}$, und der Druck liegt bei $p = 0.1{-}10 \, \mathrm{mbar}$ \cite{keplinger2024CVD}.}
     \label{fig:PECVD}
 \end{figure}
 
 \vspace{0.0em}
-\paragraph{\uline{Laser:}} Durch die \textbf{gezielte lokale Erwärmung des Substrats mittels Laser (LCVD)} können \textbf{Schichten schreibend auf} das 
-\textbf{Substrat aufgetragen} und sogar \textbf{dreidimensionale Strukturen} erzeugt werden (\autoref{fig:LCVD}). Wie bei den meisten schreibenden Verfahren eignet 
-sich der LCVD-Prozess \textbf{gut für Prototypen und Forschungszwecke}, ist jedoch \textbf{weniger geeignet für industrielle Anwendungen} \cite{keplinger2024CVD}.
+
+\paragraph{\uline{Laser:}} Durch die \textbf{gezielte lokale Erwärmung des Substrats mittels Laser (LCVD)} können \textbf{Schichten schreibend auf} das \textbf{Substrat aufgetragen} und sogar \textbf{dreidimensionale Strukturen} erzeugt werden (\autoref{fig:LCVD}). Wie bei den meisten schreibenden Verfahren eignet sich der LCVD-Prozess \textbf{gut für Prototypen und Forschungszwecke}, ist jedoch \textbf{weniger geeignet für industrielle Anwendungen} \cite{keplinger2024CVD}.
 
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=.55\textwidth]{images/Laser CVD.png} % Pfad und Dateiname des Bildes angeben
-    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
-    \caption{Laser-unterstützte CVD: Der Laser erwärmt das Substrat punktuell, wodurch die chemische Reaktion und Schichtabscheidung nur im Bereich des Laserflecks 
-    stattfinden \cite{keplinger2024CVD}.}
+    \captionsetup{labelfont=bf, width=.65\textwidth} % Setzt die Bildnummer fett
+    \caption{Laser-unterstützte CVD: Der Laser erwärmt das Substrat punktuell, wodurch die chemische Reaktion und Schichtabscheidung nur im Bereich des Laserflecks stattfinden \cite{keplinger2024CVD}.}
     \label{fig:LCVD}
 \end{figure}
 
+
+
+% Chemical Vapour Deposition -> CVD-Anlagen -> Erwärmte Anlagenteile ------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsubsection{Erwärmte Anlagenteile} % Erwärmte Anlagenteile
+
 Bei einer CVD-Anlage ist ebenfalls zu berücksichtigen, welche \textbf{Teile des Reaktors} erwärmt werden \cite{keplinger2024CVD}.
 
 \vspace{0.0em}
-\paragraph{\uline{Hot-Wall-Reaktor:}} Der \textbf{Substrathalter (Susceptor) mit} den \textbf{Substraten und die Reaktorkammer werden durch} 
-einen \textbf{Ofen mit Widerstandsheizung erwärmt} (\autoref{fig:Hot-Wall-Reaktor}). Die \textbf{Wafer stehen frei} und können 
-\textbf{dicht gepackt} werden, wodurch die \textbf{Beschichtung} (z.B. Polysilizium) \textbf{auf beiden Seiten bei Temperaturen zwischen 400 
-und 1000°C} erfolgt. Allerdings werden \textbf{auch die Reaktorwände beschichtet}, was durch \textbf{Partikelbildung} zu Problemen führen 
-kann \cite{keplinger2024CVD}.
+
+\paragraph{\uline{Hot-Wall-Reaktor:}} Der \textbf{Substrathalter (Susceptor) mit} den \textbf{Substraten und die Reaktorkammer werden durch} einen \textbf{Ofen mit Widerstandsheizung erwärmt} (\autoref{fig:Hot-Wall-Reaktor}). Die \textbf{Wafer stehen frei} und können \textbf{dicht gepackt} werden, wodurch die \textbf{Beschichtung} (z.B. Polysilizium) \textbf{auf beiden Seiten bei Temperaturen zwischen 400 und 1000°C} erfolgt. Allerdings werden \textbf{auch die Reaktorwände beschichtet}, was durch \textbf{Partikelbildung} zu Problemen führen kann \cite{keplinger2024CVD}.
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=.65\textwidth]{images/Hot-wall-reactor.png} % Pfad und Dateiname des Bildes angeben
+    \includegraphics[width=.6\textwidth]{images/Hot-wall-reactor.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{Schematische Anordnung beim Hot-wall-Reaktor \cite{keplinger2024CVD}.}
     \label{fig:Hot-Wall-Reaktor}
 \end{figure}
 
 \vspace{0.0em}
-\paragraph{\uline{Cold-Wall-Reaktor:}} Der \textbf{Waferhalter} wird hier entweder \textbf{resistiv, induktiv oder durch Strahlungslampen 
-erhitzt}, während die \textbf{Reaktorwände kalt} bleiben (\autoref{fig:Cold-Wall-Reaktor}). Dies führt zu \textbf{geringeren Ablagerungen an 
-den Wänden} und dadurch zu \textbf{weniger Partikelkontaminationen} im Vergleich zum Hot-Wall-Reaktor \cite{keplinger2024CVD}.
+
+\paragraph{\uline{Cold-Wall-Reaktor:}} Der \textbf{Waferhalter} wird hier entweder \textbf{resistiv, induktiv oder durch Strahlungslampen erhitzt}, während die \textbf{Reaktorwände kalt} bleiben (\autoref{fig:Cold-Wall-Reaktor}). Dies führt zu \textbf{geringeren Ablagerungen an den Wänden} und dadurch zu \textbf{weniger Partikelkontaminationen} im Vergleich zum Hot-Wall-Reaktor \cite{keplinger2024CVD}.
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=.60\textwidth]{images/Cold-wall-reactor.png} % Pfad und Dateiname des Bildes angeben
+    \includegraphics[width=.575\textwidth]{images/Cold-wall-reactor.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{Schematischer Aufbau des Cold-wall-Reaktors \cite{keplinger2024CVD}.}
     \label{fig:Cold-Wall-Reaktor}
 \end{figure}
 
+
+
+% Chemical Vapour Deposition -> CVD-Anlagen -> Druck ----------------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
+
 \subsubsection{Druck} % Druck
+
 Schließlich ist auch der Druck zu berücksichtigen, \textbf{unter dem die Reaktionen stattfinden} \cite{keplinger2024CVD}.
 
 \vspace{0.0em}
-\paragraph{\uline{Atmospheric Pressure CVD (APCVD):}} Bei diesem Verfahren erfolgt die \textbf{Abscheidung einer Oxidschicht unter 
-Atmosphärendruck} und ohne Evakuierung der Anlage bei einer Temperatur von z.B. \textbf{400°C}. Die Oxidschicht bildet sich über \textbf{folgende chemische 
-Reaktionen}\footnote{Bei diesen Reaktionen handelt es sich um Oxidationsreaktionen, bei denen aus dem Ausgangsstoff Silan (\(\mathrm{SiH}_4\)) und Sauerstoff 
-(\(\mathrm{O}_2\)) Siliziumdioxid (\(\mathrm{SiO}_2\)) gebildet wird \cite{keplinger2024CVD}. Dies geschieht über zwei mögliche Reaktionswege: 1. 
-\(\mathrm{SiH}_4 + 2 \, \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\mathrm{O}\): Silan reagiert mit zwei Molekülen Sauerstoff und bildet 
-Siliziumdioxid sowie Wasser (\(\mathrm{H}_2\mathrm{O}\)) als Nebenprodukt. 2. \(\mathrm{SiH}_4 + \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\): 
-Hier reagiert Silan mit einem Molekül Sauerstoff, wodurch ebenfalls Siliziumdioxid entsteht, jedoch ist das Nebenprodukt Wasserstoffgas (\(\mathrm{H}_2\)). Beide 
-Reaktionen finden bei typischen CVD-Prozesstemperaturen statt und führen zur Bildung einer Siliziumdioxidschicht (\(\mathrm{SiO}_2\)) auf dem Substrat. Die Wahl 
-der Reaktion hängt von den Prozessbedingungen wie Temperatur und Sauerstoffkonzentration ab \cite{keplinger2024CVD}.}:
+
+\paragraph{\uline{Atmospheric Pressure CVD (APCVD):}} Bei diesem Verfahren erfolgt die \textbf{Abscheidung einer Oxidschicht unter Atmosphärendruck} und ohne Evakuierung der Anlage bei einer Temperatur von z.B. \textbf{400°C}. Die Oxidschicht bildet sich über \textbf{folgende chemische Reaktionen}\footnote{Bei diesen Reaktionen handelt es sich um Oxidationsreaktionen, bei denen aus dem Ausgangsstoff Silan (\(\mathrm{SiH}_4\)) und Sauerstoff (\(\mathrm{O}_2\)) Siliziumdioxid (\(\mathrm{SiO}_2\)) gebildet wird \cite{keplinger2024CVD}. Dies geschieht über zwei mögliche Reaktionswege: 1. \(\mathrm{SiH}_4 + 2 \, \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\mathrm{O}\): Silan reagiert mit zwei Molekülen Sauerstoff und bildet Siliziumdioxid sowie Wasser (\(\mathrm{H}_2\mathrm{O}\)) als Nebenprodukt. 2. \(\mathrm{SiH}_4 + \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\): Hier reagiert Silan mit einem Molekül Sauerstoff, wodurch ebenfalls Siliziumdioxid entsteht, jedoch ist das Nebenprodukt Wasserstoffgas (\(\mathrm{H}_2\)). Beide Reaktionen finden bei typischen CVD-Prozesstemperaturen statt und führen zur Bildung einer Siliziumdioxidschicht (\(\mathrm{SiO}_2\)) auf dem Substrat. Die Wahl der Reaktion hängt von den Prozessbedingungen wie Temperatur und Sauerstoffkonzentration ab \cite{keplinger2024CVD}.}:
 $$
 \mathrm{SiH}_4 + 2 \, \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2\mathrm{O}
 $$
 $$
 \mathrm{SiH}_4 + \mathrm{O}_2 \rightarrow \mathrm{SiO}_2 + 2 \, \mathrm{H}_2
 $$
-Aufgrund der \textbf{niedrigen Prozesstemperatur} werden die \textbf{Seitenwände (Flanken) der Strukturen weniger stark beschichtet als die horizontalen Bereiche}, 
-was zu einer \textbf{geringen Konformität}\footnote{Die Konformität beschreibt das Verhältnis der Beschichtungsdicke an den Seitenwänden zur Beschichtungsdicke in 
-horizontalen Bereichen \cite{keplinger2024CVD}.} führt \cite{keplinger2024CVD}.
+Aufgrund der \textbf{niedrigen Prozesstemperatur} werden die \textbf{Seitenwände (Flanken) der Strukturen weniger stark beschichtet als die horizontalen Bereiche}, was zu einer \textbf{geringen Konformität}\footnote{Die Konformität beschreibt das Verhältnis der Beschichtungsdicke an den Seitenwänden zur Beschichtungsdicke in horizontalen Bereichen \cite{keplinger2024CVD}.} führt \cite{keplinger2024CVD}.
     
 \vspace{0.0em}
-\paragraph{\uline{Low Pressure CVD (LPCVD):}} Werden die \textbf{Schichten in} einem \textbf{evakuierten Reaktor abgeschieden}, handelt es sich um Low Pressure 
-CVD. Die \textbf{Drücke} liegen typischerweise im Bereich von \textbf{10 bis 100 Pa}. Ein häufiges \textbf{Anwendungsbeispiel} ist die \textbf{Abscheidung dünner 
-Schichten aus Polysilizium oder Siliziumnitrid}. Diese Schichten weisen eine \textbf{nahezu perfekte Konformität} auf, d.h., die \textbf{vertikalen Schichten in 
-Kanälen haben fast die gleiche Dicke wie die horizontalen Flächen}, mit einer \textbf{Konformität von bis zu 0,98} \cite{keplinger2024CVD}.
+
+\paragraph{\uline{Low Pressure CVD (LPCVD):}} Werden die \textbf{Schichten in} einem \textbf{evakuierten Reaktor abgeschieden}, handelt es sich um Low Pressure CVD. Die \textbf{Drücke} liegen typischerweise im Bereich von \textbf{10 bis 100 Pa}. Ein häufiges \textbf{Anwendungsbeispiel} ist die \textbf{Abscheidung dünner Schichten aus Polysilizium oder Siliziumnitrid}. Diese Schichten weisen eine \textbf{nahezu perfekte Konformität} auf, d.h., die \textbf{vertikalen Schichten in Kanälen haben fast die gleiche Dicke wie die horizontalen Flächen}, mit einer \textbf{Konformität von bis zu 0,98} \cite{keplinger2024CVD}.
+
+
+
+% Chemical Vapour Deposition -> Atomlagenabscheidung ----------------------------------------------------------------------------------------------------------------------
+
 
 \vspace{1em}
+
 \subsection{Atomlagenabscheidung} % Atomlagenabscheidung
+
 Bei der Atomlagenabscheidung (\textit{atomic layer deposition}, ALD) werden \textbf{in einem zyklischen Verfahren verschiedene Gase abwechselnd in den Reaktor geleitet}. Die einzelnen \textbf{Vorläufersubstanzen bilden monomolekulare Schichten}\footnote{Siehe Monolage (Begriffsklärung für PVD).}, die das \textbf{Schichtwachstum auf eine Moleküllage begrenzen. Zwischen} den \textbf{Prozessschritten mit} den \textbf{Vorläufersubstanzen} wird der \textbf{Reaktor mit} einem \textbf{inerten Gas gespült, um unerwünschte Reaktionen} im Reaktorvolumen \textbf{zu verhindern} \cite{keplinger2024CVD}.
 
 \vspace{1em}
@@ -730,7 +679,7 @@ Durch \textbf{Zählen der Zyklen} kann eine \textbf{Genauigkeit der Schichtdicke
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=.85\textwidth]{images/Atomlagenabscheidung.png} % Pfad und Dateiname des Bildes angeben
+    \includegraphics[width=.8\textwidth]{images/Atomlagenabscheidung.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{Abscheidung von \(\mathrm{Al_2O_3}\) (Aluminiumoxid) mittels ALD \cite{keplinger2024CVD}.}
     \label{fig:ALD}
@@ -754,9 +703,260 @@ Dieser Schritt endet, sobald keine \(\mathrm{CH_3}\)-Gruppen mehr sichtbar sind 
 
 Dieser Prozess wiederholt sich und ermöglicht den schichtweisen Aufbau von Aluminiumoxid (\(\mathrm{Al_2O_3}\)) durch die Atomlagenabscheidung (ALD), wobei in jedem Zyklus eine monomolekulare Schicht entsteht.
 
+
+
+% Lithographie ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 \vspace{1em}
-\section{Lithographie} % Lithographie
-This sections teaches you some more stuff ...
+
+\section{Lithographie}
+
+Die Lithographie ist ein zentrales Verfahren in der Mikrosystemtechnik zur \textbf{Herstellung feiner Strukturen auf Halbleitermaterialien}. Dabei werden \textbf{spezifizierte Muster auf eine Oberfläche übertragen}, die anschließend geätzt oder anderweitig verarbeitet werden, um Mikrochips, Sensoren und andere Miniaturkomponenten zu erzeugen.
+
+\vspace{1em}
+
+Das grundlegende Prinzip der Lithographie umfasst mehrere Schritte: Zuerst wird ein \textbf{lichtempfindlicher Lack (dünner Film)}, ein sogenannter ``\textbf{Photoresist (Photolack)}'', \textbf{auf das Substrat aufgetragen. Durch Masken, die bestimmte Bereiche abdecken}, wird der Photoresist selektiv \textbf{belichtet}. Diese belichteten Bereiche verändern ihre chemischen Eigenschaften, sodass sie \textbf{je nach Resisttyp (positiv oder negativ) entfernt oder erhalten} bleiben. Nach dem Entwicklungsprozess bleiben die gewünschten Strukturen auf dem Substrat sichtbar und dienen als Vorlage für weitere Prozessschritte wie das Ätzen oder das Abscheiden von Materialien \cite{madou2002}.
+
+\vspace{1em}
+
+In der Mikrosystemtechnik sind verschiedene Lithographietechniken etabliert, darunter die \textbf{Photolithographie (optische Lithographie)} und Elektronenstrahllithographie. Die Photolithographie ist besonders für großflächige Produktionen geeignet, da sie hohe Auflösung und Prozessgeschwindigkeit bietet. Bei der Elektronenstrahllithographie hingegen wird mit einem feinen Elektronenstrahl gearbeitet, wodurch eine höhere Auflösung erreicht wird, was besonders für Nanostrukturen entscheidend ist \cite{wolf2000}.
+
+\vspace{1em}
+
+Diese Verfahren bieten die Grundlage für das Design und die Herstellung von Mikro- und Nanosystemen, wie sie in modernen elektronischen und mechanischen Anwendungen benötigt werden. \textbf{In dieser Ausarbeitung wird jedoch ausschließlich die optische Lithographie näher erläutert.}
+
+
+
+% Lithographie -> Begriffsklärung für Lithographie ------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Begriffsklärung für die Lithographie}
+
+Begriffe, die bereits in den vorigen Kapiteln erläutert wurden, werden hier nicht erneut angeführt.
+
+\begin{itemize}
+    \item \textbf{Photoresist}: Eine lichtempfindliche Schicht (Photolack), die zur Strukturierung von Mikro- und Nanometer-Bereichen dient \cite{madou2002}.
+    \item \textbf{Maske}: Eine Vorlage mit einem Muster aus lichtdurchlässigen und lichtundurchlässigen Bereichen, die auf den Photoresist projiziert wird. Sie dient dazu, das gewünschte Strukturmuster auf den Photoresist zu übertragen, indem nur bestimmte Bereiche des Photoresists belichtet werden \cite{wolf2000}.
+\end{itemize}
+
+
+
+% Lithographie -> Photoresist ---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Photoresist}
+
+Wie bereits erwähnt, handelt es sich beim \textbf{Photoresist} um einen \textbf{lichtempfindlichen Lack}, der \textbf{auf} das \textbf{Substrat aufgetragen} wird. Bei einem sogenannten ``\textbf{Negativresist}'' verbleibt nach Belichtung und Entwicklung eine Struktur, die invers zur Struktur auf der Fotomaske ist: \textbf{An den Stellen, an denen die Fotomaske transparent ist, wird der Photoresist belichtet und dadurch unlöslich.} Bei einem ``\textbf{Positivresist}'' hingegen erhöht sich die Löslichkeit der belichteten Bereiche. Dadurch führen die \textbf{undurchsichtigen Bereiche der Fotomaske zu den nicht löslichen und somit verbleibenden Schichten} nach Belichtung und Entwicklung \cite{gerald2006}. Zur Veranschaulichung soll die \autoref{fig:photoresist1} dienen.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.9\textwidth]{images/photoresist.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Vergleich Positiv- und Negativresist \cite{sciencedirect_photoresist}.}
+    \label{fig:photoresist1}
+\end{figure}
+
+\vspace{1em}
+
+Photoresiste müssen die folgenden \textbf{Anforderungen} erfüllen \cite{schmid2024}:
+
+\begin{itemize}
+    \item \textbf{Hohe Strukturgenauigkeit}\footnote{Hohe Strukturgenauigkeit bedeutet, dass der Photoresist die Fähigkeit besitzt, sehr präzise und detaillierte Muster auf dem Substrat zu erzeugen. Dies ist wichtig, um die gewünschten Strukturen exakt abzubilden und sicherzustellen, dass die resultierenden Muster genau den Spezifikationen entsprechen. Eine hohe Strukturgenauigkeit ist entscheidend für Anwendungen in der Mikro- und Nanotechnologie, da kleinste Abweichungen die Funktionalität der Bauteile beeinträchtigen können \cite{madou2002, wolf2000, sciencedirect_photoresist}.}
+    \item \textbf{Gute Maßhaltigkeit}\footnote{Das bedeutet, dass der Photoresist die Abmessungen des gewünschten Musters präzise beibehalten muss, selbst nach den Prozessen der Belichtung, Entwicklung und weiteren Bearbeitungsschritten. Eine hohe Maßhaltigkeit stellt sicher, dass die Struktur exakt in der vorgesehenen Größe und Form erhalten bleibt \cite{madou2002, wolf2000}.}
+    \item \textbf{Hohe Sensitivität}\footnote{Hohe Sensitivität bedeutet, dass der Photoresist schon bei geringer Belichtungsenergie zuverlässig reagiert, was zu einer effizienteren und schnelleren Strukturierung führt \cite{madou2002, sciencedirect_photoresist}.}
+    \item \textbf{Gute Haftung}
+    \item \textbf{Gute Resistenz beim Ätzen}\footnote{Gute Resistenz beim Ätzen bezieht sich auf die Fähigkeit des nicht löslichen Teils des Photoresists, dem Ätzprozess standzuhalten, sodass die darunterliegende Schicht geschützt bleibt \cite{madou2002, wolf2000}.} (daher der Begriff „Resist“)
+    \item \textbf{Hohe thermische und chemische Belastbarkeit}
+    \item \textbf{Gute Entfernbarkeit (Strippen)} (nach dem Ätzen)
+\end{itemize}
+
+\vspace{1em}
+
+Eine detaillierte Gegenüberstellung von Positiv- und Negativresisten ist in \autoref{tab:Vergleich Positiv- und Negativresist Teil 1} und \autoref{tab:Vergleich Positiv- und Negativresist Teil 2} dargestellt.
+
+\begin{table}[htb!]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Erhöht den Zeilenabstand in der Tabelle
+    \begin{tabular}{|p{6cm}|p{6cm}|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{Vergleich Positiv- und Negativresist}} \\ \hline
+        \textbf{Positivresist} & \textbf{Negativresist} \\ \hline
+        Erhöhte Löslichkeit der belichteten Bereiche (\textbf{belichtete Bereiche werden entfernt}) & Verringerte Löslichkeit der belichteten Bereiche (\textbf{belichtete Bereiche werden entfernt}) \\
+        \textbf{Hohe Strukturgenauigkeit möglich} (wird hauptsächlich für feine Muster verwendet) & \textbf{Weniger strukturgenau}, besonders bei kleinsten Strukturen (eignet sich für grobe, robuste Strukturen) \\
+        \textbf{Gute Maßhaltigkeit} bei kleinen Strukturen & Geeignet für größere, weniger komplexe Strukturen \\
+        Erfordert höhere Belichtungsenergie & Erfordert niedrigere Belichtungsenergie \\ \hline
+    \end{tabular}
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Vergleich Positiv- und Negativresist Teil 1 \cite{madou2002, wolf2000}}
+    \label{tab:Vergleich Positiv- und Negativresist Teil 1}
+\end{table}
+
+\begin{table}[htb!]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Erhöht den Zeilenabstand in der Tabelle
+    \begin{tabular}{|p{6cm}|p{3cm}|p{3cm}|}
+        \hline
+        \textbf{Vergleichsparameter} & \textbf{Positiv-Resist} & \textbf{Negativ-Resist} \\ \hline
+        Minimale Strukturbreite & \textbf{< 0.5 µm} & ca. 2 µm \\ \hline
+        Quellen beim Entwickeln & \textbf{nein} & ja \\ \hline
+        Aspektverhältnis & \textbf{gut} & mäßig \\ \hline
+        Lift-off & Mit Aceton & Methylethylketon \\ \hline
+        Thermische Stabilität & \textbf{gut (bis 200 °C)} & mäßig \\ \hline
+        Staubpartikel & \textbf{kaum Einfluss} & bewirken Löcher \\ \hline
+        Passivierung bei \textbf{Plasma-Ätzung} & \textbf{sehr gut} & mäßig \\ \hline
+        Passivierung bei \textbf{Nasschemie} & mäßig & \textbf{sehr gut} \\ \hline
+        Adhäsion (Haftung) zu Si & gut & \textbf{sehr gut} \\ \hline
+        Kosten & \textbf{teurer} & günstiger \\ \hline
+    \end{tabular}
+    \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
+    \caption{Vergleich Positiv- und Negativresist Teil 2 \cite{madou2002, wolf2000}}
+    \label{tab:Vergleich Positiv- und Negativresist Teil 2}
+\end{table}  
+
+\vspace{1em}
+
+Die angeführten \textbf{Vergleichsparameter} in der \autoref{tab:Vergleich Positiv- und Negativresist Teil 2} beschreiben wichtige \textbf{wichtige Eigenschaften von Positiv- und Negativresisten} und werden nun kurz erläutert: 
+
+\vspace{1em}
+
+Die \textbf{Minimale Strukturbreite} gibt an, wie klein die erzeugten Muster sein können, was für die Herstellung feinster Strukturen entscheidend ist \cite{madou2002, sciencedirect_photoresist}. 
+
+\vspace{1em}
+
+\textbf{``Quellen beim Entwickeln''} beschreibt, ob sich der \textbf{Resist beim Entwickeln ausdehnt}, was die \textbf{Präzision der Strukturen beeinflusst} \cite{hoegel2024}. 
+
+\vspace{1em}
+
+Das \textbf{``Aspektverhältnis''} bezieht sich auf das \textbf{Verhältnis von Höhe zu Breite der Strukturen} und \textbf{beeinflusst} deren \textbf{Stabilität und Detaillierung}. Ein \textbf{gutes Aspektverhältnis bedeutet, dass die Strukturen stabiler stehen und feine Details genauer dargestellt werden} können (\autoref{fig:high-aspect-ratio}). \textbf{Wenn} das \textbf{Aspektverhältnis nicht passt, könnten hohe Strukturen kippen oder Details verloren gehen}. Grundsätzlich gilt: Je größer das Aspektverhältnis und je kleiner die absolute Größe der Struktur, desto schwieriger wird die Fertigung. \cite{madou2002, wolf2000, gerald2006, wikipedia_aspektverhaeltnis}. 
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/high-aspect-ratio.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.85\textwidth} % Setzt die Bildnummer fett
+    \caption{Kohlenstoff-MEMS-Strukturen mit hohem Aspektverhältnis (Höhe zu Breite) \cite{carbonMEMS}.}
+    \label{fig:high-aspect-ratio}
+\end{figure}
+
+\vspace{1em}
+
+
+\textbf{``Lift-off''} bezeichnet das \textbf{Verfahren zum Entfernen des Resists} und hängt von den eingesetzten Chemikalien ab, wie Aceton oder Methylethylketon \cite{wolf2000, rogers2008}. 
+
+\vspace{1em}
+
+\textbf{Staubpartikel} können die Struktur beeinflussen: Während Positivresisten weniger empfindlich auf Staub reagieren, können sie \textbf{bei Negativresisten Löcher verursachen}. Dies \textbf{liegt daran, dass Staubpartikel während der Belichtung als Schattenwurf fungieren}. Bei einem Negativresist führt ein solcher Schattenwurf dazu, dass der \textbf{betroffene Bereich unbelichtet und somit beim Entwickeln löslich bleibt}, was kleine Löcher im Resist hinterlässt. Da Negativresiste belichtete Bereiche härten und unbelichtete entfernen, können Staubpartikel daher Löcher in der endgültigen Struktur verursachen \cite{madou2002, sciencedirect_photoresist}.
+
+\textbf{Positivresisten} hingegen \textbf{reagieren weniger empfindlich auf Staub}, da bei ihnen die belichteten (und nicht die unbelichteten) Bereiche entfernt werden. Ein \textbf{Staubpartikel auf einem Positivresist verhindert zwar die Belichtung eines Punktes, aber dieser Bereich bleibt im Nachhinein bestehen}\footnote{Im schlimmsten Fall bleibt zu viel Photolack zurück. Nach dem Entfernen der Staubpartikel muss dann lediglich erneut belichtet werden, anstatt -- wie beim Negativresist -- neuer Photolack aufzutragen werden.}, während die belichteten, von Staub freien Bereiche entfernt werden. Daher entstehen in Positivresisten keine Löcher durch Staubpartikel \cite{wias_photoresist}.
+
+\vspace{1em}
+
+Die \textbf{``Passivierung bei Plasma-Ätzung'' und ``Nasschemie''} beschreiben, \textbf{wie gut der Resist die darunterliegende Schicht während der Ätzprozesse schützt}, was besonders bei empfindlichen Schichten wichtig ist \cite{schmid2024CVD}. 
+
+\vspace{1em}
+
+\textbf{Plasma-Ätzung} ist ein trockenes Ätzverfahren, bei dem ionisiertes Gas (Plasma) genutzt wird, um Material gezielt von einer Oberfläche zu entfernen. Dabei entsteht eine chemische Reaktion zwischen dem Plasma und dem zu ätzenden Material, was präzise und kontrollierte Strukturierungen ermöglicht. Dieses Verfahren wird häufig in der Mikroelektronik eingesetzt, da es sehr feine Strukturen erlaubt \cite{madou2002, wolf2000}.
+
+\vspace{1em}
+
+\textbf{Nasschemie} hingegen nutzt flüssige Chemikalien, um Material durch chemische Reaktionen zu lösen und abzutragen. Dabei wird das Substrat in eine Lösung getaucht, die das Material selektiv auflöst. Diese Methode ist besonders verbreitet, weil sie einfach anzuwenden ist und sich gut für großflächige Ätzungen eignet, jedoch weniger präzise als Plasma-Ätzung ist \cite{rogers2008, gerald2006}.
+
+
+
+% Lithographie -> Funktionsweise ------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Funktionsweise}
+
+In diesem Abschnitt wird der Prozessablauf für die Lithographie, wie in \cite{schmid2024, gerald2006} beschrieben, erklärt. Zur besseren Veranschaulichung zeigt die \autoref{fig:lithography} einen vereinfachten Ablauf des Lithographieprozesses.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/lithography.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Vereinfachter Ablauf des Lithographieprozesses mit Negativresist \cite{wias_photoresist}.}
+    \label{fig:lithography}
+\end{figure}
+
+\begin{enumerate}
+    \item \textbf{Reinigen und Trocknen des Substrats} (z. B. bei 300°C).
+    \begin{itemize}
+        \item \textbf{Ziel}: Sicherstellung einer guten Haftung zwischen Substrat und Fotoresist.
+    \end{itemize}
+
+    \item \textbf{Optional}: Vorbereitung des Substrats zur Verbesserung der Resist-Haftung.
+    \begin{itemize}
+        \item \textbf{Ziel}: Falls der Resist schlecht auf $\mathrm{Si}$, $\mathrm{SiOH}$ (Siliziumhydroxid) oder $\mathrm{SiO}_2$ (Siliziumoxid bzw. Siliziumdioxid) haftet, Aufdampfen eines Haftvermittlers, z. B. Hexamethyldisilazan (HMDS).
+    \end{itemize}
+
+    \item \textbf{Aufschleudern des Resists} (Spin-Coating):
+    \begin{itemize}
+        \item \textbf{Ziel}: Gleichmäßiges Aufbringen des Resists mit definierter Dicke.
+        \item Spin-Coating-Parameter: 900~U/min, Beschleunigung von 15 $\mathrm{U}/\mathrm{s}^2$, 30 Sekunden Spin-Dauer, ergibt eine Schichtdicke von ca. 1,6~µm.
+        \item Beispiel: Positivresist auf Novolak-Diazo-Basis, AZ 4620.
+    \end{itemize}
+
+    \item \textbf{Softbake} (Resist-Prebake: Vorhärtung des Resists):
+    \begin{itemize}
+        \item \textbf{Ziel}: Bildung eines stabilen Resistfilms und weitgehende Entfernung von Lösungsmitteln.
+        \item Durchführung im Umluftofen bei 90°C für 30 Minuten.
+    \end{itemize}
+
+    \item \textbf{Optional}: Randentlackung und erneutes Trocknen des Substrats.
+
+    \item \textbf{Justierung und Belichtung}:
+    \begin{itemize}
+        \item \textbf{Ziel}: Übertragung der Maskenstruktur in den Resist.
+        \item In der Produktion erfolgt eine automatische Justierung und Belichtung.
+        \item In der Mikrostrukturtechnik wird oft eine doppelseitige Belichtung zur Bearbeitung der Waferrückseite angewendet.
+    \end{itemize}
+
+    \item \textbf{Schichthärtung} (Post-Exposure Bake):
+    \begin{itemize}
+        \item \textbf{Ziel}: Reduktion des Einflusses einer inhomogenen Belichtungsdosis durch stehende Wellen im Resist.
+    \end{itemize}
+
+    \item \textbf{Entwickeln des Resists}:
+    \begin{itemize}
+        \item \textbf{Ziel}: Herausbildung des Strukturmusters im Fotoresist.
+        \item Beispiel: Sprühentwicklung mit verdünntem Entwickler AZ 400 K (1:4), Entwicklungsdauer 150 Sekunden bei 38°C.
+        \item Nach dem Entwickeln Spülen des Resists mit deionisiertem Wasser\footnote{Deionisiertes Wasser, auch DI-Wasser genannt, ist Wasser, aus dem gelöste Ionen entfernt wurden, um eine hohe Reinheit zu erreichen. Der Prozess der Deionisation entfernt Kationen wie $\mathrm{Na}^+$ und $\mathrm{Ca}^{2+}$ sowie Anionen wie $\mathrm{Cl}^-$ und $\mathrm{SO}_4^{2-}$ \cite{swatchuk2008, weast2004}. Deionisiertes Wasser wird durch Ionenaustausch gewonnen und weist eine geringe Leitfähigkeit auf. In der Mikroelektronik, Labortechnik und Medizin wird es aufgrund seiner Reinheit verwendet \cite{handbook2007}. In der Fotolithografie wird DI-Wasser zum Spülen von Fotolacken eingesetzt, um die Präzision und Qualität der Strukturen zu sichern \cite{peeters1994}.}.    
+        \item Trocknung des Resists durch Trockenschleudern.
+    \end{itemize}
+
+    \item \textbf{Hardbake} (Resist-Postbake):
+    \begin{itemize}
+        \item \textbf{Ziel}: Verdampfung von Lösungsmittelresten und Verbesserung der Resisthaftung auf dem Wafer für folgende Ätz- oder Implantationsprozesse.
+        \item Durchführung im Umluftofen bei 100–180°C für 20 Minuten.
+    \end{itemize}
+
+    \item \textbf{Optionaler Reinigungsschritt}:
+    \begin{itemize}
+        \item \textbf{Ziel}: Descum-Schritt im $\mathrm{O}_2$-Plasma zur Entfernung von Rückständen.
+    \end{itemize}
+
+    \item \textbf{Strukturübertragung} ins Substrat (Prozessschritt):
+    \begin{itemize}
+        \item \textbf{Ziel}: Übertragung der Resiststruktur in die darunterliegende Schicht bzw. ins Substrat.
+        \item Durchführung mittels Verfahren wie Ätzen, Abscheiden, Galvanik oder Ionenimplantation.
+    \end{itemize}
+
+    \item \textbf{Entfernen des Resists} (Strippen):
+    \begin{itemize}
+        \item \textbf{Ziel}: Entfernung der Resiststruktur nach der Strukturübertragung durch Strippen \\ (Lackstrippen).
+        \item Nasschemisches Strippen mit Lösungsmitteln (z. B. Aceton) oder Veraschen im Sauerstoffplasma.
+    \end{itemize}
+\end{enumerate}
+
+
+% END ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 \thispagestyle{empty}
 \newpage
