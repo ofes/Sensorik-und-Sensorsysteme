@@ -13,6 +13,9 @@
 
 \usepackage[a4paper, left=3cm, right=3cm, top=2.5cm, bottom=2.5cm]{geometry} % A4-Format mit definierten Rändern
 
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle, draw, inner sep=1pt, text height=1.5ex, text depth=.25ex] (char) {#1};}}
+
 \setlength{\footskip}{2cm}       % Abstand zwischen Text und Fußnotenlinie
 \setlength{\skip\footins}{1cm}    % Abstand zwischen Fußnotenlinie und -text
 \interfootnotelinepenalty = 10000   % Verhindert das Teilen von Fußnoten über Seiten
@@ -54,7 +57,9 @@
 \end{titlepage}
 
 \tableofcontents
+\thispagestyle{empty}
 \listoftables
+\thispagestyle{empty}
 \listoffigures
 \thispagestyle{empty}
 \newpage
@@ -66,13 +71,17 @@
 % Einleitung --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-\section*{Einleitung} % Einleitung
+\section*{Einleitung}
 
-Diese Zusammenfassung der Vorlesung \textit{Sensorik und Sensorsysteme} (366.071) an der TU Wien dient als Lernhilfe und wurde sorgfältig erstellt. Dennoch sind Fehler möglich. Leserinnen und Leser sind daher eingeladen, auf eventuelle Unstimmigkeiten zu achten und diese an \\ \texttt{e1616023@student.tuwien.ac.at} zu melden. Alternativ können Korrekturen direkt im Repository auf GitHub vorgenommen werden: \\ \url{https://github.com/ofes/sensorik-und-sensorsysteme}. Bei Bedarf einer Zugriffsberechtigung gerne eine Nachricht an \url{https://github.com/ofes} senden.
+Diese Zusammenfassung der Vorlesung \textit{Sensorik und Sensorsysteme} (366.071) an der TU Wien dient als Lernhilfe und wurde sorgfältig erstellt. Nach dem Durchlesen dieser Zusammenfassung sollten Leserinnen und Leser in der Lage sein, die theoretischen Fragen, die derzeit prüfungsrelevant sind, zu beantworten. Sie ist zudem darauf ausgelegt, dass beim Lernen ein vertieftes Verständnis der vermittelten Inhalte entsteht. 
 
 \vspace{1em}
 
-Im ersten Abschnitt dieser Zusammenfassung werden grundlegende Herstellungsmethoden der Mikrosystemtechnik erläutert. Anschließend folgt eine Vorstellung ausgewählter MEMS-Sensoren (mikroelektromechanische Systeme) sowie ihrer Funktionsweisen.
+Da trotz sorgfältiger Erstellung Fehler vorkommen können, sind Leserinnen und Leser herzlich eingeladen, auf mögliche Unstimmigkeiten zu achten und diese an \texttt{e1616023@student.tuwien.ac.at} zu melden. Alternativ können Korrekturen direkt im Repository auf GitHub vorgenommen werden: \url{https://github.com/ofes/sensorik-und-sensorsysteme}. Falls eine Zugriffsberechtigung benötigt wird, kann eine Anfrage an \url{https://github.com/ofes} gesendet werden. Gute Lernunterlagen sind mir besonders wichtig, da sie die Motivation beim Lernen erheblich steigern – daher bin ich für jedes Feedback dankbar.
+
+\vspace{1em}
+
+Im ersten Abschnitt dieser Zusammenfassung werden grundlegende Herstellungsmethoden der Mikrosystemtechnik erläutert. Anschließend werden ausgewählte MEMS-Sensoren (mikroelektromechanische Systeme) und ihre Funktionsweisen vorgestellt.
 
 \vspace{1em}
 
@@ -83,8 +92,7 @@ Viel Erfolg beim Lernen!
 % Pysical Vapour Deposition -----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-\vspace{1em}
-
+\clearpage
 \section{Pysical Vapour Deposition} % PVD
 
 PVD (Physical Vapour Deposition) umfasst alle \textbf{physikalischen Verfahren zur Abscheidung dünner Schichten aus der Dampfphase}. Dabei werden die Ausgangsmaterialien der Schichten durch physikalische Prozesse wie Erhitzen in die Dampfphase überführt und anschließend auf dem Zielobjekt abgeschieden. Die \textbf{typischen Schichtdicken} liegen \textbf{zwischen 1~nm und 1~µm} und können \textbf{in Ausnahmefällen bis zu 10~µm} erreichen \cite{keplinger2024}.
@@ -400,8 +408,7 @@ Abschließend werden in \autoref{tab:Vergleich Aufdampfen - Sputtern} das thermi
 % Chemical Vapour Deposition ----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-\vspace{1em}
-
+\clearpage
 \section{Chemical Vapour Deposition} % CVD
 
 PVD-Verfahren sind essenzielle Prozesse in der Herstellung miniaturisierter Sensoren, vor allem für metallische Schichten und Dielektrika. Diese Verfahren erfordern feste Ausgangsstoffe, sind jedoch problematisch bei Materialien, die im Prozess disproportionieren\footnote{Disproportionierung ist ein Prozess, bei dem ein Stoff sich aufteilt: Ein Teil gibt Elektronen ab (Oxidation) und ein anderer Teil nimmt Elektronen auf (Reduktion). Dadurch entstehen zwei neue Stoffe mit dem gleichen Element, aber in verschiedenen Zuständen \cite{petrucci_general_chemistry}. In PVD-Prozessen kann dies problematisch sein, weil beim Erhitzen zum Beispiel Metallteile aufbrechen und nicht als ganzes Metall in die Schicht eingebaut werden. Stattdessen bilden sich zwei verschiedene Verbindungen, die nicht alle Eigenschaften des Ausgangsstoffes besitzen, was die Qualität der Schicht beeinflussen kann.}, etwa durch Schmelzen beim Aufdampfen. Dadurch können wichtige Komponenten unvollständig in die Schicht eingebaut werden. Im Gegensatz dazu werden \textbf{bei} der \textbf{Chemical Vapor Deposition (CVD) Gase in den Rezipienten einer Anlage geleitet}, wo sie \textbf{chemisch reagieren und} die \textbf{Reaktionsprodukte am Substrat}, oft ein Wafer, eine \textbf{Schicht bilden}. Diese chemische Reaktion \textbf{erfordert Energie}, die \textbf{thermisch oder durch Gasentladung} zugeführt wird \cite{keplinger2024CVD}.
@@ -708,23 +715,22 @@ Dieser Prozess wiederholt sich und ermöglicht den schichtweisen Aufbau von Alum
 % Lithographie ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-\vspace{1em}
-
+\clearpage
 \section{Lithographie}
 
-Die Lithographie ist ein zentrales Verfahren in der Mikrosystemtechnik zur \textbf{Herstellung feiner Strukturen auf Halbleitermaterialien}. Dabei werden \textbf{spezifizierte Muster auf eine Oberfläche übertragen}, die anschließend geätzt oder anderweitig verarbeitet werden, um Mikrochips, Sensoren und andere Miniaturkomponenten zu erzeugen.
+Die Lithographie ist ein zentrales Verfahren in der Mikrosystemtechnik zur \textbf{Herstellung feiner Strukturen auf Halbleitermaterialien}. Dabei werden \textbf{spezifizierte Muster auf eine (zuvor bedampfte) Waferoberfläche übertragen}, die \textbf{anschließend geätzt oder anderweitig verarbeitet} werden, um Mikrochips, Sensoren und andere Miniaturkomponenten (MEMS) zu erzeugen.
 
 \vspace{1em}
 
-Das grundlegende Prinzip der Lithographie umfasst mehrere Schritte: Zuerst wird ein \textbf{lichtempfindlicher Lack (dünner Film)}, ein sogenannter ``\textbf{Photoresist (Photolack)}'', \textbf{auf das Substrat aufgetragen. Durch Masken, die bestimmte Bereiche abdecken}, wird der Photoresist selektiv \textbf{belichtet}. Diese belichteten Bereiche verändern ihre chemischen Eigenschaften, sodass sie \textbf{je nach Resisttyp (positiv oder negativ) entfernt oder erhalten} bleiben. Nach dem Entwicklungsprozess bleiben die gewünschten Strukturen auf dem Substrat sichtbar und dienen als Vorlage für weitere Prozessschritte wie das Ätzen oder das Abscheiden von Materialien \cite{madou2002}.
+Das \textbf{grundlegende Prinzip der Lithographie} umfasst mehrere Schritte: Zuerst wird ein \textbf{lichtempfindlicher Lack (dünner Film)}, ein sogenannter ``\textbf{Photoresist (Photolack)}'', \textbf{auf} das \textbf{Substrat aufgetragen. Durch Masken}, die \textbf{bestimmte Bereiche abdecken}, wird der Photoresist \textbf{selektiv belichtet}. Diese belichteten Bereiche verändern ihre chemischen Eigenschaften, sodass sie \textbf{je nach Resisttyp} (positiv oder negativ) \textbf{entfernt oder erhalten} bleiben. \textbf{Nach} dem \textbf{Entwicklungsprozess bleiben} die \textbf{gewünschten Strukturen auf dem Substrat sichtbar} und dienen als \textbf{Vorlage für weitere Prozessschritte} wie zum Beispiel \textbf{Ätzen} \cite{madou2002}.
 
 \vspace{1em}
 
-In der Mikrosystemtechnik sind verschiedene Lithographietechniken etabliert, darunter die \textbf{Photolithographie (optische Lithographie)} und Elektronenstrahllithographie. Die Photolithographie ist besonders für großflächige Produktionen geeignet, da sie hohe Auflösung und Prozessgeschwindigkeit bietet. Bei der Elektronenstrahllithographie hingegen wird mit einem feinen Elektronenstrahl gearbeitet, wodurch eine höhere Auflösung erreicht wird, was besonders für Nanostrukturen entscheidend ist \cite{wolf2000}.
+In der Mikrosystemtechnik sind \textbf{verschiedene Lithographietechniken} etabliert, darunter die Photolithographie (optische Lithographie) und Elektronenstrahllithographie. Die \textbf{Photolithographie} ist besonders \textbf{für großflächige Produktionen} geeignet, da sie \textbf{hohe Auflösung und Prozessgeschwindigkeit} bietet. Bei der \textbf{Elektronenstrahllithographie} hingegen wird mit einem feinen Elektronenstrahl gearbeitet, wodurch eine \textbf{noch höhere Auflösung} erreicht wird, was besonders \textbf{für Nanostrukturen} entscheidend ist \cite{wolf2000}.
 
 \vspace{1em}
 
-Diese Verfahren bieten die Grundlage für das Design und die Herstellung von Mikro- und Nanosystemen, wie sie in modernen elektronischen und mechanischen Anwendungen benötigt werden. \textbf{In dieser Ausarbeitung wird jedoch ausschließlich die optische Lithographie näher erläutert.}
+Diese Verfahren bieten die Grundlage für das Design und die Herstellung von Mikro- und Nanosystemen, wie sie in modernen elektronischen und mechanischen Anwendungen benötigt werden. \textbf{In dieser Ausarbeitung} wird jedoch \textbf{ausschließlich} die \textbf{optische Lithographie näher erläutert.}
 
 
 
@@ -739,7 +745,10 @@ Begriffe, die bereits in den vorigen Kapiteln erläutert wurden, werden hier nic
 
 \begin{itemize}
     \item \textbf{Photoresist}: Eine lichtempfindliche Schicht (Photolack), die zur Strukturierung von Mikro- und Nanometer-Bereichen dient \cite{madou2002}.
-    \item \textbf{Maske}: Eine Vorlage mit einem Muster aus lichtdurchlässigen und lichtundurchlässigen Bereichen, die auf den Photoresist projiziert wird. Sie dient dazu, das gewünschte Strukturmuster auf den Photoresist zu übertragen, indem nur bestimmte Bereiche des Photoresists belichtet werden \cite{wolf2000}.
+    \item \textbf{Maske} (Photomaske): Eine Vorlage mit einem Muster aus lichtdurchlässigen und lichtundurchlässigen Bereichen, die auf den Photoresist projiziert wird. Sie dient dazu, das gewünschte Strukturmuster zu übertragen \cite{wolf2000}.
+    \item \textbf{Kohärenzgrad von Licht}: In der Lithographie beschreibt der Kohärenzgrad des Lichts, wie gleichmäßig die Lichtwellen zueinander schwingen. Eine hohe Kohärenz bedeutet, dass die Lichtwellen eine feste Phasenbeziehung haben -- sie schwingen synchron, wie zwei Freunde, die auf einem Trampolin immer gleichzeitig springen. Diese Synchronität ermöglicht scharfe Interferenzmuster und kann die Präzision der abgebildeten Strukturen erhöhen \cite{Mack2006, BornWolf1999}. 
+
+    Eine niedrige Kohärenz bedeutet hingegen, dass die Lichtwellen weniger synchron sind und keinen konstanten Abstand zueinander halten, wie mehrere Personen, die auf einem Trampolin jeweils in ihrem eigenen Rhythmus springen. Diese ``Unordnung'' der Wellen reduziert Interferenzeffekte, was bei der Lithographie helfen kann, eine gleichmäßigere Belichtung zu erreichen und störende Muster zu vermeiden \cite{Mack2006}.
 \end{itemize}
 
 
@@ -751,7 +760,7 @@ Begriffe, die bereits in den vorigen Kapiteln erläutert wurden, werden hier nic
 
 \subsection{Photoresist}
 
-Wie bereits erwähnt, handelt es sich beim \textbf{Photoresist} um einen \textbf{lichtempfindlichen Lack}, der \textbf{auf} das \textbf{Substrat aufgetragen} wird. Bei einem sogenannten ``\textbf{Negativresist}'' verbleibt nach Belichtung und Entwicklung eine Struktur, die invers zur Struktur auf der Fotomaske ist: \textbf{An den Stellen, an denen die Fotomaske transparent ist, wird der Photoresist belichtet und dadurch unlöslich.} Bei einem ``\textbf{Positivresist}'' hingegen erhöht sich die Löslichkeit der belichteten Bereiche. Dadurch führen die \textbf{undurchsichtigen Bereiche der Fotomaske zu den nicht löslichen und somit verbleibenden Schichten} nach Belichtung und Entwicklung \cite{gerald2006}. Zur Veranschaulichung soll die \autoref{fig:photoresist1} dienen.
+Wie bereits erwähnt, handelt es sich beim \textbf{Photoresist} um einen \textbf{lichtempfindlichen Lack}, der \textbf{auf} das \textbf{Substrat aufgetragen} wird. Bei einem sogenannten \textbf{``Negativresist''} verbleibt nach Belichtung und Entwicklung eine Struktur, die invers zur Struktur auf der Photomaske ist: \textbf{An} den \textbf{Stellen, an denen} die \textbf{Photomaske transparent} ist, wird der \textbf{Negativresist belichtet und dadurch unlöslich.} Bei einem \textbf{``Positivresist''} hingegen \textbf{erhöht sich} die \textbf{Löslichkeit der belichteten Bereiche}. Dadurch führen die \textbf{undurchsichtigen Bereiche der Photomaske zu den nicht löslichen und somit verbleibenden Schichten} nach Belichtung und Entwicklung \cite{gerald2006}. Zur Veranschaulichung soll die \autoref{fig:photoresist1} dienen.
 
 \begin{figure}[htb!]
     \centering
@@ -766,7 +775,7 @@ Wie bereits erwähnt, handelt es sich beim \textbf{Photoresist} um einen \textbf
 Photoresiste müssen die folgenden \textbf{Anforderungen} erfüllen \cite{schmid2024}:
 
 \begin{itemize}
-    \item \textbf{Hohe Strukturgenauigkeit}\footnote{Hohe Strukturgenauigkeit bedeutet, dass der Photoresist die Fähigkeit besitzt, sehr präzise und detaillierte Muster auf dem Substrat zu erzeugen. Dies ist wichtig, um die gewünschten Strukturen exakt abzubilden und sicherzustellen, dass die resultierenden Muster genau den Spezifikationen entsprechen. Eine hohe Strukturgenauigkeit ist entscheidend für Anwendungen in der Mikro- und Nanotechnologie, da kleinste Abweichungen die Funktionalität der Bauteile beeinträchtigen können \cite{madou2002, wolf2000, sciencedirect_photoresist}.}
+    \item \textbf{Hohe Strukturgenauigkeit}\footnote{Hohe Strukturgenauigkeit bedeutet, dass der Photoresist die Fähigkeit besitzt, sehr präzise und detaillierte Muster auf dem Substrat zu erzeugen. Dies ist wichtig, um die gewünschten Strukturen exakt abzubilden und sicherzustellen, dass die resultierenden Muster genau den Spezifikationen entsprechen. Eine hohe Strukturgenauigkeit ist entscheidend, da kleinste Abweichungen die Funktionalität der Bauteile beeinträchtigen können \cite{madou2002, wolf2000, sciencedirect_photoresist}.}
     \item \textbf{Gute Maßhaltigkeit}\footnote{Das bedeutet, dass der Photoresist die Abmessungen des gewünschten Musters präzise beibehalten muss, selbst nach den Prozessen der Belichtung, Entwicklung und weiteren Bearbeitungsschritten. Eine hohe Maßhaltigkeit stellt sicher, dass die Struktur exakt in der vorgesehenen Größe und Form erhalten bleibt \cite{madou2002, wolf2000}.}
     \item \textbf{Hohe Sensitivität}\footnote{Hohe Sensitivität bedeutet, dass der Photoresist schon bei geringer Belichtungsenergie zuverlässig reagiert, was zu einer effizienteren und schnelleren Strukturierung führt \cite{madou2002, sciencedirect_photoresist}.}
     \item \textbf{Gute Haftung}
@@ -786,10 +795,10 @@ Eine detaillierte Gegenüberstellung von Positiv- und Negativresisten ist in \au
         \hline
         \multicolumn{2}{|c|}{\textbf{Vergleich Positiv- und Negativresist}} \\ \hline
         \textbf{Positivresist} & \textbf{Negativresist} \\ \hline
-        Erhöhte Löslichkeit der belichteten Bereiche (\textbf{belichtete Bereiche werden entfernt}) & Verringerte Löslichkeit der belichteten Bereiche (\textbf{belichtete Bereiche werden entfernt}) \\
+        Erhöhte Löslichkeit der belichteten Bereiche (\textbf{belichtete Bereiche werden entfernt}) & Verringerte Löslichkeit der belichteten Bereiche (\textbf{belichtete Bereiche bleiben erhalten}) \\
         \textbf{Hohe Strukturgenauigkeit möglich} (wird hauptsächlich für feine Muster verwendet) & \textbf{Weniger strukturgenau}, besonders bei kleinsten Strukturen (eignet sich für grobe, robuste Strukturen) \\
-        \textbf{Gute Maßhaltigkeit} bei kleinen Strukturen & Geeignet für größere, weniger komplexe Strukturen \\
-        Erfordert höhere Belichtungsenergie & Erfordert niedrigere Belichtungsenergie \\ \hline
+        \textbf{Gute Maßhaltigkeit} bei kleinen Strukturen & \textbf{Geringere Maßhaltigkeit} da sie zum Quellen neigen \\
+        Erfordert \textbf{höhere Belichtungsenergie} & Erfordert \textbf{niedrigere Belichtungsenergie} \\ \hline
     \end{tabular}
     \captionsetup{labelfont=bf} % Setzt die Bildnummer fett
     \caption{Vergleich Positiv- und Negativresist Teil 1 \cite{madou2002, wolf2000}}
@@ -805,7 +814,6 @@ Eine detaillierte Gegenüberstellung von Positiv- und Negativresisten ist in \au
         Minimale Strukturbreite & \textbf{< 0.5 µm} & ca. 2 µm \\ \hline
         Quellen beim Entwickeln & \textbf{nein} & ja \\ \hline
         Aspektverhältnis & \textbf{gut} & mäßig \\ \hline
-        Lift-off & Mit Aceton & Methylethylketon \\ \hline
         Thermische Stabilität & \textbf{gut (bis 200 °C)} & mäßig \\ \hline
         Staubpartikel & \textbf{kaum Einfluss} & bewirken Löcher \\ \hline
         Passivierung bei \textbf{Plasma-Ätzung} & \textbf{sehr gut} & mäßig \\ \hline
@@ -832,7 +840,7 @@ Die \textbf{Minimale Strukturbreite} gibt an, wie klein die erzeugten Muster sei
 
 \vspace{1em}
 
-Das \textbf{``Aspektverhältnis''} bezieht sich auf das \textbf{Verhältnis von Höhe zu Breite der Strukturen} und \textbf{beeinflusst} deren \textbf{Stabilität und Detaillierung}. Ein \textbf{gutes Aspektverhältnis bedeutet, dass die Strukturen stabiler stehen und feine Details genauer dargestellt werden} können (\autoref{fig:high-aspect-ratio}). \textbf{Wenn} das \textbf{Aspektverhältnis nicht passt, könnten hohe Strukturen kippen oder Details verloren gehen}. Grundsätzlich gilt: Je größer das Aspektverhältnis und je kleiner die absolute Größe der Struktur, desto schwieriger wird die Fertigung. \cite{madou2002, wolf2000, gerald2006, wikipedia_aspektverhaeltnis}. 
+Das \textbf{Aspektverhältnis} beschreibt das \textbf{Verhältnis von Höhe zu Breite der Strukturen} und \textbf{beeinflusst deren Detaillierung}. Ein \textbf{hohes (gutes) Aspektverhältnis} bedeutet, dass \textbf{höhere Strukturen entwickelt bzw. feine Details präziser dargestellt} werden können (\autoref{fig:high-aspect-ratio}). \textbf{Ist das Aspektverhältnis nicht optimal, könnten hohe Strukturen kippen oder Details verloren gehen}. Grundsätzlich gilt: Je größer das Aspektverhältnis und je kleiner die absolute Größe der Struktur, desto schwieriger wird die Fertigung \cite{madou2002, wolf2000, gerald2006, wikipedia_aspektverhaeltnis}.
 
 \begin{figure}[htb!]
     \centering
@@ -844,18 +852,13 @@ Das \textbf{``Aspektverhältnis''} bezieht sich auf das \textbf{Verhältnis von 
 
 \vspace{1em}
 
-
-\textbf{``Lift-off''} bezeichnet das \textbf{Verfahren zum Entfernen des Resists} und hängt von den eingesetzten Chemikalien ab, wie Aceton oder Methylethylketon \cite{wolf2000, rogers2008}. 
-
-\vspace{1em}
-
-\textbf{Staubpartikel} können die Struktur beeinflussen: Während Positivresisten weniger empfindlich auf Staub reagieren, können sie \textbf{bei Negativresisten Löcher verursachen}. Dies \textbf{liegt daran, dass Staubpartikel während der Belichtung als Schattenwurf fungieren}. Bei einem Negativresist führt ein solcher Schattenwurf dazu, dass der \textbf{betroffene Bereich unbelichtet und somit beim Entwickeln löslich bleibt}, was kleine Löcher im Resist hinterlässt. Da Negativresiste belichtete Bereiche härten und unbelichtete entfernen, können Staubpartikel daher Löcher in der endgültigen Struktur verursachen \cite{madou2002, sciencedirect_photoresist}.
+\textbf{Staubpartikel} können die Struktur beeinflussen: Während Positivresisten weniger empfindlich auf Staub reagieren, können sie \textbf{bei Negativresisten Löcher verursachen}. Dies \textbf{liegt daran, dass Staubpartikel während der Belichtung als Schattenwurf fungieren}. Bei einem Negativresist (belichtete Bereiche werden unlöslich) führt ein solcher Schattenwurf dazu, dass der \textbf{betroffene Bereich unbelichtet und somit beim Entwickeln löslich bleibt}, was kleine Löcher im Resist hinterlässt \cite{madou2002, sciencedirect_photoresist}.
 
 \textbf{Positivresisten} hingegen \textbf{reagieren weniger empfindlich auf Staub}, da bei ihnen die belichteten (und nicht die unbelichteten) Bereiche entfernt werden. Ein \textbf{Staubpartikel auf einem Positivresist verhindert zwar die Belichtung eines Punktes, aber dieser Bereich bleibt im Nachhinein bestehen}\footnote{Im schlimmsten Fall bleibt zu viel Photolack zurück. Nach dem Entfernen der Staubpartikel muss dann lediglich erneut belichtet werden, anstatt -- wie beim Negativresist -- neuer Photolack aufzutragen werden.}, während die belichteten, von Staub freien Bereiche entfernt werden. Daher entstehen in Positivresisten keine Löcher durch Staubpartikel \cite{wias_photoresist}.
 
 \vspace{1em}
 
-Die \textbf{``Passivierung bei Plasma-Ätzung'' und ``Nasschemie''} beschreiben, \textbf{wie gut der Resist die darunterliegende Schicht während der Ätzprozesse schützt}, was besonders bei empfindlichen Schichten wichtig ist \cite{schmid2024CVD}. 
+Die \textbf{``Passivierung bei Plasma-Ätzung'' und ``Nasschemie''} beschreiben, \textbf{wie gut der Resist die darunterliegende Schicht während der Ätzprozesse schützt}, was besonders bei empfindlichen Schichten wichtig ist \cite{schmid2024}. 
 
 \vspace{1em}
 
@@ -887,7 +890,7 @@ In diesem Abschnitt wird der Prozessablauf für die Lithographie, wie in \cite{s
 \begin{enumerate}
     \item \textbf{Reinigen und Trocknen des Substrats} (z. B. bei 300°C).
     \begin{itemize}
-        \item \textbf{Ziel}: Sicherstellung einer guten Haftung zwischen Substrat und Fotoresist.
+        \item \textbf{Ziel}: Sicherstellung einer guten Haftung zwischen Substrat und Photoresist.
     \end{itemize}
 
     \item \textbf{Optional}: Vorbereitung des Substrats zur Verbesserung der Resist-Haftung.
@@ -895,14 +898,13 @@ In diesem Abschnitt wird der Prozessablauf für die Lithographie, wie in \cite{s
         \item \textbf{Ziel}: Falls der Resist schlecht auf $\mathrm{Si}$, $\mathrm{SiOH}$ (Siliziumhydroxid) oder $\mathrm{SiO}_2$ (Siliziumoxid bzw. Siliziumdioxid) haftet, Aufdampfen eines Haftvermittlers, z. B. Hexamethyldisilazan (HMDS).
     \end{itemize}
 
-    \item \textbf{Aufschleudern des Resists} (Spin-Coating):
+    \item \textbf{Aufschleudern des Resists} (mittels Spin-Coating in \autoref{fig:spin-coating}):
     \begin{itemize}
         \item \textbf{Ziel}: Gleichmäßiges Aufbringen des Resists mit definierter Dicke.
         \item Spin-Coating-Parameter: 900~U/min, Beschleunigung von 15 $\mathrm{U}/\mathrm{s}^2$, 30 Sekunden Spin-Dauer, ergibt eine Schichtdicke von ca. 1,6~µm.
-        \item Beispiel: Positivresist auf Novolak-Diazo-Basis, AZ 4620.
     \end{itemize}
 
-    \item \textbf{Softbake} (Resist-Prebake: Vorhärtung des Resists):
+    \item \textbf{Softbake} (Resist-Prebake = Vorhärtung des Resists):
     \begin{itemize}
         \item \textbf{Ziel}: Bildung eines stabilen Resistfilms und weitgehende Entfernung von Lösungsmitteln.
         \item Durchführung im Umluftofen bei 90°C für 30 Minuten.
@@ -924,16 +926,16 @@ In diesem Abschnitt wird der Prozessablauf für die Lithographie, wie in \cite{s
 
     \item \textbf{Entwickeln des Resists}:
     \begin{itemize}
-        \item \textbf{Ziel}: Herausbildung des Strukturmusters im Fotoresist.
+        \item \textbf{Ziel}: Herausbildung des Strukturmusters im Photoresist.
         \item Beispiel: Sprühentwicklung mit verdünntem Entwickler AZ 400 K (1:4), Entwicklungsdauer 150 Sekunden bei 38°C.
-        \item Nach dem Entwickeln Spülen des Resists mit deionisiertem Wasser\footnote{Deionisiertes Wasser, auch DI-Wasser genannt, ist Wasser, aus dem gelöste Ionen entfernt wurden, um eine hohe Reinheit zu erreichen. Der Prozess der Deionisation entfernt Kationen wie $\mathrm{Na}^+$ und $\mathrm{Ca}^{2+}$ sowie Anionen wie $\mathrm{Cl}^-$ und $\mathrm{SO}_4^{2-}$ \cite{swatchuk2008, weast2004}. Deionisiertes Wasser wird durch Ionenaustausch gewonnen und weist eine geringe Leitfähigkeit auf. In der Mikroelektronik, Labortechnik und Medizin wird es aufgrund seiner Reinheit verwendet \cite{handbook2007}. In der Fotolithografie wird DI-Wasser zum Spülen von Fotolacken eingesetzt, um die Präzision und Qualität der Strukturen zu sichern \cite{peeters1994}.}.    
+        \item Nach dem Entwickeln Spülen des Resists mit deionisiertem Wasser\footnote{Deionisiertes Wasser, auch DI-Wasser genannt, ist Wasser, aus dem gelöste Ionen entfernt wurden, um eine hohe Reinheit zu erreichen. Der Prozess der Deionisation entfernt Kationen wie $\mathrm{Na}^+$ und $\mathrm{Ca}^{2+}$ sowie Anionen wie $\mathrm{Cl}^-$ und $\mathrm{SO}_4^{2-}$ \cite{swatchuk2008, weast2004}. Deionisiertes Wasser wird durch Ionenaustausch gewonnen und weist eine geringe Leitfähigkeit auf. In der Mikroelektronik, Labortechnik und Medizin wird es aufgrund seiner Reinheit verwendet \cite{handbook2007}. In der Photolithographie wird DI-Wasser zum Spülen von Photolacken eingesetzt, um die Reinheit -- und somit die Qualität --  der Strukturen zu sichern \cite{peeters1994}.}.    
         \item Trocknung des Resists durch Trockenschleudern.
     \end{itemize}
 
     \item \textbf{Hardbake} (Resist-Postbake):
     \begin{itemize}
         \item \textbf{Ziel}: Verdampfung von Lösungsmittelresten und Verbesserung der Resisthaftung auf dem Wafer für folgende Ätz- oder Implantationsprozesse.
-        \item Durchführung im Umluftofen bei 100–180°C für 20 Minuten.
+        \item Durchführung im Umluftofen bei 100-180°C für 20 Minuten.
     \end{itemize}
 
     \item \textbf{Optionaler Reinigungsschritt}:
@@ -941,7 +943,7 @@ In diesem Abschnitt wird der Prozessablauf für die Lithographie, wie in \cite{s
         \item \textbf{Ziel}: Descum-Schritt im $\mathrm{O}_2$-Plasma zur Entfernung von Rückständen.
     \end{itemize}
 
-    \item \textbf{Strukturübertragung} ins Substrat (Prozessschritt):
+    \item \textbf{Strukturübertragung} ins Substrat (Prozessschritt wie z.B. \textbf{Ätzen}):
     \begin{itemize}
         \item \textbf{Ziel}: Übertragung der Resiststruktur in die darunterliegende Schicht bzw. ins Substrat.
         \item Durchführung mittels Verfahren wie Ätzen, Abscheiden, Galvanik oder Ionenimplantation.
@@ -954,6 +956,265 @@ In diesem Abschnitt wird der Prozessablauf für die Lithographie, wie in \cite{s
     \end{itemize}
 \end{enumerate}
 
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.65\textwidth]{images/spin-coating.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.75\textwidth} % Setzt die Bildnummer fett
+    \caption{Das Auftragen des Photoresists erfolgt mittels ``Spin-Coating'': a) Der Photoresist wird mittig auf den ruhenden Wafer aufgetragen. b) Der Wafer wird beschleunigt -- die zeitliche Änderung der Winkelgeschwindigkeit $\omega$ ist ungleich Null. c) Bei konstanter Winkelgeschwindigkeit wird der Photoresist aufgrund der Zentrifugalkräfte gleichmäßig an die Ränder des Wafers gedrückt und so auf der Oberfläche verteilt. d) Schließlich wird das Lösungsmittel mittels ``Softbake'' im Photoresist verdampft \cite{Sankapal2023}.}
+    \label{fig:spin-coating}
+\end{figure}
+
+%Zusammengefasst:
+%
+%\begin{enumerate}
+%    \item Wafer Reinigen
+%    \item Wafer Spin-Coating mit Photoresist
+%    \item Softbake (Prebake zum Entfernen des Lösungsmittels aus dem Photoresist)
+%    \item Justiereung und Belichtung (Exposure)
+%    \item Schichthärtung (Post-Exposure Bake)
+%    \item Entwicklung
+%    \item Hardbake (Postbake)
+%    \item Strukturübertragung durch Ätzen
+%    \item Resist entfernen (Strippen)
+%\end{enumerate}
+
+
+
+% Lithographie -> Belichtungsverfahren ------------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Belichtungsverfahren}
+
+Zur Belichtung stehen \textbf{drei Verfahren} zur Verfügung, die in \textbf{zwei Hauptkategorien} unterteilt werden und im Folgenden detailliert beschrieben werden. Diese \textbf{Kategorien} sind die Schattenprojektion und die \textbf{abbildende Projektion (Projektions-Belichtung)}. Die \textbf{Schattenprojektion gliedert sich} dabei weiter \textbf{in} die \textbf{Kontaktbelichtung} und die \textbf{Proximity-Belichtung}.
+
+\vspace{1em}
+
+Ergänzend sei erwähnt, dass die \textbf{Masken} aus einer \textbf{Quarzplatte mit einer strukturierten Chromschicht}, dem sogenannten \textbf{Absorber}, bestehen. Aufgrund dieser Struktur werden sie \textbf{auch als Chrommasken bezeichnet} \cite{schmid2024, Mescheder2004}.
+
+\vspace{1em}
+
+Zur besseren Veranschaulichung zeigt \textbf{\autoref{fig:belichtung}} die drei Verfahren in vereinfachter Darstellung: a) die Kontaktbelichtung (Schattenprojektion), b) die Proximity-Belichtung (Schattenprojektion) und c) die Projektionsbelichtung (Abbildungsprojektion). Die \textbf{schwarzen „Balken“} zwischen der Maske und dem Photoresist bei den Schattenprojektionen sowie zwischen der Maske und der Optik bei der Abbildungsprojektion stellen die zuvor genannten \textbf{Absorber} dar \cite{schmid2024}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/belichtung.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Die drei Belichtungsverfahren in der Lithographie: a) Kontaktbelichtung, b) Proximity-Belichtung und c) Projektionsbelichtung. Die zu strukturierende Schicht ist hier leider nicht eingezeichnet. Diese befindet sich zwischen Wafer und Resist (z.B. Siliziumdioxid $\mathrm{SiO}_2$) \cite{cowburn1997}.}
+    \label{fig:belichtung}
+\end{figure}
+
+
+
+% Lithographie -> Belichtungsverfahren -> Kontaktbelichtung ---------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsubsection{Kontaktbelichtung (Schattenprojektion)}
+
+\vspace{1em}
+
+Bei der Kontaktbelichtung wird \textbf{mittels parallelem Licht} eine \textbf{Maske im 1:1-Maßstab in den Photolack} auf einer Silizium-Oberfläche \textbf{übertragen} (\autoref{fig:kontaktbelichtung}) \cite{Mescheder2004}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.65\textwidth]{images/kontaktbelichtung.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Kontaktbelichtung im Detail \cite{schmid2024}.}
+    \label{fig:kontaktbelichtung}
+\end{figure}
+
+\vspace{1em}
+
+Dieses \textbf{Verfahren ist recht einfach} und bietet einige \textbf{Vorteile}: \textbf{Da} die \textbf{Maske auf dem Wafer aufliegt}, entstehen \textbf{kaum Abbildungsfehler}, und es können \textbf{sehr kleine Details bis zu} etwa \textbf{1~µm} präzise abgebildet werden. Ein \textbf{weiterer Vorteil} ist, dass \textbf{kein monochromatisches} (einfarbiges) Licht \textbf{benötigt} wird, sodass \textbf{hohe Lichtintensitäten und dadurch kürzere Belichtungszeiten möglich} sind. Da das \textbf{gesamte Muster in einem Schritt auf den gesamten Wafer belichtet} wird (ein sogenanntes \textbf{Full-Wafer-Verfahren}\footnote{Im Gegensatz zur Projektionsbelichtung, bei der nur ein Bereich nach dem anderen belichtet wird \cite{Mescheder2004}.}), ist es zudem schnell und \textbf{ermöglicht} einen \textbf{hohen Produktionsdurchsatz} \cite{schmid2024}.
+
+\vspace{1em}
+
+Allerdings gibt es auch \textbf{Nachteile}. \textbf{Da die Maske direkten Kontakt mit dem Wafer hat, entstehen leicht Defekte auf der Maske und im Photolack durch mechanische Beanspruchung} und Abrieb, was die \textbf{Lebensdauer der Maske} verkürzt, die \textbf{Defektdichte erhöht} und die \textbf{Kosten steigen} lässt \cite{schmid2024}. Weiterhin ist es \textbf{schwierig}, die \textbf{Maske gleichmäßig und flächig auf} dem \textbf{Wafer aufzulegen. Unterschiede in der Oberflächenstruktur des Wafers, Gasbildung oder eingeschlossene Luftblasen} führen zu \textbf{Abbildungsfehlern, da das Licht} an diesen Stellen \textbf{gestreut oder gebeugt wird.}
+
+\vspace{1em}
+
+\textbf{Zusätzlich kann sich der Wafer während der Fertigung leicht verziehen, was bedeutet, dass die Lage der Maskenmuster nicht immer exakt stimmt.} Solche \textbf{Verformungen im Mikrometerbereich lassen sich im Full-Wafer-Verfahren nicht einfach korrigiere}n und können das fertige Produkt beeinträchtigen \cite{schmid2024}.
+
+
+
+% Lithographie -> Belichtungsverfahren -> Proximity-Belichtung ------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsubsection{Proximity-Belichtung (Schattenprojektion)}
+
+Ähnlich wie bei der Kontaktbelichtung wird auch bei der Proximity-Belichtung eine Maske im 1:1-Maßstab mittels parallelem Licht auf den Photolack einer Silizium-Oberfläche übertragen. Dabei besteht ein geringer Abstand von etwa $10 \, \mathrm{\mu m}$ bis $30 \, \mathrm{\mu m}$ zwischen Maske und Wafer (\autoref{fig:proximity-belichtung}) \cite{Mescheder2004}. Die Proximity-Belichtung hat sich in der Mikrosystemtechnik als Standardverfahren etabliert \cite{schmid2024}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.4\textwidth]{images/proximity-belichtung.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.5\textwidth} % Setzt die Bildnummer fett
+    \caption{Proximity-Belichtung im Detail. Der Abstand zwischen Resist und Maske ist mit \( g \) (gap) bezeichnet, und \( b \) steht für die (minimale) Linienbreite des Absorbers \cite{schmid2024}.}
+    \label{fig:proximity-belichtung}
+\end{figure}
+
+\vspace{1em}
+
+Ein wesentlicher Vorteil dieser Methode ist die hohe Lebensdauer der Maske, da sie keinen direkten Kontakt mit dem Wafer hat. Zudem handelt es sich auch hier um ein Full-Wafer-Verfahren, was, wie bereits erwähnt, zu einem sehr hohen Durchsatz führt \cite{schmid2024}.
+
+\vspace{1em}
+
+Zu den Nachteilen zählt die geringere Strukturauflösung, die durch die Beugung des Lichts an den Kanten der Maske begrenzt wird. Die minimale Linienbreite $b$ lässt sich durch $b \geq \sqrt{g\lambda}$ bestimmen, wobei $g$ der Abstand zwischen Wafer und Maske (gap) und $\lambda$ die Wellenlänge des Lichts ist (\autoref{fig:proximity-belichtung}). Bei einem Abstand von $g = 20 \, \mathrm{\mu m}$ und einer Wellenlänge von $\lambda = 400 \, \mathrm{nm}$ ergibt sich zum Beispiel $b \geq 3 \, \mathrm{\mu m}$. Um die Auflösung zu verbessern, können kurzwelligeres Licht oder Phasenmasken\footnote{Phasenmasken sind spezielle Masken in der Lithographie, die die Phase des Lichts verändern, um den Kontrast an den Kanten des projizierten Musters zu erhöhen. Dies erfolgt durch Phasenverschiebung mittels unterschiedlicher Materialdicken oder Brechungsindizes, was feinere Strukturen ermöglicht. Diese Technik hilft, die minimale Linienbreite zu reduzieren und eignet sich besonders für kürzere Wellenlängen \cite{Lin1992, Levenson1982, Mack2006}.} eingesetzt werden \cite{schmid2024}.
+
+\vspace{1em}
+
+Für Auflösungen im Mikrometer-Bereich muss der Abstand fast null betragen, was zur bereits erwähnten Kontaktbelichtung führt. Eine Alternative bietet die Röntgenstrahllithographie, die bei einem Abstand von $30-50 \, \mathrm{\mu m}$ eine Auflösung von unter $0,5 \, \mathrm{\mu m}$ und eine hohe Tiefenschärfe\footnote{Tiefenschärfe beschreibt in der Lithographie den Bereich entlang der optischen Achse, in dem ein Objekt scharf abgebildet wird. Eine größere Tiefenschärfe erlaubt eine dickere Schicht, in der das Muster scharf projiziert werden kann. Sie ist entscheidend für die präzise Übertragung feiner Details, da eine geringe Tiefenschärfe zu Unschärfen und damit zu einer beeinträchtigten Strukturqualität führen kann \cite{Mack2006}.} ermöglicht. Diese Technik wird auch im LIGA-Verfahren\footnote{\textbf{LIGA} steht für \textbf{Lithographie, Galvanoformung und Abformung}. Es ist ein Verfahren der Mikrosystemtechnik zur Herstellung hochpräziser Mikrostrukturen mit hohen Aspektverhältnissen. Dabei werden in drei Schritten ein Muster per Röntgenstrahllithographie erstellt, dieses galvanisch mit Metall gefüllt und anschließend abgeformt. Das Verfahren eignet sich für präzise Anwendungen in der Feinmechanik und Mikrosystemtechnik \cite{Mescheder2004}.} eingesetzt, um tiefe Lackstrukturen zu erzeugen \cite{Mescheder2004}.
+
+
+
+% Lithographie -> Belichtungsverfahren -> Projektionsbelichtung -----------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsubsection{Projektionsbelichtung (abbildende Projektion)}
+
+Die Projektionsbelichtung nutzt ein Abbildungssystem (Spiegel oder Linsen) zwischen Maske und Wafer, um die Maskenvorlage meist verkleinert auf den Wafer zu projizieren (\autoref{fig:projektionsbelichtung}). Übliche Maßstäbe sind 10:1 und 5:1. Die Maske wird außerdem nur abschnittsweise auf den Wafer projiziert. Oft enthält die Maske nur eine funktionale Einheit\footnote{``Step and Repeat''-Verfahren \cite{schmid2024}.} (z.B. einen Chip oder Sensor) \cite{schmid2024,Mescheder2004}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.45\textwidth]{images/projektionsbelichtung.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.55\textwidth} % Setzt die Bildnummer fett
+    \caption{Projektionsbelichtungssytem mit Öffnungswinkel $\alpha$ der Optik \cite{schmid2024}.}
+    \label{fig:projektionsbelichtung}
+\end{figure}
+
+\vspace{1em}
+
+Die Auflösung (minimal auflösbare Strukturgröße) wird durch Beugung, die Wellenlänge $\lambda$, den Kohärenzgrad des Lichtes, die numerische Apertur $\mathrm{N_A} = \sin{\alpha}$, wobei $\alpha$ der Öffnungswinkel der Optik ist (\autoref{fig:projektionsbelichtung}), und das optische System begrenzt. Da nur kleine Felder (ca. $15 \times 15 \, \mathrm{mm^2}$) belichtet werden können, muss der Wafer schrittweise bewegt werden, um die gesamte Si-Scheibe (z.B. 6-Zoll-Wafer) zu belichten \cite{Mescheder2004,schmid2024}. Damit diese Anwendung funktioniert, muss ein Filter monochromatisches Licht erzeugen. Spiegel in der Belichtungsanlage erhöhen die Lichtintensität. Mit der Projektionsbelichtung ist der Stand der Technik in der Mikroelektronik die Belichtung von Strukturen bis hinab zu 100 nm und darunter. \cite{schmid2024}.
+
+\vspace{1em}
+
+Die Projektionsbelichtung bietet einige Vorteile: Durch die Verwendung vergrößerter Masken (Reticles) ist die Herstellung einfacher und präziser (weil der Maßstab nicht 1:1 ist), was eine bessere Kontrolle ermöglicht. Da sich auf jeder Maske nur ein Chip befindet, ist die Fertigung zudem kostengünstiger. Das Einzelchip-Belichtungsverfahren (``Step and Repeat'') erlaubt eine genaue Justierung für jeden Chip und ermöglicht die Korrektur von nichtlinearem Waferverzug \cite{schmid2024}. 
+
+\vspace{1em}
+
+Nachteile sind jedoch die hohen Kosten der erforderlichen Geräte, da extrem korrigierte Optiken mit hoher numerischer Apertur ($\mathrm{N_A}$ bis zu 0,6) benötigt werden. Zudem kann die Dispersion des Lichts durch monochromatisches Licht ausgeglichen werden, was jedoch zu stehenden Wellen führen kann. Das begrenzte Belichtungsfeld führt zu einem geringeren Durchsatz und erfordert wiederholte Justierung. Die geringe Tiefenschärfe schränkt zudem das Aspektverhältnis der Strukturen ein \cite{schmid2024}.
+
+
+
+% Lithographie -> SU-8 Photoresist ----------------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{SU-8 Photoresist} % Resin 3D Druck?
+
+Der Photoresist SU-8 ist ein epoxidbasierter Negativ-Resist, der mit herkömmlicher UV-Photolitho-graphieausrüstung verwendet wird und die Herstellung von Strukturen bis zu einer Höhe von zwei Millimetern ermöglicht -- Röntgenstrahlung ist dabei nicht erforderlich. SU-8 zeichnet sich durch ein hohes Aspektverhältnis von bis zu 1:30 aus, was auf den hohen Kontrast\footnote{Der hohe Kontrast bei einem Photoresist wie SU-8 bedeutet, dass sich die belichteten und unbelichteten Bereiche sehr klar und scharf voneinander unterscheiden lassen. Das ist wie bei einem Bild mit kräftigen Farben: Die Unterschiede sind leicht zu erkennen. Bei SU-8 sorgt der hohe Kontrast dafür, dass die belichteten Stellen des Resists sehr genau und sauber härten, während die unbelichteten Bereiche weich bleiben und später entfernt werden können. 
+
+Der Kontrast ist so hoch, weil SU-8 auf einem speziellen Epoxidharz basiert, das besonders gut auf UV-Licht reagiert. Dadurch entstehen scharfe, klare Strukturen, die nicht ``verwischen'', was bei der Herstellung von sehr hohen und präzisen Strukturen hilft \cite{Lorenz1997, Jensen2002, DelCampo2007}.} des Resists zurückzuführen ist und die Realisierung hoher Strukturen erlaubt. Zudem besitzt SU-8 eine hohe chemische Resistenz und kann daher auch als Ätzmaske eingesetzt werden \cite{schmid2024}. Mit SU-8 geätzte Strukturen sind in der \autoref{fig:su8-1}, der \autoref{fig:su8-2} und der \autoref{fig:su8-3} dargestellt. 
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.65\textwidth]{images/su8-1.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.75\textwidth} % Setzt die Bildnummer fett 
+    \caption{Nach Lithographie mit SU-8 Photoresist entstandene Wände mit sehr hohem Aspektverhältnis \cite{SU8Photoresist}.}
+    \label{fig:su8-1}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.6\textwidth]{images/su8-2.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.7\textwidth} % Setzt die Bildnummer fett
+    \caption{Nach Lithographie mit SU-8 Photoresist entstandene Säulen \cite{Tian2005}.}
+    \label{fig:su8-2}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/su8-3.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.85\textwidth} % Setzt die Bildnummer fett
+    \caption{Nach Lithographie mit SU-8 Photoresist entstandene Strukturen und entstandenes Logo von KemLab Inc. \cite{KemLab2023}.}
+    \label{fig:su8-3}
+\end{figure}
+
+Zusammengefass bietet der Photoresist SU-8 zahlreiche Vorteile: Er kann durch Aufschleudern aufgetragen werden, wobei seine hohe Viskosität die Herstellung dicker Schichten ermöglicht. Diese Zähflüssigkeit macht jedoch das Handling anspruchsvoller als bei Standardlacken. Nach dem Auftrag benötigt SU-8 ein sogenanntes Postbake, was zu einem Volumenschwund von etwa 7,5 \% führt und dadurch innere Spannungen sowie Haftungsminderungen verursacht. Daher eignet sich SU-8 nicht optimal für großflächige Strukturen. SU-8 erreicht Aspektverhältnisse von über 1:20 und haftet gut auf Silizium und Glas, insbesondere bei kleinen oder niedrigen Strukturen. Der Resist zeichnet sich durch hohe chemische Stabilität und biologische Kompatibilität aus, was ihn für optische, mechanische und Fluidik-Elemente sowie Galvanikformen ideal macht. Zudem ist SU-8 im Vergleich zu Prozessen wie DRIE und LIGA kosten- und zeiteffizient und liefert ähnliche Ergebnisse \cite{schmid2024, Kayaku2020}.
+
+
+
+% Lithographie -> Lift-Off Verfahren --------------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Lift-Off Verfahren}
+
+Das Lift-Off-Verfahren ist eine Methode zur Strukturierung metallischer Dünnfilme ohne Ätzen. Zunächst wird ein Photoresist auf den Wafer aufgebracht und strukturiert, um die gewünschten Muster zu definieren. Danach wird das Metall ganzflächig abgeschieden, wobei es sowohl auf dem freigelegten Substrat als auch auf dem Photoresist landet. Entscheidend ist, dass die Flanken des Resists steil oder negativ sind, damit das Metall auf diesen Flächen nicht haften bleibt. Anschließend wird der Photoresist in einem Lösungsmittelbad entfernt (gestrippt), wobei das darauf liegende Metall ebenfalls abgelöst wird, während das Metall auf dem Substrat die definierte Struktur bildet.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/lift-off.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Vergleich des Standardverfahrens in der Lithographie mit Negativresist (links) und dem Verfahren mittels Lift-Off (rechts) \cite{ZeloofWebsite}.}
+    \label{fig:lift-off}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.65\textwidth]{images/mlo-irl.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.75\textwidth} % Setzt die Bildnummer fett
+    \caption{Metallbahnen auf einem Wafer, hergestellt durch das MLO-Verfahren (MLO, Metal-Lift-Off, entspricht dem klassischen Lift-Off-Verfahren). Im oberen Bild ist der Photoresist mit negativen Flanken zu sehen, der mit Metall beschichtet wurde. Das untere Bild zeigt das Endresultat nach dem Entfernen des Photoresists mit einem geeigneten Lösungsmittel \cite{ClassOneLiftOff}.}
+    \label{fig:mlo-irl}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/lift-off irl.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Mit dem Lift-Off-Verfahren hergestellte Kupferbahn auf einem Wafer. Links: Wafer mit strukturiertem Photoresist, wobei die negativen Flanken gut zu erkennen sind. Mitte: Querschnitt der gleichen Anordnung nach dem Sputtern. Auf dem Photoresist und dem Wafer wurde Kupfer abgeschieden. Rechts: Endresultat nach dem Strippen -- eine Kupferbahn \cite{jsr_lift_resists}.}
+\label{fig:lift-off irl}
+\end{figure}
+
+
+%Lift-Off Lösungsmittel & Aceton & Methylethylketon \\ \hline
+% \vspace{1em}
+ 
+%\textbf{``Lift-off''} bezeichnet das \textbf{Verfahren zum Entfernen des Resists} und hängt von den eingesetzten Chemikalien ab, wie Aceton oder Methylethylketon \cite%{wolf2000, rogers2008}. 
+
+
+
+% Ätztechnik --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\clearpage
+\section{Ätztechnik}
+
+Die Ätztechnik ist ein zentrales Verfahren in der Mikrosystemtechnik, um gezielt Material von der Oberfläche eines Festkörpers zu entfernen und feine Strukturen zu erzeugen. Dabei kann das Ätzen entweder nasschemisch oder trocken erfolgen. Beim nasschemischen Ätzen werden chemische Reagenzien verwendet, um die Oberfläche eines Materials gezielt abzutragen. Das Trockenätzen hingegen arbeitet mit Teilchen hoher kinetischer Energie, die durch physikalische Prozesse die Oberfläche angreifen und Material abtragen. Beide Methoden bieten spezifische Vorteile und Herausforderungen und werden in der Mikrosystemtechnik je nach Anforderung eingesetzt \cite{schmid2024Aetzen}.
+
+
+
+% Ätzprofile --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Ätzprofile}
+
+In der Mikrosystemtechnik gibt es verschiedene Ätzprofile, die sich durch das Verhalten der Ätzrate in verschiedenen Raumrichtungen unterscheiden und die Form der erzeugten Strukturen bestimmen. Diese Ätzprofile werden als isotrop oder anisotrop klassifiziert \cite{schmid2024Aetzen}. Die \autoref{fig:aetzprofile} liefert einen Überblick über diese Profile. 
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/aetzprofile.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.85\textwidth} % Setzt die Bildnummer fett
+    \caption{Darstellung der verschiedenen Ätzprofile: \protect\circled{1} isotrop, \protect\circled{2} anisotropes durch Trockenätzen und \protect\circled{3} anisotrope durch KOH-Ätzen \cite{schmid2024Aetzen}.}
+    \label{fig:aetzprofile}
+\end{figure}
+
+\paragraph{\protect\circled{1} \uline{Isotropes Ätzprofil:}} Ein isotropes Ätzprofil entsteht, wenn die Ätzrate in alle Raumrichtungen gleich groß ist. Dadurch entstehen abgerundete, viertelkreisförmige Strukturen, da das Material gleichmäßig in die Tiefe und Breite abgetragen wird.
+
+\paragraph{\protect\circled{2} \uline{und} \protect\circled{3} \uline{Anisotrope Ätzprofile:}} Bei einem anisotropen Ätzprofil hängt die Ätzrate von der Raumrichtung ab, was gezielte Strukturen mit steilen Kanten ermöglicht. Ein Beispiel für anisotropes Ätzen ist das Trockenätzen, bei dem Teilchen hoher kinetischer Energie gezielt entlang einer Richtung die Oberfläche angreifen.
+
+\paragraph{KOH-Ätzen} Eine spezifische Form des anisotropen Ätzens ist das KOH-Ätzen, bei dem Kaliumhydroxid (KOH) als Ätzmittel verwendet wird. Beim KOH-Ätzen von Silizium weisen die {111}-Kristallebenen die kleinste Ätzrate auf, was zu Strukturen mit definierten Kanten und Winkeln führt. Dies ermöglicht präzise Geometrien, die in der Mikrosystemtechnik besonders wichtig sind.
+
+\paragraph{Ätzmasken} Um gezielte Ätzprofile zu erzielen, werden Masken oder Ätzmasken eingesetzt. Eine Ätzmaske ist eine Schutzschicht, die bestimmte Bereiche der Oberfläche vor dem Ätzprozess bewahrt und damit festlegt, wo das Material abgetragen wird. Sie besteht oft aus Materialien, die eine hohe Resistenz gegenüber dem verwendeten Ätzmittel aufweisen. Die Selektivität eines Ätzprozesses beschreibt das Verhältnis der Ätzrate der zu ätzenden Schicht $R_1$ zur Ätzrate der Maskenschicht $R_2$ und wird durch $S = R_1 / R_2$ definiert.
+
+\paragraph{Weitere Parameter: Ätzrate und Anisotropiefaktor} Die Ätzrate gibt an, wie viel Material pro Zeiteinheit abgetragen wird (z.B. in nm/min oder µm/h). Der Anisotropiefaktor $A$ beschreibt das Verhältnis der vertikalen Ätzrate $R_v$ zur lateralen Ätzrate $R_l$ und wird als $A = 1 - R_l/R_v$ berechnet. Ein hoher Anisotropiefaktor deutet auf eine präzise vertikale Struktur hin.
 
 % END ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
