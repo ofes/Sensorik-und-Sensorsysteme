@@ -25,7 +25,7 @@
 
 \subsubsectionfont{\large}
 
-\title{Zusammenfassung Sensorik und Sensorsysteme (TU Wien)}
+\title{Zusammenfassung von MEMS Herstellungsverfahren (TU Wien)}
 \author{Omar Filip El Sendiouny \\ \texttt{e1616023@student.tuwien.ac.at}}
 \vfill
 \date{\today}
@@ -36,7 +36,7 @@
 \begin{titlepage}
     \centering
     \vspace{2cm}
-    {\Huge \bfseries Zusammenfassung Sensorik und Sensorsysteme (TU Wien) \par}
+    {\Huge \bfseries Zusammenfassung von MEMS-Herstellungsverfahren (TU Wien) \par}
     
     \vspace{1cm}
     {\Large Omar Filip El Sendiouny \\ \texttt{e1616023@student.tuwien.ac.at} \par}
@@ -73,15 +73,11 @@
 
 \section*{Einleitung}
 
-Diese Zusammenfassung der Vorlesung \textit{Sensorik und Sensorsysteme} (366.071) an der TU Wien dient als Lernhilfe und wurde sorgfältig erstellt. Nach dem Durchlesen dieser Zusammenfassung sollten Leserinnen und Leser in der Lage sein, die theoretischen Fragen, die derzeit prüfungsrelevant sind, zu beantworten. Sie ist zudem darauf ausgelegt, dass beim Lernen ein vertieftes Verständnis der vermittelten Inhalte entsteht. 
+Diese Zusammenfassung von MEMS-Herstellungsverfahren, die in der Vorlesung \textit{Sensorik und Sensorsysteme} (366.071) an der TU Wien behandelt werden, dient als umfassende Lernhilfe und wurde sorgfältig erstellt. Nach dem Durcharbeiten sollten Leserinnen und Leser die prüfungsrelevanten theoretischen Fragen zu diesem Thema beantworten können und ein vertieftes Verständnis der vermittelten Inhalte gewinnen.
 
 \vspace{1em}
 
 Da trotz sorgfältiger Erstellung Fehler vorkommen können, sind Leserinnen und Leser herzlich eingeladen, auf mögliche Unstimmigkeiten zu achten und diese an \texttt{e1616023@student.tuwien.ac.at} zu melden. Alternativ können Korrekturen direkt im Repository auf GitHub vorgenommen werden: \url{https://github.com/ofes/sensorik-und-sensorsysteme}. Falls eine Zugriffsberechtigung benötigt wird, kann eine Anfrage an \url{https://github.com/ofes} gesendet werden. Gute Lernunterlagen sind mir besonders wichtig, da sie die Motivation beim Lernen erheblich steigern – daher bin ich für jedes Feedback dankbar.
-
-\vspace{1em}
-
-Im ersten Abschnitt dieser Zusammenfassung werden grundlegende Herstellungsmethoden der Mikrosystemtechnik erläutert. Anschließend werden ausgewählte MEMS-Sensoren (mikroelektromechanische Systeme) und ihre Funktionsweisen vorgestellt.
 
 \vspace{1em}
 
@@ -864,7 +860,7 @@ Die \textbf{``Passivierung bei Plasma-Ätzung'' und ``Nasschemie''} beschreiben,
 
 \vspace{1em}
 
-\textbf{Plasma-Ätzung} ist ein trockenes Ätzverfahren, bei dem ionisiertes Gas (Plasma) genutzt wird, um Material gezielt von einer Oberfläche zu entfernen. Dabei entsteht eine physikalisch-chemische Reaktion zwischen dem Plasma und dem zu ätzenden Material, was präzise und kontrollierte Strukturierungen ermöglicht. Dieses Verfahren wird häufig in der Mikroelektronik eingesetzt, da es sehr feine Strukturen erlaubt \cite{madou2002, wolf2000}.
+\textbf{Plasma-Ätzung} ist ein trockenes Ätzverfahren, bei dem ionisiertes Gas (Plasma) genutzt wird, um Material gezielt von einer Oberfläche zu entfernen. Dabei entsteht eine physikalische oder chemische Reaktion zwischen dem Plasma und dem zu ätzenden Material, was präzise und kontrollierte Strukturierungen ermöglicht. Dieses Verfahren wird häufig in der Mikroelektronik eingesetzt, da es sehr feine Strukturen erlaubt \cite{madou2002, wolf2000}.
 
 \vspace{1em}
 
@@ -1210,7 +1206,7 @@ Das Lift-Off-Verfahren ist eine \textbf{Methode zur Strukturierung metallischer 
 \clearpage
 \section{Ätztechnik}
 
-Die Ätztechnik ist ein zentrales Verfahren in der Mikrosystemtechnik, um \textbf{gezielt Material von der Oberfläche eines Festkörpers zu entfernen} und feine Strukturen zu erzeugen. Dabei kann das Ätzen entweder nasschemisch oder trocken erfolgen. \textbf{Beim nasschemischen Ätzen} werden \textbf{chemische Reagenzien verwendet, um} die \textbf{Oberfläche eines Materials gezielt abzutragen}. Das \textbf{Trockenätzen} hingegen \textbf{arbeitet mit Teilchen hoher kinetischer Energie}, die durch \textbf{physikalisch-chemische Prozess}e die \textbf{Oberfläche angreifen und Material abtragen}. Beide Methoden bieten spezifische Vorteile und Herausforderungen und werden in der Mikrosystemtechnik je nach Anforderung eingesetzt \cite{schmid2024Aetzen}.
+Die Ätztechnik ist ein zentrales Verfahren in der Mikrosystemtechnik, um \textbf{gezielt Material von der Oberfläche eines Festkörpers zu entfernen} und feine Strukturen zu erzeugen. Dabei kann das Ätzen entweder nasschemisch oder trocken erfolgen. \textbf{Beim nasschemischen Ätzen} werden \textbf{chemische Reagenzien verwendet, um} die \textbf{Oberfläche eines Materials gezielt abzutragen}. Das \textbf{Trockenätzen} hingegen \textbf{arbeitet mit Teilchen hoher kinetischer Energie}, die durch \textbf{physikalische oder chemische Prozesse} die \textbf{Oberfläche angreifen und Material abtragen}. Beide Methoden bieten spezifische Vorteile und Herausforderungen und werden in der Mikrosystemtechnik je nach Anforderung eingesetzt \cite{schmid2024Aetzen}.
 
 
 
@@ -1249,6 +1245,21 @@ Wie in den vorherigen Kapiteln erwähnt, werden bereits erklärte Begriffe hier 
     \end{itemize}
     
     \textbf{Zusammengefasst}: Die Wahl zwischen einem \{100\}- und einem \{110\}-Silizium-Wafer beeinflusst die Struktur der bearbeiteten Oberflächen und die entstehenden Winkel beim anisotropen Ätzen. Die \{100\}-Orientierung erzeugt Winkel von 54,74° und ist für allgemeine Halbleiteranwendungen weit verbreitet, während die \{110\}-Orientierung mit einem Winkel von 35,26° für spezielle strukturelle Anforderungen verwendet wird \cite{kittel2004, ashcroft1976}.
+
+    \item \textbf{Redox-Prozess:} Dieser Prozess besteht aus zwei Teilen: einer Reduktion und einer Oxidation. Einfach gesagt, bei einer \textbf{Reduktion gewinnt ein Atom Elektronen hinzu}, und bei einer Oxidation \textbf{verliert ein Atom Elektronen}. Beide Vorgänge passieren immer gleichzeitig, da die Elektronen, die ein Atom abgibt, von einem anderen aufgenommen werden.
+
+    \textbf{Redox-Prozess beim KOH-Ätzen von Silizium:} Beim Ätzen von Silizium mit Kaliumhydroxid (KOH) läuft dieser Prozess wie folgt ab:
+
+    \begin{itemize}
+        \item \textbf{Oxidation}: An der Siliziumoberfläche werden Elektronen „weggenommen“. Diese Elektronen verlassen die äußere Schicht des Siliziums, wodurch das Ätzmittel (in diesem Fall KOH) die Siliziumoberfläche angreifen und abbauen kann.
+        
+        \item \textbf{Reduktion}: Die „verlorenen“ Elektronen müssen an eine andere Stelle gelangen. Sie gehen in die Flüssigkeit (KOH-Lösung) über und verbinden sich dort mit anderen Teilchen.
+    \end{itemize}
+    
+    Durch diesen Elektronenfluss, der im Redox-Prozess stattfindet, können bestimmte Bereiche des Siliziums gezielt abgetragen werden. Dies kann durch die \textbf{p\textsuperscript{+}-Dotierung} verstärkt werden: Hierbei wird das Silizium gezielt mit Bor angereichert, das Elektronen aus dem Kristallgitter zieht und die Elektronenmenge im Silizium weiter reduziert. Weniger Elektronen bedeuten, dass der Redox-Prozess (der KOH-Ätzvorgang) erheblich verlangsamt wird, und das Silizium an diesen Stellen definierter und genauer strukturiert werden kann \cite{madou2002}.
+    \item \textbf{Epitaxieschicht:} Ist eine zusätzliche, dünne Schicht, die auf einem Substrat gezüchtet wird. Diese Schicht kann die mechanischen und elektrischen Eigenschaften verbessern, indem sie bestimmte Eigenschaften der p\textsuperscript{+} dotierten Bereiche (Ätzstopp) kompensiert \cite{kittel2004}.
+    \item \textbf{Monolithische Integration:} Beschreibt die Integration unterschiedlicher Bauteile wie Mechanik und Elektronik auf einem einzigen Chip. Diese Technik wird durch den p\textsuperscript{+}-Dotierung (Ätzstopp) erschwert, da sie die elektrischen Eigenschaften des Materials verändern \cite{madou2002, kittel2004}.
+    \item \textbf{Passivierung:} Bezeichnet das Aufbringen einer Schutzschicht auf die Oberfläche eines Materials, um dieses vor chemischen Reaktionen oder physikalischen Veränderungen zu schützen. In der Mikrofertigung, insbesondere beim \textbf{Deep Reactive Ion Etching (DRIE)}, spielt die Passivierung eine entscheidende Rolle. Hier wird in jedem Zyklus des Bosch-Prozesses eine dünne Schutzschicht auf die Seitenwände der Struktur aufgetragen, um diese vor weiterem Ätzen zu bewahren. Dies ermöglicht ein \textbf{stark anisotropes Ätzprofil} mit nahezu senkrechten Seitenwänden, indem die Ätzung gezielt nur am Boden der Struktur erfolgt \cite{madou2002}.
 \end{itemize}
 
 \begin{figure}[htb!]
@@ -1357,7 +1368,7 @@ Eine hohe Selektivität bedeutet, dass die zu ätzende Schicht schneller abgetra
 
 
 
-% Ätztechnichk -> Ätzprofile -> Ätzgraben bei anisotroper KOH-Ätzung von 100- und 110-Si-Wafern ---------------------------------------------------------------------------
+% Ätztechnichk -> Ätzgraben bei anisotroper KOH-Ätzung von 100- und 110-Si-Wafern -----------------------------------------------------------------------------------------
 
 
 \vspace{1em}
@@ -1382,12 +1393,139 @@ In diesem Abschnitt wird erläutert, wie \textbf{unterschiedliche Ätzgräben} a
 
 
 
+% Ätztechnichk -> Ätzstoppebenen mit Dotierung ----------------------------------------------------------------------------------------------------------------------------
+
+
+\subsection{Ätzstoppebenen mit p\textsuperscript{+}-Dotierung}
+
+In der Mikrosystemtechnik ist eine \textbf{präzise Kontrolle des Ätzvorgangs} entscheidend, um definierte Strukturen und Tiefen zu erzielen. Eine Möglichkeit, dies zu erreichen, ist das \textbf{Einfügen von Ätzstoppebenen durch p\textsuperscript{+}-Dotierung}\footnote{Der Entzug von Elektronen aus dieser Ebene verlangsamt bzw. stoppt den Redox-Prozess beim KOH-Ätzen, bei dem Elektronen von der Siliziumoberfläche ins Ätzmittel übertragen werden \cite{madou2002}.}. Besonders bei der Verwendung von \textbf{Kaliumhydroxid (KOH) als Ätzmittel} bewirkt die Dotierung mit Atomen wie \textbf{Bor}\footnote{Boratome besitzen in ihrer Valenzschale ein Elektron weniger als Silizium. Durch die Dotierung mit Bor erhält man p-dotiertes Silizium, das als positiver Halbleiter fungiert \cite{madou2002}.}, dass das Material an den dotierten Stellen \textbf{wesentlich langsamer geätzt} wird. Zur Veranschaulichung dient die \autoref{fig:aetzstopp}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/aetzstopp.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.85\textwidth} % Setzt die Bildnummer fett
+    \caption{Veranschaulichung einer Ätzstoppebene (rot) in einem Silizium-Wafer (weiß). Der Ätzprozess wird an dieser Ebene stark verlangsamt \cite{schmid2024Aetzen}.}
+    \label{fig:aetzstopp}
+\end{figure}
+
+\paragraph{\uline{Warum funktioniert die p\textsuperscript{+}-Dotierung als Ätzstopp?:}} Beim \textbf{KOH-Ätzen von Silizium} findet ein \textbf{Redox-Prozess} statt, bei dem \textbf{Elektronen zwischen} der \textbf{Siliziumoberfläche und} der \textbf{KOH-Lösung übertragen} werden. \textbf{In der Oxidationsphase verlassen Elektronen} die \textbf{Siliziumoberfläche, wodurch das KOH das Silizium abbauen kann}. Durch eine \textbf{\textbf{p\textsuperscript{+}-Dotierung}} wird gezielt \textbf{Bor in das Silizium eingebracht}, das \textbf{Elektronen aus} dem \textbf{Kristall entzieht und} den \textbf{Redox-Prozess an diesen Stellen stark verlangsamt} (aber nicht völlig unterbricht). Dies ermöglicht eine sehr präzise Kontrolle der Ätzrate an diesen Ebenen \cite{seidel1990, madou2002}.
+
+\paragraph{Vorteile der Ätzstopptechnik:}
+\begin{itemize}
+    \item \textbf{Homogenität über den Wafer}: Das Ätzen wird gleichmäßiger, da die Keilförmigkeit des Wafers und andere mechanische Variationen weniger Einfluss haben.\footnote{In der Herstellung von Mikrochips und Mikrosystemen wird oft ein großer, dünner Silizium-Wafer verwendet, der nicht überall exakt gleich dick ist. Diese leichte Schrägheit nennt man ``Keilförmigkeit''. Da der Wafer dadurch in verschiedenen Bereichen leicht unterschiedliche Dicken aufweist, könnte dies normalerweise das Ätzen beeinflussen und zu ungleichmäßigen Ergebnissen führen. Die Nutzung einer Ätzstoppebene gleicht diese kleinen Unterschiede jedoch aus und sorgt dafür, dass die Ätzung unabhängig von der Dicke gleichmäßig ist \cite{madou2002}.}
+    \item \textbf{Stabilität der Ätzrate}: Schwankungen durch Temperatur- oder Konzentrationsänderungen werden durch die Ätzstopp-Eigenschaften weniger kritisch.
+    \item \textbf{Wegfall der Zeitkontrolle}: Der Ätzvorgang stoppt automatisch an der Ätzstoppebene, ohne dass ein kritischer Zeitpunkt gemessen werden muss \cite{madou2002}.
+\end{itemize}
+
+\paragraph{Nachteile der Dotierung:}
+\begin{itemize}
+    \item \textbf{Mechanische Einschränkungen}: Die Einführung von Bor-Atomen erzeugt Zugspannungen im Kristall und kann die strukturelle Integrität beeinträchtigen, was den Kristall anfälliger für Risse macht.
+    \item \textbf{Elektrische Entartung}: Die starke Dotierung führt zu metallähnlichem Verhalten im Material und verhindert so die Integration elektronischer Bauelemente, wie p/n-Übergänge. Dies macht eine \textbf{monolithische Integration} von Mechanik und Elektronik unmöglich.
+    \item \textbf{Abhilfe durch Epitaxieschicht}: Um die mechanischen und elektrischen Nachteile teilweise auszugleichen, kann eine weniger stark dotierte \textbf{Epitaxieschicht} über der p\textsuperscript{+}-Schicht aufgebracht werden, was jedoch den Herstellungsaufwand erhöht \cite{seidel1990, kittel2004}.
+\end{itemize}
+
+\paragraph{Zusammengefasst:} Durch die p\textsuperscript{+}-Dotierung können Ätzstoppebenen geschaffen werden, die den Ätzvorgang präzise an definierten Stellen erheblich verlangsamen. Diese Technik bietet Vorteile für eine gleichmäßige Strukturierung und Präzision, hat jedoch Nachteile hinsichtlich der mechanischen Stabilität und elektrischen Eigenschaften des Kristalls \cite{madou2002, kittel2004}.
+
+\paragraph{Hinweis:} Die selektive Ätztechnik mit hochdotierten Stoppschichten wird wegen Ihrer Nachteile nur noch selten verwendet \cite{schmid2024Aetzen}.
+
+
+
+% Ätztechnichk -> Trockenätzverfahren -------------------------------------------------------------------------------------------------------------------------------------
+
+
+\subsection{Trockenätzverfahren}
+
+Trockenätzverfahren sind in der Mikrosystemtechnik essenziell für die Herstellung kleiner Strukturen, da \textbf{nasschemische Ätzprozesse} in der Regel \textbf{nur bis} zu einer \textbf{Strukturgröße von} etwa \textbf{2-3~µm präzise} arbeiten können. \textbf{Kleinere und präzisere Strukturen erfordern} daher \textbf{Trockenätzverfahren} \cite{madou2002}.
+
+\paragraph{\uline{Chemisches Trockenätzen:}} Das chemische Trockenätzen basiert auf der \textbf{Reaktion reaktiver Ionen oder Radikale mit} der \textbf{Substratoberfläche}. Diese reaktiven Teilchen werden \textbf{durch chemische Prozesse erzeugt} und \textbf{treffen durch} den \textbf{hohen Gasdruck und} die \textbf{resultierende Stoßwahrscheinlichkeit stark abgebremst auf das Substrat}. Da die \textbf{kinetische Energie reduziert} ist, \textbf{tragen} sie \textbf{nicht zum physikalischen Abtrag bei} und \textbf{ermöglichen} eine \textbf{hohe Selektivität, da nur die reaktive Komponente mit} der \textbf{Festkörperoberfläche reagiert}. Diese Methode ist oft \textbf{isotrop}, da die \textbf{Reaktivität in alle Richtungen gleich} ist. Gängige Verfahren sind das \textbf{Barrel-Ätzen und} (\autoref{fig:barrel-aetzen}) das \textbf{Plasma-Ätzen} (\autoref{fig:plasma-aetzen}) \cite{schmid2024Aetzen}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.65\textwidth]{images/barrel-aetzen.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.75\textwidth} % Setzt die Bildnummer fett
+    \caption{Barrel-Ätzverfahren: Das Plasma ist vom Ätzbereich getrennt, sodass nur reaktive Teilchen in die Ätzkammer gelangen. Hauptanwendung ist das Entfernen (Veraschen, Strippen) von Photoresist im Sauerstoffplasma \cite{schmid2024Aetzen}.}
+    \label{fig:barrel-aetzen}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.55\textwidth]{images/plasma-aetzen.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.65\textwidth} % Setzt die Bildnummer fett
+    \caption{Plasma-Ätzverfahren: Das Plasma wird direkt im Ätzbereich erzeugt, wodurch eine hohe Reaktivität erzielt wird \cite{schmid2024Aetzen}.}
+    \label{fig:plasma-aetzen}
+\end{figure}
+
+\paragraph{\uline{Physikalisches Trockenätzen:}} Beim physikalischen Trockenätzen kommen \textbf{inerte Ionen}\footnote{Inerte Ionen sind elektrisch geladene Teilchen, die chemisch inaktiv oder „reaktionsträge“ sind. Das bedeutet, dass sie unter normalen Bedingungen keine Reaktionen mit anderen Stoffen eingehen \cite{mattox2010handbook}.}, meist Argonionen (\(\mathrm{Ar^+}\)), mit einer \textbf{Energie von 0,1-1~keV} zum Einsatz. Diese Ionen \textbf{treffen mit hoher kinetischer Energie auf die Festkörperoberfläche und entfernen Material durch physikalischen Abtrag}, d.h., durch \textbf{kinetische Energieübertragung}. Physikalisches Trockenätzen ermöglicht eine \textbf{hohe Anisotropie}, da die \textbf{Ionen in} eine \textbf{spezifische Richtung beschleunigt} werden. Die \textbf{Selektivität} zur Maskenschicht ist jedoch \textbf{niedrig, da die Sputterrate bei verschiedenen Materialien ähnliche Größenordnungen hat}. Zu den verbreiteten Methoden gehören das \textbf{Sputterätzen} (\autoref{fig:sputter-aetzen}) und das \textbf{Ionenstrahlätzen} \cite{wolf2000}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/Sputterätzen.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.85\textwidth} % Setzt die Bildnummer fett
+    \caption{Sputterätzen: Prozessdruck im Bereich von \(1-10\mathrm{Pa}\) \cite{schmid2024Aetzen}.}
+    \label{fig:sputter-aetzen}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.75\textwidth]{images/Ionenstrahlätzen.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.85\textwidth} % Setzt die Bildnummer fett
+    \caption{Ionenstrahlätzen (IBE): Hochvakuumbereich von < \(10^{-2}\) Pa, bei dem die Ionen durch einen Glühfaden neutralisiert werden. Typische Ätzraten liegen im Bereich einiger 10 nm/min \cite{schmid2024Aetzen}.}
+    \label{fig:IBE-aetzen}
+\end{figure}
+
+\paragraph{\uline{Reactive Ion Etching (reaktives Ionenätzen bzw. RIE):}} Das reaktive Ionenätzen \textbf{kombiniert chemische und physikalische Ätzmechanismen}. Dabei wird ein \textbf{Plasma aus reaktiven Gasen} oder einem \textbf{Gemisch aus reaktiven und inerten Gasen} erzeugt. Die Kombination dieser beiden Komponenten führt zu einem \textbf{Ätzangriff, bei dem sowohl chemische als auch physikalische Abtragseffekte wirken}. Durch diese Kombination wird eine \textbf{hohe Selektivität}, eine \textbf{hohe Anisotropie} und die \textbf{Realisierung von senkrechten Wänden} erreicht, was für präzise Mikrosysteme notwendig ist. Zudem können \textbf{hohe Ätzraten} erzielt werden, was RIE zum \textbf{\uline{am häufigsten genutzten Trockenätzverfahren}} macht. Typische Ausführungen umfassen Parallelplattenreaktoren (\autoref{fig:rie} oben) und Barrelreaktoren (\autoref{fig:rie} unten) \cite{madou2002}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.9\textwidth]{images/rie.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Typen von RIE-Reaktoren: Oben - Parallelplattenreaktor, Unten - Barrelreaktor \cite{schmid2024Aetzen}.}
+    \label{fig:rie}
+\end{figure}
+
+\paragraph{\uline{Deep Reactive Ion Etching (DRIE):}} 
+Das Deep Reactive Ion Etching (DRIE) ist eine \textbf{erweiterte Form des reaktiven Ionenätzens} (RIE), die speziell entwickelt wurde, um \textbf{tiefe, schmale und präzise Ätzstrukturen mit hohen Aspektverhältnissen} zu erzeugen, wie sie in der MEMS-Fertigung (Mikro-Elektro-Mechanische Systeme) erforderlich sind.
+
+\vspace{1em}
+
+Dieses Verfahren basiert auf einem \textbf{Wechselprozess} aus abwechselnden \textbf{Ätz- und Passivierungsschritten} (bekannt als Bosch-Prozess). In jedem Zyklus wird zunächst eine Schutzschicht aufgebracht, die die Seitenwände der Struktur schützt. Anschließend folgt ein Ätzschritt, bei dem das Material an der Bodenfläche abgetragen wird. Durch die wiederholte Anwendung dieser Schritte entstehen \textbf{tiefe Ätzprofile mit nahezu senkrechten Kanten} und einer hohen Anisotropie. Die Seitenwände weisen allerdings durch den alternierenden Prozess Wellen auf (\autoref{fig:drie4}, \autoref{fig:drie2} und \autoref{fig:drie3}).
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.5\textwidth]{images/drie4.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.6\textwidth} % Setzt die Bildnummer fett
+    \caption{Prozessablauf des Deep Reactive Ion Etching (DRIE): Schrittweise Darstellung der abwechselnden Passivierungs- und Ätzzyklen, die zu tiefen und hochgradig anisotropen Strukturen führen \cite{wikipedia_DRIE}.}
+    \label{fig:drie4}
+\end{figure}
+\vspace{1em}
+
+DRIE \textbf{ermöglicht die Herstellung präziser, hoch anisotroper Strukturen}, die für Anwendungen wie MEMS-Sensoren, Aktoren und mikrofluidische Kanäle entscheidend sind. Trotz der hohen Präzision und Flexibilität ist der Prozess \textbf{anspruchsvoll und erfordert eine sorgfältige Kontrolle} der Parameter, wie Gasfluss, Zykluszeit und Plasmaströme \cite{madou2002, wolf2000}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/drie2.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Ein Silizium-Mikropfeiler, hergestellt mittels Bosch-Prozess \cite{wikipedia_en_DRIE}.}
+    \label{fig:drie2}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/drie3.jpg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Gewellte Seitenwand einer Siliziumstruktur, hergestellt mit dem Bosch-Prozess \cite{wikipedia_en_DRIE}.}
+    \label{fig:drie3}
+\end{figure}
+
+
+
 % END ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+\clearpage
 \thispagestyle{empty}
-\newpage
 \bibliographystyle{ieeetr}  % IEEE-Standard für das Literaturverzeichnis
+\thispagestyle{empty}
 \bibliography{references}  % Ersetze "your_bib_file" durch den tatsächlichen Namen der .bib-Datei ohne die Endung .bib
 
 \end{document}
