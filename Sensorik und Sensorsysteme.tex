@@ -479,7 +479,7 @@ Die Schichtbildung basiert auf einer \textbf{Reihe von Teilprozessen}, die je na
 
 \begin{enumerate}
     \item \textbf{Gaszufuhr}: Die Reaktanden SiH$_4$ (Silan) und NH$_3$ (Ammoniak) werden in die Reaktionskammer geleitet und strömen über das Substrat. Dabei gelangen die Ausgangsstoffe durch erzwungene Konvektion zum Substrat \cite{keplinger2024CVD}.
-    \item \textbf{Diffusion}: Die Geschwindigkeit des Gases nimmt zur Oberfläche hin innerhalb der Prandtlschen Grenzschicht\footnote{Die Prandtlsche Grenzschicht ist der Bereich in der Nähe einer Oberfläche, in dem die Strömungsgeschwindigkeit eines Fluids von der maximalen Geschwindigkeit bis auf Null abnimmt. Innerhalb dieser Schicht verlangsamt sich das Fluid aufgrund der Reibungskräfte an der Grenzfläche \cite{white2006}.} bis auf Null ab. Deshalb müssen die Reaktanden diese Schicht durch einen Diffusionsprozess überwinden\footnote{Die Reaktanden diffundieren durch die Prandtlsche Grenzschicht zur Oberfläche \cite{bergman2011, incropera2007}.} \cite{keplinger2024CVD}.
+    \item \textbf{Diffusion}: Die Geschwindigkeit des Gases nimmt zur Oberfläche hin innerhalb der Prandtl'schen Grenzschicht\footnote{Die Prandtl'sche Grenzschicht ist der Bereich in der Nähe einer Oberfläche, in dem die Strömungsgeschwindigkeit eines Fluids von der maximalen Geschwindigkeit bis auf Null abnimmt. Innerhalb dieser Schicht verlangsamt sich das Fluid aufgrund der Reibungskräfte an der Grenzfläche \cite{white2006}.} bis auf Null ab. Deshalb müssen die Reaktanden diese Schicht durch einen Diffusionsprozess überwinden\footnote{Die Reaktanden diffundieren durch die Prandtlsche Grenzschicht zur Oberfläche \cite{bergman2011, incropera2007}.} \cite{keplinger2024CVD}.
     \item \textbf{Adsorption}: Die Moleküle, die zur Oberfläche hin diffundieren, ``kleben'' an der Oberfläche fest (adsorbieren). Dort bleiben sie aber nicht an einer festen Stelle, sondern bewegen sich je nach Temperatur mehr oder weniger stark über die Oberfläche \cite{keplinger2024CVD, bergman2011, incropera2007}.
     \item \textbf{Reaktion}: Die Ausgangsstoffe reagieren an der Oberfläche. Bei der Bildung von Siliziumnitrid folgt die Reaktion der chemischen Gleichung:
     $$
@@ -746,9 +746,11 @@ Begriffe, die bereits in den vorigen Kapiteln erläutert wurden, werden hier nic
 \begin{itemize}
     \item \textbf{Photoresist}: Eine lichtempfindliche Schicht (Photolack), die zur Strukturierung von Mikro- und Nanometer-Bereichen dient \cite{madou2002}.
     \item \textbf{Maske} (Photomaske): Eine Vorlage mit einem Muster aus lichtdurchlässigen und lichtundurchlässigen Bereichen, die auf den Photoresist projiziert wird. Sie dient dazu, das gewünschte Strukturmuster zu übertragen \cite{wolf2000}.
-    \item \textbf{Kohärenzgrad von Licht}: In der Lithographie beschreibt der Kohärenzgrad des Lichts, wie gleichmäßig die Lichtwellen zueinander schwingen. Eine hohe Kohärenz bedeutet, dass die Lichtwellen eine feste Phasenbeziehung haben -- sie schwingen synchron, wie zwei Freunde, die auf einem Trampolin immer gleichzeitig springen. Diese Synchronität ermöglicht scharfe Interferenzmuster und kann die Präzision der abgebildeten Strukturen erhöhen \cite{Mack2006, BornWolf1999}. 
+    \item \textbf{Kohärenzgrad von Licht}: In der Lithographie beschreibt der Kohärenzgrad des Lichts, wie gleichmäßig die Lichtwellen zueinander schwingen. Eine hohe Kohärenz bedeutet, dass die Lichtwellen eine feste Phasenbeziehung haben -- sie schwingen synchron, wie zwei Freunde, die auf einem Trampolin immer gleichzeitig springen. Diese Synchronität ermöglicht scharfe Interferenzmuster und kann die Präzision der abgebildeten Strukturen erhöhen \cite{Mack2006, BornWolf1999}.
 
     Eine niedrige Kohärenz bedeutet hingegen, dass die Lichtwellen weniger synchron sind und keinen konstanten Abstand zueinander halten, wie mehrere Personen, die auf einem Trampolin jeweils in ihrem eigenen Rhythmus springen. Diese ``Unordnung'' der Wellen reduziert Interferenzeffekte, was bei der Lithographie helfen kann, eine gleichmäßigere Belichtung zu erreichen und störende Muster zu vermeiden \cite{Mack2006}.
+    \item \textbf{LIGA-Verfahren}: LIGA steht für \textbf{Lithographie, Galvanoformung und Abformung}. Es ist ein Verfahren der Mikrosystemtechnik zur Herstellung hochpräziser Mikrostrukturen mit hohen Aspektverhältnissen. Dabei werden in drei Schritten ein Muster per Röntgenstrahllithographie erstellt, dieses galvanisch mit Metall gefüllt (``Galvanisch gefüllt'' bedeutet, dass das Muster im Prozess durch eine elektrochemische Abscheidung (Galvanik) mit Metall aufgefüllt wird. Dabei wird Metall in die Vertiefungen der Form abgeschieden, wodurch stabile und präzise metallische Strukturen entstehen.) und anschließend abgeformt (``Abformung'' bedeutet in diesem Zusammenhang, dass das erzeugte Muster als Form oder Negativ verwendet wird, um weitere Strukturen durch das Einfüllen eines Materials in diese Form herzustellen. Das Ziel ist, exakte Kopien der Struktur zu erzeugen, indem das Material in die Form gegossen oder gepresst und dann herausgenommen wird.). Das Verfahren eignet sich für präzise Anwendungen in der Feinmechanik und Mikrosystemtechnik \cite{Mescheder2004}.
+    \item \textbf{DRIE-Verfahren}: DRIE steht für \textbf{Deep Reactive Ion Etching}, ein Verfahren zur Herstellung tief strukturierter Mikrokomponenten mit hohen Aspektverhältnissen in der Mikrosystemtechnik. Es nutzt reaktive Ionen\footnote{Reaktive Ionen sind geladene Teilchen, die chemisch sehr aktiv sind und durch Ionisierung von Gasen in einem Plasma entstehen. In Prozessen wie dem DRIE werden diese Ionen verwendet, um gezielt Material abzutragen. Die reaktiven Ionen reagieren mit der Oberfläche des Materials und erzeugen chemische Verbindungen, die sich ablösen lassen, wodurch sehr präzise Strukturen entstehen \cite{henning2002, wolf2000}.}, die durch ein Plasma erzeugt werden, um das Material gezielt abzutragen. Durch DRIE lassen sich sehr präzise und vertikale Strukturen in Materialien wie Silizium erzeugen, was es ideal für die Herstellung komplexer Mikrostrukturen in Anwendungen wie MEMS macht \cite{madou2002, li2014drie}.
 \end{itemize}
 
 
@@ -862,7 +864,7 @@ Die \textbf{``Passivierung bei Plasma-Ätzung'' und ``Nasschemie''} beschreiben,
 
 \vspace{1em}
 
-\textbf{Plasma-Ätzung} ist ein trockenes Ätzverfahren, bei dem ionisiertes Gas (Plasma) genutzt wird, um Material gezielt von einer Oberfläche zu entfernen. Dabei entsteht eine chemische Reaktion zwischen dem Plasma und dem zu ätzenden Material, was präzise und kontrollierte Strukturierungen ermöglicht. Dieses Verfahren wird häufig in der Mikroelektronik eingesetzt, da es sehr feine Strukturen erlaubt \cite{madou2002, wolf2000}.
+\textbf{Plasma-Ätzung} ist ein trockenes Ätzverfahren, bei dem ionisiertes Gas (Plasma) genutzt wird, um Material gezielt von einer Oberfläche zu entfernen. Dabei entsteht eine physikalisch-chemische Reaktion zwischen dem Plasma und dem zu ätzenden Material, was präzise und kontrollierte Strukturierungen ermöglicht. Dieses Verfahren wird häufig in der Mikroelektronik eingesetzt, da es sehr feine Strukturen erlaubt \cite{madou2002, wolf2000}.
 
 \vspace{1em}
 
@@ -1047,7 +1049,7 @@ Allerdings gibt es auch \textbf{Nachteile}. \textbf{Da die Maske direkten Kontak
 
 \subsubsection{Proximity-Belichtung (Schattenprojektion)}
 
-Ähnlich wie bei der Kontaktbelichtung wird auch bei der Proximity-Belichtung eine Maske im 1:1-Maßstab mittels parallelem Licht auf den Photolack einer Silizium-Oberfläche übertragen. Dabei besteht ein geringer Abstand von etwa $10 \, \mathrm{\mu m}$ bis $30 \, \mathrm{\mu m}$ zwischen Maske und Wafer (\autoref{fig:proximity-belichtung}) \cite{Mescheder2004}. Die Proximity-Belichtung hat sich in der Mikrosystemtechnik als Standardverfahren etabliert \cite{schmid2024}.
+\textbf{Ähnlich wie} bei der \textbf{Kontaktbelichtung} wird auch bei der Proximity-Belichtung eine \textbf{Maske im 1:1-Maßstab mittels parallelem Licht auf} den \textbf{Photolack} einer Silizium-Oberfläche \textbf{übertragen}. Bei diesem Verfahren besteht \textbf{jedoch ein geringer Abstand von etwa 10~µm bis 30~µm zwischen Maske und Wafer} (\autoref{fig:proximity-belichtung}) \cite{Mescheder2004}. Die Proximity-Belichtung hat sich in der \textbf{Mikrosystemtechnik} als \textbf{Standardverfahren} etabliert \cite{schmid2024}.
 
 \begin{figure}[htb!]
     \centering
@@ -1059,15 +1061,23 @@ Allerdings gibt es auch \textbf{Nachteile}. \textbf{Da die Maske direkten Kontak
 
 \vspace{1em}
 
-Ein wesentlicher Vorteil dieser Methode ist die hohe Lebensdauer der Maske, da sie keinen direkten Kontakt mit dem Wafer hat. Zudem handelt es sich auch hier um ein Full-Wafer-Verfahren, was, wie bereits erwähnt, zu einem sehr hohen Durchsatz führt \cite{schmid2024}.
+Ein \textbf{wesentlicher Vorteil} dieser Methode ist die \textbf{hohe Lebensdauer der Maske}, da sie keinen direkten Kontakt mit dem Wafer hat. Zudem handelt es sich auch hier um ein \textbf{Full-Wafer-Verfahren}, was, wie bereits erwähnt, zu einem \textbf{sehr hohen Durchsatz} führt \cite{schmid2024}.
 
 \vspace{1em}
 
-Zu den Nachteilen zählt die geringere Strukturauflösung, die durch die Beugung des Lichts an den Kanten der Maske begrenzt wird. Die minimale Linienbreite $b$ lässt sich durch $b \geq \sqrt{g\lambda}$ bestimmen, wobei $g$ der Abstand zwischen Wafer und Maske (gap) und $\lambda$ die Wellenlänge des Lichts ist (\autoref{fig:proximity-belichtung}). Bei einem Abstand von $g = 20 \, \mathrm{\mu m}$ und einer Wellenlänge von $\lambda = 400 \, \mathrm{nm}$ ergibt sich zum Beispiel $b \geq 3 \, \mathrm{\mu m}$. Um die Auflösung zu verbessern, können kurzwelligeres Licht oder Phasenmasken\footnote{Phasenmasken sind spezielle Masken in der Lithographie, die die Phase des Lichts verändern, um den Kontrast an den Kanten des projizierten Musters zu erhöhen. Dies erfolgt durch Phasenverschiebung mittels unterschiedlicher Materialdicken oder Brechungsindizes, was feinere Strukturen ermöglicht. Diese Technik hilft, die minimale Linienbreite zu reduzieren und eignet sich besonders für kürzere Wellenlängen \cite{Lin1992, Levenson1982, Mack2006}.} eingesetzt werden \cite{schmid2024}.
+Zu den \textbf{Nachteilen} zählt die \textbf{geringere Strukturauflösung}, die \textbf{durch} die \textbf{Beugung des Lichts an den Kanten der Maske begrenzt} wird. Wichtig ist also \textbf{minimale Linienbreite} $b$ in \autoref{fig:proximity-belichtung}. Sie lässt sich durch: 
+$$
+b \geq \sqrt{g\lambda}
+$$ 
+bestimmen, wobei $g$ der Abstand zwischen Wafer und Maske (gap) und $\lambda$ die Wellenlänge des Lichts ist (\autoref{fig:proximity-belichtung}). Bei einem Abstand von $g = 20 \, \mathrm{\mu m}$ und einer Wellenlänge von $\lambda = 400 \, \mathrm{nm}$ ergibt sich zum Beispiel $b \geq 3 \, \mathrm{\mu m}$ \cite{schmid2024}. 
 
 \vspace{1em}
 
-Für Auflösungen im Mikrometer-Bereich muss der Abstand fast null betragen, was zur bereits erwähnten Kontaktbelichtung führt. Eine Alternative bietet die Röntgenstrahllithographie, die bei einem Abstand von $30-50 \, \mathrm{\mu m}$ eine Auflösung von unter $0,5 \, \mathrm{\mu m}$ und eine hohe Tiefenschärfe\footnote{Tiefenschärfe beschreibt in der Lithographie den Bereich entlang der optischen Achse, in dem ein Objekt scharf abgebildet wird. Eine größere Tiefenschärfe erlaubt eine dickere Schicht, in der das Muster scharf projiziert werden kann. Sie ist entscheidend für die präzise Übertragung feiner Details, da eine geringe Tiefenschärfe zu Unschärfen und damit zu einer beeinträchtigten Strukturqualität führen kann \cite{Mack2006}.} ermöglicht. Diese Technik wird auch im LIGA-Verfahren\footnote{\textbf{LIGA} steht für \textbf{Lithographie, Galvanoformung und Abformung}. Es ist ein Verfahren der Mikrosystemtechnik zur Herstellung hochpräziser Mikrostrukturen mit hohen Aspektverhältnissen. Dabei werden in drei Schritten ein Muster per Röntgenstrahllithographie erstellt, dieses galvanisch mit Metall gefüllt und anschließend abgeformt. Das Verfahren eignet sich für präzise Anwendungen in der Feinmechanik und Mikrosystemtechnik \cite{Mescheder2004}.} eingesetzt, um tiefe Lackstrukturen zu erzeugen \cite{Mescheder2004}.
+Um die \textbf{Auflösung} zu \textbf{verbessern}, können \textbf{kurzwelligeres Licht oder Phasenmasken}\footnote{Phasenmasken sind spezielle Masken in der Lithographie, die die Phase des Lichts verändern, um den Kontrast an den Kanten des projizierten Musters zu erhöhen. Dies erfolgt durch Phasenverschiebung mittels unterschiedlicher Materialdicken oder Brechungsindizes, was feinere Strukturen ermöglicht. Diese Technik hilft, die minimale Linienbreite zu reduzieren und eignet sich besonders für kürzere Wellenlängen \cite{Lin1992, Levenson1982, Mack2006}.} eingesetzt werden \cite{schmid2024}.
+
+\vspace{1em}
+
+Für \textbf{Auflösungen im Mikrometer-Bereich} muss der Abstand fast null betragen, was zur bereits erwähnten Kontaktbelichtung führt. Eine Alternative bietet die \textbf{Röntgenstrahllithographie}, die bei einem \textbf{Abstand von 30-50~µm} eine \textbf{Auflösung von unter 0,5~µm und} eine \textbf{hohe Tiefenschärfe}\footnote{Tiefenschärfe beschreibt in der Lithographie den Bereich entlang der optischen Achse, in dem ein Objekt scharf abgebildet wird. Eine größere Tiefenschärfe erlaubt eine dickere Schicht, in der das Muster scharf projiziert werden kann. Sie ist entscheidend für die präzise Übertragung feiner Details, da eine geringe Tiefenschärfe zu Unschärfen und damit zu einer beeinträchtigten Strukturqualität führen kann \cite{Mack2006}.} ermöglicht. Diese Technik wird auch im LIGA-Verfahren eingesetzt, um tiefe Lackstrukturen zu erzeugen \cite{Mescheder2004}.
 
 
 
@@ -1078,7 +1088,7 @@ Für Auflösungen im Mikrometer-Bereich muss der Abstand fast null betragen, was
 
 \subsubsection{Projektionsbelichtung (abbildende Projektion)}
 
-Die Projektionsbelichtung nutzt ein Abbildungssystem (Spiegel oder Linsen) zwischen Maske und Wafer, um die Maskenvorlage meist verkleinert auf den Wafer zu projizieren (\autoref{fig:projektionsbelichtung}). Übliche Maßstäbe sind 10:1 und 5:1. Die Maske wird außerdem nur abschnittsweise auf den Wafer projiziert. Oft enthält die Maske nur eine funktionale Einheit\footnote{``Step and Repeat''-Verfahren \cite{schmid2024}.} (z.B. einen Chip oder Sensor) \cite{schmid2024,Mescheder2004}.
+Die Projektionsbelichtung nutzt ein \textbf{Abbildungssystem (Spiegel oder Linsen) zwischen Maske und Wafer}, um die \textbf{Maskenvorlage meist verkleinert auf} den \textbf{Wafer} zu \textbf{projizieren} (\autoref{fig:projektionsbelichtung}). \textbf{Übliche Maßstäbe sind 10:1 und 5:1}. Die Maske wird \textbf{außerdem nur abschnittsweise auf} den \textbf{Wafer projiziert. Oft enthält} die \textbf{Maske nur eine funktionale Einheit}\footnote{``Step and Repeat''-Verfahren \cite{schmid2024}.} (z.B. einen Chip oder Sensor) \cite{schmid2024,Mescheder2004}.
 
 \begin{figure}[htb!]
     \centering
@@ -1090,15 +1100,22 @@ Die Projektionsbelichtung nutzt ein Abbildungssystem (Spiegel oder Linsen) zwisc
 
 \vspace{1em}
 
-Die Auflösung (minimal auflösbare Strukturgröße) wird durch Beugung, die Wellenlänge $\lambda$, den Kohärenzgrad des Lichtes, die numerische Apertur $\mathrm{N_A} = \sin{\alpha}$, wobei $\alpha$ der Öffnungswinkel der Optik ist (\autoref{fig:projektionsbelichtung}), und das optische System begrenzt. Da nur kleine Felder (ca. $15 \times 15 \, \mathrm{mm^2}$) belichtet werden können, muss der Wafer schrittweise bewegt werden, um die gesamte Si-Scheibe (z.B. 6-Zoll-Wafer) zu belichten \cite{Mescheder2004,schmid2024}. Damit diese Anwendung funktioniert, muss ein Filter monochromatisches Licht erzeugen. Spiegel in der Belichtungsanlage erhöhen die Lichtintensität. Mit der Projektionsbelichtung ist der Stand der Technik in der Mikroelektronik die Belichtung von Strukturen bis hinab zu 100 nm und darunter. \cite{schmid2024}.
+Die \textbf{Auflösung} (minimal auflösbare Strukturgröße) wird \textbf{durch Beugung}, die \textbf{Wellenlänge} $\lambda$, den \textbf{Kohärenzgrad des Lichtes}, die \textbf{numerische Apertur}:
+$$
+\mathrm{N_A} = \sin{\alpha},
+$$ wobei $\alpha$ der Öffnungswinkel der Optik ist (\autoref{fig:projektionsbelichtung}), \textbf{und das optische System begrenzt} \cite{schmid2024}. 
 
 \vspace{1em}
 
-Die Projektionsbelichtung bietet einige Vorteile: Durch die Verwendung vergrößerter Masken (Reticles) ist die Herstellung einfacher und präziser (weil der Maßstab nicht 1:1 ist), was eine bessere Kontrolle ermöglicht. Da sich auf jeder Maske nur ein Chip befindet, ist die Fertigung zudem kostengünstiger. Das Einzelchip-Belichtungsverfahren (``Step and Repeat'') erlaubt eine genaue Justierung für jeden Chip und ermöglicht die Korrektur von nichtlinearem Waferverzug \cite{schmid2024}. 
+Da \textbf{nur kleine Felder} (ca. $15 \times 15 \, \mathrm{mm^2}$) \textbf{belichtet} werden können, \textbf{muss der Wafer schrittweise bewegt werden, um} die \textbf{gesamte Si-Scheib}e (z.B. 6-Zoll-Wafer) \textbf{zu belichten} \cite{Mescheder2004,schmid2024}. Damit diese Anwendung funktioniert, muss ein Filter \textbf{monochromatisches Licht} erzeugen. Spiegel in der Belichtungsanlage erhöhen die Lichtintensität. Mit der \textbf{Projektionsbelichtung} ist der \textbf{Stand der Technik in der Mikroelektronik} die Belichtung von Strukturen \textbf{bis hinab zu 100 nm und darunter} \cite{schmid2024}.
 
 \vspace{1em}
 
-Nachteile sind jedoch die hohen Kosten der erforderlichen Geräte, da extrem korrigierte Optiken mit hoher numerischer Apertur ($\mathrm{N_A}$ bis zu 0,6) benötigt werden. Zudem kann die Dispersion des Lichts durch monochromatisches Licht ausgeglichen werden, was jedoch zu stehenden Wellen führen kann. Das begrenzte Belichtungsfeld führt zu einem geringeren Durchsatz und erfordert wiederholte Justierung. Die geringe Tiefenschärfe schränkt zudem das Aspektverhältnis der Strukturen ein \cite{schmid2024}.
+Die Projektionsbelichtung bietet einige \textbf{Vorteile}: Durch die \textbf{Verwendung vergrößerter Masken} (Reticles) ist die\textbf{ Herstellung einfacher und präziser} (weil der Maßstab nicht 1:1 ist), was eine \textbf{bessere Kontrolle ermöglicht}. Da sich \textbf{auf jeder Maske nur ein Chip} befindet, ist die \textbf{Fertigung (der Maske)} zudem \textbf{kostengünstiger}. Das Einzelchip-Belichtungsverfahren (``Step and Repeat'') \textbf{erlaubt eine genaue Justierung für jeden Chip} und \textbf{ermöglicht die Korrektur von nichtlinearem Waferverzug} \cite{schmid2024}. 
+
+\vspace{1em}
+
+\textbf{Nachteile} sind jedoch \textbf{die hohen Kosten der erforderlichen Geräte}, da extrem korrigierte Optiken mit \textbf{hoher numerischer Apertur ($\mathrm{N_A}$ bis zu 0,6) benötigt} werden. Die Verwendung von \textbf{monochromatischem Licht} kann Dispersion ausgleichen, \textbf{führt} jedoch \textbf{zu stehenden Wellen, die die Strukturgenauigkeit beeinträchtigen} können. Das \textbf{begrenzte Belichtungsfeld führt zu} einem \textbf{geringeren Durchsatz und erfordert wiederholte Justierung}. Die \textbf{geringe Tiefenschärfe schränkt} zudem das \textbf{Aspektverhältnis} der Strukturen \textbf{ein} \cite{schmid2024}.
 
 
 
@@ -1109,9 +1126,9 @@ Nachteile sind jedoch die hohen Kosten der erforderlichen Geräte, da extrem kor
 
 \subsection{SU-8 Photoresist} % Resin 3D Druck?
 
-Der Photoresist SU-8 ist ein epoxidbasierter Negativ-Resist, der mit herkömmlicher UV-Photolitho-graphieausrüstung verwendet wird und die Herstellung von Strukturen bis zu einer Höhe von zwei Millimetern ermöglicht -- Röntgenstrahlung ist dabei nicht erforderlich. SU-8 zeichnet sich durch ein hohes Aspektverhältnis von bis zu 1:30 aus, was auf den hohen Kontrast\footnote{Der hohe Kontrast bei einem Photoresist wie SU-8 bedeutet, dass sich die belichteten und unbelichteten Bereiche sehr klar und scharf voneinander unterscheiden lassen. Das ist wie bei einem Bild mit kräftigen Farben: Die Unterschiede sind leicht zu erkennen. Bei SU-8 sorgt der hohe Kontrast dafür, dass die belichteten Stellen des Resists sehr genau und sauber härten, während die unbelichteten Bereiche weich bleiben und später entfernt werden können. 
+Der Photoresist SU-8 ist ein \textbf{epoxidbasierter Negativ-Resist, der mit herkömmlicher UV-Photolitho-graphieausrüstung verwendet wird} und die \textbf{Herstellung von Strukturen bis zu einer Höhe von zwei Millimetern} ermöglicht -- \textbf{Röntgenstrahlung} ist dabei \textbf{nicht erforderlich}. SU-8 zeichnet sich durch ein \textbf{hohes Aspektverhältnis von bis zu 30:1} aus, was auf den \textbf{hohen Kontrast}\footnote{Der hohe Kontrast bei einem Photoresist wie SU-8 bedeutet, dass sich die belichteten und unbelichteten Bereiche sehr klar und scharf voneinander unterscheiden lassen. Das ist wie bei einem Bild mit kräftigen Farben: Die Unterschiede sind leicht zu erkennen. Bei SU-8 sorgt der hohe Kontrast dafür, dass die belichteten Stellen des Resists sehr genau und sauber härten, während die unbelichteten Bereiche weich bleiben und später entfernt werden können. 
 
-Der Kontrast ist so hoch, weil SU-8 auf einem speziellen Epoxidharz basiert, das besonders gut auf UV-Licht reagiert. Dadurch entstehen scharfe, klare Strukturen, die nicht ``verwischen'', was bei der Herstellung von sehr hohen und präzisen Strukturen hilft \cite{Lorenz1997, Jensen2002, DelCampo2007}.} des Resists zurückzuführen ist und die Realisierung hoher Strukturen erlaubt. Zudem besitzt SU-8 eine hohe chemische Resistenz und kann daher auch als Ätzmaske eingesetzt werden \cite{schmid2024}. Mit SU-8 geätzte Strukturen sind in der \autoref{fig:su8-1}, der \autoref{fig:su8-2} und der \autoref{fig:su8-3} dargestellt. 
+Der Kontrast ist so hoch, weil SU-8 auf einem speziellen Epoxidharz basiert, das besonders gut auf UV-Licht reagiert. Dadurch entstehen scharfe, klare Strukturen, die nicht ``verwischen'', was bei der Herstellung von sehr hohen und präzisen Strukturen hilft \cite{Lorenz1997, Jensen2002, DelCampo2007}.} des Resists zurückzuführen ist und die \textbf{Realisierung hoher Strukturen} erlaubt. Zudem besitzt SU-8 eine \textbf{hohe chemische Resistenz} und kann daher \textbf{auch als Ätzmaske eingesetzt} werden \cite{schmid2024}. Mit Hilfe von SU-8 entwickelte Strukturen sind in der \autoref{fig:su8-1}, der \autoref{fig:su8-2} und der \autoref{fig:su8-3} dargestellt. 
 
 \begin{figure}[htb!]
     \centering
@@ -1137,7 +1154,11 @@ Der Kontrast ist so hoch, weil SU-8 auf einem speziellen Epoxidharz basiert, das
     \label{fig:su8-3}
 \end{figure}
 
-Zusammengefass bietet der Photoresist SU-8 zahlreiche Vorteile: Er kann durch Aufschleudern aufgetragen werden, wobei seine hohe Viskosität die Herstellung dicker Schichten ermöglicht. Diese Zähflüssigkeit macht jedoch das Handling anspruchsvoller als bei Standardlacken. Nach dem Auftrag benötigt SU-8 ein sogenanntes Postbake, was zu einem Volumenschwund von etwa 7,5 \% führt und dadurch innere Spannungen sowie Haftungsminderungen verursacht. Daher eignet sich SU-8 nicht optimal für großflächige Strukturen. SU-8 erreicht Aspektverhältnisse von über 1:20 und haftet gut auf Silizium und Glas, insbesondere bei kleinen oder niedrigen Strukturen. Der Resist zeichnet sich durch hohe chemische Stabilität und biologische Kompatibilität aus, was ihn für optische, mechanische und Fluidik-Elemente sowie Galvanikformen ideal macht. Zudem ist SU-8 im Vergleich zu Prozessen wie DRIE und LIGA kosten- und zeiteffizient und liefert ähnliche Ergebnisse \cite{schmid2024, Kayaku2020}.
+Zusammengefasst bietet der Photoresist SU-8 zahlreiche \textbf{Vorteile}: Er \textbf{kann durch Aufschleudern aufgetragen werden}, wobei seine \textbf{hohe Viskosität} die \textbf{Herstellung dicker Schichten ermöglicht}. SU-8 erreicht \textbf{Aspektverhältnisse von über 20:1} und \textbf{haftet gut auf Silizium und Glas}, insbesondere bei kleinen oder niedrigen Strukturen. Der Resist zeichnet sich durch \textbf{hohe chemische Stabilität und biologische Kompatibilität} aus, was ihn \textbf{für optische, mechanische und Fluidik-Elemente sowie Galvanikformen\footnote{Siehe LIGA-Verfahren.} ideal} macht. Zudem ist SU-8 im Vergleich zu Prozessen wie DRIE und LIGA \textbf{kosten- und zeiteffizient} und liefert ähnliche Ergebnisse \cite{schmid2024, Kayaku2020}.
+
+\vspace{1em}
+
+Zu den \textbf{Nachteilen} zählen: Die \textbf{hohe Viskosität erschwert} das \textbf{Handling} im Vergleich zu Standardlacken. \textbf{Nach dem Auftragen erfordert SU-8} ein \textbf{Postbake, das zu einem Volumenschwund von etwa 7,5 \% führt} und \textbf{dadurch innere Spannungen} sowie eine \textbf{reduzierte Haftung verursacht}. Daher ist SU-8 \textbf{für großflächige Strukturen weniger geeignet} \cite{schmid2024, Kayaku2020}.
 
 
 
@@ -1146,9 +1167,9 @@ Zusammengefass bietet der Photoresist SU-8 zahlreiche Vorteile: Er kann durch Au
 
 \vspace{1em}
 
-\subsection{Lift-Off Verfahren}
+\subsection{Lift-Off-Verfahren}
 
-Das Lift-Off-Verfahren ist eine Methode zur Strukturierung metallischer Dünnfilme ohne Ätzen. Zunächst wird ein Photoresist auf den Wafer aufgebracht und strukturiert, um die gewünschten Muster zu definieren. Danach wird das Metall ganzflächig abgeschieden, wobei es sowohl auf dem freigelegten Substrat als auch auf dem Photoresist landet. Entscheidend ist, dass die Flanken des Resists steil oder negativ sind, damit das Metall auf diesen Flächen nicht haften bleibt. Anschließend wird der Photoresist in einem Lösungsmittelbad entfernt (gestrippt), wobei das darauf liegende Metall ebenfalls abgelöst wird, während das Metall auf dem Substrat die definierte Struktur bildet.
+Das Lift-Off-Verfahren ist eine \textbf{Methode zur Strukturierung metallischer Dünnfilme ohne Ätzen}. Zunächst wird ein \textbf{Photoresist auf} den \textbf{Wafer aufgebracht und strukturiert}, um die gewünschten Muster zu definieren. \textbf{Danach wird} das \textbf{Metall ganzflächig abgeschieden}, wobei es sowohl \textbf{auf dem freigelegten Substrat als auch auf dem Photoresist landet}. \textbf{Entscheidend} ist, dass die \textbf{Flanken des Resists steil oder negativ} sind, \textbf{damit das Metall auf diesen Flächen nicht haften bleibt}. \textbf{Anschließend} wird der \textbf{Photoresist in einem Lösungsmittelbad entfernt} (gestrippt), wobei \textbf{das darauf liegende Metall ebenfalls abgelöst} wird, während das \textbf{Metall auf dem Substrat die definierte Struktur} bildet \cite{madou2002, smith1997, kern1990}. Der Unterschied zwischen dem zuvor beschriebenen Standardverfahren und dem Lift-Off-Verfahren in der Lithographie wird in \autoref{fig:lift-off} veranschaulicht. Beispiele dieses Verfahrens unter dem Elektronenmikroskop sind in \autoref{fig:lift-off irl} und \autoref{fig:mlo-irl} dargestellt.
 
 \begin{figure}[htb!]
     \centering
@@ -1160,19 +1181,20 @@ Das Lift-Off-Verfahren ist eine Methode zur Strukturierung metallischer Dünnfil
 
 \begin{figure}[htb!]
     \centering
+    \includegraphics[width=\textwidth]{images/lift-off irl.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Mit dem Lift-Off-Verfahren hergestellte Kupferbahn auf einem Wafer. Links: Wafer mit strukturiertem Photoresist, wobei die negativen Flanken gut zu erkennen sind. Mitte: Querschnitt der gleichen Anordnung nach dem Sputtern. Auf dem Photoresist und dem Wafer wurde Kupfer abgeschieden. Rechts: Endresultat nach dem Strippen -- eine Kupferbahn \cite{jsr_lift_resists}.}
+\label{fig:lift-off irl}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
     \includegraphics[width=.65\textwidth]{images/mlo-irl.jpg} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf, width=.75\textwidth} % Setzt die Bildnummer fett
     \caption{Metallbahnen auf einem Wafer, hergestellt durch das MLO-Verfahren (MLO, Metal-Lift-Off, entspricht dem klassischen Lift-Off-Verfahren). Im oberen Bild ist der Photoresist mit negativen Flanken zu sehen, der mit Metall beschichtet wurde. Das untere Bild zeigt das Endresultat nach dem Entfernen des Photoresists mit einem geeigneten Lösungsmittel \cite{ClassOneLiftOff}.}
     \label{fig:mlo-irl}
 \end{figure}
 
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\textwidth]{images/lift-off irl.png} % Pfad und Dateiname des Bildes angeben
-    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
-    \caption{Mit dem Lift-Off-Verfahren hergestellte Kupferbahn auf einem Wafer. Links: Wafer mit strukturiertem Photoresist, wobei die negativen Flanken gut zu erkennen sind. Mitte: Querschnitt der gleichen Anordnung nach dem Sputtern. Auf dem Photoresist und dem Wafer wurde Kupfer abgeschieden. Rechts: Endresultat nach dem Strippen -- eine Kupferbahn \cite{jsr_lift_resists}.}
-\label{fig:lift-off irl}
-\end{figure}
 
 
 %Lift-Off Lösungsmittel & Aceton & Methylethylketon \\ \hline
@@ -1188,33 +1210,177 @@ Das Lift-Off-Verfahren ist eine Methode zur Strukturierung metallischer Dünnfil
 \clearpage
 \section{Ätztechnik}
 
-Die Ätztechnik ist ein zentrales Verfahren in der Mikrosystemtechnik, um gezielt Material von der Oberfläche eines Festkörpers zu entfernen und feine Strukturen zu erzeugen. Dabei kann das Ätzen entweder nasschemisch oder trocken erfolgen. Beim nasschemischen Ätzen werden chemische Reagenzien verwendet, um die Oberfläche eines Materials gezielt abzutragen. Das Trockenätzen hingegen arbeitet mit Teilchen hoher kinetischer Energie, die durch physikalische Prozesse die Oberfläche angreifen und Material abtragen. Beide Methoden bieten spezifische Vorteile und Herausforderungen und werden in der Mikrosystemtechnik je nach Anforderung eingesetzt \cite{schmid2024Aetzen}.
+Die Ätztechnik ist ein zentrales Verfahren in der Mikrosystemtechnik, um \textbf{gezielt Material von der Oberfläche eines Festkörpers zu entfernen} und feine Strukturen zu erzeugen. Dabei kann das Ätzen entweder nasschemisch oder trocken erfolgen. \textbf{Beim nasschemischen Ätzen} werden \textbf{chemische Reagenzien verwendet, um} die \textbf{Oberfläche eines Materials gezielt abzutragen}. Das \textbf{Trockenätzen} hingegen \textbf{arbeitet mit Teilchen hoher kinetischer Energie}, die durch \textbf{physikalisch-chemische Prozess}e die \textbf{Oberfläche angreifen und Material abtragen}. Beide Methoden bieten spezifische Vorteile und Herausforderungen und werden in der Mikrosystemtechnik je nach Anforderung eingesetzt \cite{schmid2024Aetzen}.
 
 
 
-% Ätzprofile --------------------------------------------------------------------------------------------------------------------------------------------------------------
+% Ätztechnichk -> Begriffsklärung für die Ätztechnik ----------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Begriffsklärung für die Ätztechnik}
+
+Wie in den vorherigen Kapiteln erwähnt, werden bereits erklärte Begriffe hier nicht erneut behandelt.
+
+\begin{itemize}
+    \item \textbf{Ätzmasken} (z.B. Photoresist nach Hardbake): Um gezielte Ätzprofile zu erzielen, werden Masken oder Ätzmasken eingesetzt. Eine Ätzmaske ist eine Schutzschicht, die bestimmte Bereiche der Oberfläche vor dem Ätzprozess bewahrt und damit festlegt, wo das Material abgetragen wird. Sie besteht oft aus Materialien, die eine hohe Resistenz gegenüber dem verwendeten Ätzmittel aufweisen \cite{madou2002, kern1983, wolf2000, sze1988, plummer2000}.
+    \item \textbf{KOH-Ätzen}: Eine spezifische Form des anisotropen Ätzens ist das KOH-Ätzen, bei dem Kaliumhydroxid (KOH) als Ätzmittel verwendet wird. Beim KOH-Ätzen von Silizium weisen die \{111\}-Kristallebenen die kleinste Ätzrate auf, was zu \textbf{Strukturen mit definierten Kanten und Winkeln} führt. Dies ermöglicht \textbf{präzise Geometrien}, die in der Mikrosystemtechnik besonders wichtig sind \cite{madou2002, seidel1990, williams2003, li1997}.
+    \item \textbf{Miller'sche Inidzes und Kristallebenen}: In einem Kristall wie Silizium (\autoref{fig:Si-Kristall}) sind die Atome in einem regelmäßigen 3D-Gitter angeordnet. Diese Anordnung ermöglicht es, das Material entlang bestimmter Schichten oder ``Kristallebenen'' zu schneiden. Diese Ebenen werden durch Miller'sche Inidzes wie \{100\}, \{110\} oder \{111\} beschrieben. Die Zahlen zeigen, wie die Schnitte in Bezug auf das Gitter verlaufen \cite{kittel2004, ashcroft1976, miller1839, hull1999, hammond2009}. Zur Veranschaulichung zeigt \autoref{fig:Richtungen} wichtige Richtungen im kubischen Kristallsystem, während \autoref{fig:Miller} die wesentlichen Ebenen in kubischen Elementarzellen darstellt. Diese Ebenen werden durch die Miller'schen Indizes beschrieben.
+
+    Die \{111\}-Ebenen in Silizium sind besonders stabil und schwer zu ätzen, da die Atome in einer dichten, dreieckigen Anordnung vorliegen. Diese enge Packung macht es schwierig, Atome herauszulösen, was zu einer geringeren Ätzrate führt \cite{kittel2004, ashcroft1976}. Beim KOH-Ätzen wird daher die \{111\}-Ebene langsamer abgetragen als andere Kristallebenen, wodurch schräge Wände und präzise Winkel entstehen \cite{seidel1990}. Diese stabilen \{111\}-Ebenen werden gezielt genutzt, um Strukturen mit scharfen Kanten und exakten Winkeln zu erzeugen \cite{madou2002}.
+
+    \textbf{Zusammengefasst}: Die Bezeichnungen \{100\}, \{110\}, \{111\} usw. geben an, wie die Kristallebenen im Gitter verlaufen und wie stabil sie sind. Die Wahl der Kristallebene beeinflusst die Ätzrate und ist entscheidend für die präzise Strukturierung in der Mikrotechnik \cite{kittel2004, ashcroft1976, madou2002}.
+
+    \item \textbf{\{100\}-Silizium-Wafer und \{110\}-Silizium-Wafer}: Diese Waferarten \textbf{unterscheiden sich durch ihre kristallografische Orientierung}, die durch die \textbf{Miller-Indizes} \{100\} bzw. \{110\} beschrieben wird. Diese Indizes geben an, wie die Atomschichten im Kristallgitter des Siliziums zur Wafer-Oberfläche orientiert sind.
+
+    \textbf{\{100\}-Silizium-Wafer}:
+    \begin{itemize}
+        \item Die Oberfläche eines \{100\}-Wafers ist parallel zur \{100\}-Ebene des Kristallgitters, was bedeutet, dass die Silizium-Atome in einer quadratischen Anordnung vorliegen.
+        \item Diese Orientierung wird häufig in der Halbleiterfertigung verwendet, da sie gute mechanische und elektrische Eigenschaften aufweist.
+        \item Beim anisotropen KOH-Ätzen bilden die \{111\}-Ebenen (die schräg zur \{100\}-Ebene verlaufen und eine niedrigere Ätzrate aufweisen) typische schräge Wände mit einem Winkel von 54,74°. Dies ist nützlich für die Herstellung präziser Strukturen in der Mikrosystemtechnik \cite{madou2002}.
+    \end{itemize}
+    
+    \textbf{\{110\}-Silizium-Wafer}:
+    \begin{itemize}
+        \item Bei einem \{110\}-Wafers ist die Oberfläche parallel zur \{110\}-Ebene des Kristallgitters. Diese Anordnung führt dazu, dass die Atome dichter gepackt und in länglichen Reihen angeordnet sind.
+        \item Diese Orientierung bietet andere mechanische Eigenschaften und wird in bestimmten Anwendungen bevorzugt, wo besondere strukturelle Stabilität erforderlich ist.
+        \item Beim anisotropen KOH-Ätzen ergibt die Orientierung des \{110\}-Wafers schräge Wände mit einem kleineren Winkel von 35,26°, da die \{111\}-Ebenen hier anders zur Oberfläche verlaufen als beim \{100\}-Wafer. Dieser Winkel ist besonders für präzise Strukturierungen in der Mikrotechnik interessant \cite{seidel1990}.
+    \end{itemize}
+    
+    \textbf{Zusammengefasst}: Die Wahl zwischen einem \{100\}- und einem \{110\}-Silizium-Wafer beeinflusst die Struktur der bearbeiteten Oberflächen und die entstehenden Winkel beim anisotropen Ätzen. Die \{100\}-Orientierung erzeugt Winkel von 54,74° und ist für allgemeine Halbleiteranwendungen weit verbreitet, während die \{110\}-Orientierung mit einem Winkel von 35,26° für spezielle strukturelle Anforderungen verwendet wird \cite{kittel2004, ashcroft1976}.
+\end{itemize}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.45\textwidth]{images/si-crystal.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.55\textwidth} % Setzt die Bildnummer fett
+    \caption{Elementarzelle des Siliziumkristalls \cite{wilderness_silicon}.}
+    \label{fig:Si-Kristall}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/Elementarzelle Richtungen.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{Wichtige Richtungen im kubischen Kristallsystem: Die Richtung [111] entsteht durch die vektorielle Zusammensetzung aus jeweils einem Schritt in x-, y- und z-Richtung \cite{grundlagen_konstruktionswerkstoffe}.}
+    \label{fig:Richtungen}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.85\textwidth]{images/Elementarzelle Miller'sche Indizes.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.95\textwidth} % Setzt die Bildnummer fett
+    \caption{Darstellung wichtiger Ebenen in kubischen Elementarzellen. Beispiel: Die (100)-Ebene schneidet die x-Achse bei 1 und verläuft parallel zur y- und z-Achse, da sie diese in der Unendlichkeit ($\infty$) schneidet. Die Miller'schen Indizes dieser Ebene ergeben sich aus den Kehrwerten der Schnittpunkte mit den Achsen: $1/1$ für x, $1/\infty$ für y und $1/\infty$ für z, woraus die Indizes (100) resultieren \cite{grundlagen_konstruktionswerkstoffe}.}
+    \label{fig:Miller}
+\end{figure}
+
+
+
+% Ätztechnichk -> Ätzrate -------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Ätzrate}
+
+Die Ätzrate beschreibt, \textbf{wie schnell Material während eines Ätzprozesses abgetragen wird}. Sie wird als die \textbf{Menge des entfernten Materials pro Zeiteinheit} angegeben, oft in Einheiten wie \textbf{Nanometer pro Minute} (nm/min) oder \textbf{Mikrometer pro Stunde} ($\mu$m/h). Die Ätzrate \textbf{hängt von verschiedenen Faktoren ab}, darunter das verwendete \textbf{Ätzmittel}, die \textbf{Temperatur} und die \textbf{Kristallrichtung des Materials}. Eine kontrollierte Ätzrate ist entscheidend für die Herstellung präziser Strukturen \cite{madou2002, schmid2024Aetzen}. 
+
+
+
+% Ätztechnichk -> Ätzprofile ----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
 
 \subsection{Ätzprofile}
 
-In der Mikrosystemtechnik gibt es verschiedene Ätzprofile, die sich durch das Verhalten der Ätzrate in verschiedenen Raumrichtungen unterscheiden und die Form der erzeugten Strukturen bestimmen. Diese Ätzprofile werden als isotrop oder anisotrop klassifiziert \cite{schmid2024Aetzen}. Die \autoref{fig:aetzprofile} liefert einen Überblick über diese Profile. 
+In der Mikrosystemtechnik gibt es verschiedene Ätzprofile, \textbf{die sich durch das Verhalten der Ätzrate in verschiedenen Raumrichtungen unterscheiden und die Form der erzeugten Strukturen bestimmen}. Diese Ätzprofile werden als \textbf{isotrop oder anisotrop} klassifiziert \cite{schmid2024Aetzen}. Die \autoref{fig:aetzprofile} liefert einen Überblick über diese Profile. 
 
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=.75\textwidth]{images/aetzprofile.png} % Pfad und Dateiname des Bildes angeben
     \captionsetup{labelfont=bf, width=.85\textwidth} % Setzt die Bildnummer fett
-    \caption{Darstellung der verschiedenen Ätzprofile: \protect\circled{1} isotrop, \protect\circled{2} anisotropes durch Trockenätzen und \protect\circled{3} anisotrope durch KOH-Ätzen \cite{schmid2024Aetzen}.}
+    \caption{Darstellung der verschiedenen Ätzprofile: \protect\circled{1} isotrop, \protect\circled{2} anisotrop durch Trockenätzen und \protect\circled{3} anisotrop durch KOH-Ätzen \cite{schmid2024Aetzen}.}
     \label{fig:aetzprofile}
 \end{figure}
 
-\paragraph{\protect\circled{1} \uline{Isotropes Ätzprofil:}} Ein isotropes Ätzprofil entsteht, wenn die Ätzrate in alle Raumrichtungen gleich groß ist. Dadurch entstehen abgerundete, viertelkreisförmige Strukturen, da das Material gleichmäßig in die Tiefe und Breite abgetragen wird.
+\paragraph{\protect\circled{1} \uline{Isotropes Ätzprofil:}} Ein isotropes Ätzprofil entsteht, wenn die \textbf{Ätzrate in alle Raumrichtungen gleich groß} ist. Dadurch entstehen \textbf{abgerundete, viertelkreisförmige Strukturen}, da das \textbf{Material gleichmäßig in} die \textbf{Tiefe und Breite abgetragen} wird \cite{schmid2024Aetzen}.
 
-\paragraph{\protect\circled{2} \uline{und} \protect\circled{3} \uline{Anisotrope Ätzprofile:}} Bei einem anisotropen Ätzprofil hängt die Ätzrate von der Raumrichtung ab, was gezielte Strukturen mit steilen Kanten ermöglicht. Ein Beispiel für anisotropes Ätzen ist das Trockenätzen, bei dem Teilchen hoher kinetischer Energie gezielt entlang einer Richtung die Oberfläche angreifen.
+\paragraph{\protect\circled{2} \uline{und} \protect\circled{3} \uline{Anisotrope Ätzprofile:}} Bei einem anisotropen Ätzprofil \textbf{hängt die Ätzrate von der Raumrichtung ab}, was \textbf{gezielte Strukturen mit steilen Kanten} ermöglicht. Es gibt verschiedene Ansätze für anisotropes Ätzen, wie das \textbf{Trockenätzen} \protect\circled{2}, bei dem \textbf{Teilchen hoher kinetischer Energie} gezielt \textbf{entlang einer Richtung die Oberfläche angreifen}, und das \textbf{KOH-Ätzen} \protect\circled{3}. Beim KOH-Ätzen weisen die \{111\}-Kristallebenen die \textbf{geringste Ätzrate} auf, wodurch \textbf{natürliche schräge Wände und präzise Winkel} entstehen. Diese \textbf{gezielte Richtungsabhängigkeit} ist in der Mikrosystemtechnik besonders wichtig, um Strukturen mit scharfen Kanten und definierten Winkeln zu erzeugen \cite{schmid2024Aetzen, madou2002}.
 
-\paragraph{KOH-Ätzen} Eine spezifische Form des anisotropen Ätzens ist das KOH-Ätzen, bei dem Kaliumhydroxid (KOH) als Ätzmittel verwendet wird. Beim KOH-Ätzen von Silizium weisen die {111}-Kristallebenen die kleinste Ätzrate auf, was zu Strukturen mit definierten Kanten und Winkeln führt. Dies ermöglicht präzise Geometrien, die in der Mikrosystemtechnik besonders wichtig sind.
 
-\paragraph{Ätzmasken} Um gezielte Ätzprofile zu erzielen, werden Masken oder Ätzmasken eingesetzt. Eine Ätzmaske ist eine Schutzschicht, die bestimmte Bereiche der Oberfläche vor dem Ätzprozess bewahrt und damit festlegt, wo das Material abgetragen wird. Sie besteht oft aus Materialien, die eine hohe Resistenz gegenüber dem verwendeten Ätzmittel aufweisen. Die Selektivität eines Ätzprozesses beschreibt das Verhältnis der Ätzrate der zu ätzenden Schicht $R_1$ zur Ätzrate der Maskenschicht $R_2$ und wird durch $S = R_1 / R_2$ definiert.
 
-\paragraph{Weitere Parameter: Ätzrate und Anisotropiefaktor} Die Ätzrate gibt an, wie viel Material pro Zeiteinheit abgetragen wird (z.B. in nm/min oder µm/h). Der Anisotropiefaktor $A$ beschreibt das Verhältnis der vertikalen Ätzrate $R_v$ zur lateralen Ätzrate $R_l$ und wird als $A = 1 - R_l/R_v$ berechnet. Ein hoher Anisotropiefaktor deutet auf eine präzise vertikale Struktur hin.
+% Ätztechnichk -> Ätzprofile -> Anisotropiefaktor -------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsubsection{Anisotropiefaktor}
+
+Der Anisotropiefaktor $A_f$ ist ein \textbf{Maß für die Richtungsempfindlichkeit des Ätzvorgangs} (\autoref{fig:af}). Er beschreibt das Verhältnis der \textbf{lateralen Ätzrate} $R_l$ zur \textbf{vertikalen Ätzrate} $R_v$ indirekt durch die Formel:
+$$
+A_f = 1 - \frac{R_l}{R_v}.
+$$
+Ein \textbf{vollständig anisotroper Ätzprozess}, bei dem $R_l = 0$, ergibt $A_f = 1$ und führt zu einer \textbf{exakt senkrechten Struktur}. Ein \textbf{isotroper Ätzvorgang} hingegen hat $A_f = 0$, was auf \textbf{gleiche Ätzraten in alle Richtungen} hinweist \cite{schmid2024Aetzen}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.8\textwidth]{images/af.jpeg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.9\textwidth} % Setzt die Bildnummer fett
+    \caption{Veranschaulichung des Anisotropiefaktors \cite{schmid2024Aetzen}.}
+    \label{fig:af}
+\end{figure}
+
+
+
+% Ätztechnichk -> Ätzprofile -> Selektivität ------------------------------------------------------------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsubsection{Selektivität}
+
+Die Selektivität eines Ätzprozesses beschreibt das \textbf{Verhältnis der Ätzrate der zu ätzenden Schicht $R_1$ zur Ätzrate der darunterliegenden Schicht (z.B. Si-Substrat)} $R_2$, definiert durch:
+$$
+S = \frac{R_1}{R_2}.
+$$
+Eine hohe Selektivität bedeutet, dass die zu ätzende Schicht schneller abgetragen wird als die darunterliegende Schicht, sodass diese gut erhalten bleibt. \textbf{Im Allgemeinen ist eine hohe Selektivität erwünscht}, um einen geringen Abtrag der darunterliegenden Schicht zu erreichen (\autoref{fig:selectivity}) \cite{schmid2024Aetzen}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=.8\textwidth]{images/selectivity.jpeg} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=.9\textwidth} % Setzt die Bildnummer fett
+    \caption{Veranschaulichung der Selektivität \cite{schmid2024Aetzen}.}
+    \label{fig:selectivity}
+\end{figure}
+
+
+
+% Ätztechnichk -> Ätzprofile -> Ätzgraben bei anisotroper KOH-Ätzung von 100- und 110-Si-Wafern ---------------------------------------------------------------------------
+
+
+\vspace{1em}
+
+\subsection{Ätzgraben bei anisotroper KOH-Ätzung von \{100\}- und \{110\}-Si-Wafern}
+
+In diesem Abschnitt wird erläutert, wie \textbf{unterschiedliche Ätzgräben} ausschauen können. Die \autoref{fig:koh-aetzgraeben} zeigt Ätzgräben, die durch \textbf{anisotropes KOH-Ätzen (Ätzrichtung: von ``oben'' nach ``unten'')} in zwei \textbf{verschiedenen Silizium-Wafer-Typen} erzeugt wurden: einen \{100\}- und einen \{110\}-Silizium-Wafer (siehe Begriffsklärung für die Ätztechnik). Beim anisotropen Ätzen ist die \textbf{Ätzrate richtungsabhängig}. Die \textbf{KOH-Lösung} (Kaliumhydroxid) \textbf{ätzt bestimmte Kristallebenen im Silizium langsamer als andere, was spezifische Winkel und geometrische Strukturen erzeugt}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{images/koh-aetzgraeben.png} % Pfad und Dateiname des Bildes angeben
+    \captionsetup{labelfont=bf, width=\textwidth} % Setzt die Bildnummer fett
+    \caption{KOH-Ätzgräben in einer a) \{100\}- und b) \{110\}-Siliziumscheibe.}
+    \label{fig:koh-aetzgraeben}
+\end{figure}
+
+\subparagraph{a) \uline{\{100\}-Silizium-Wafer:}} Im \{100\}-orientierten Silizium-Wafer verläuft der \textbf{Boden des Ätzgrabens} entlang der \textbf{\{100\}-Ebene}, während die \textbf{Seitenwände} entlang der \textbf{\{111\}-Kristallebe-nen} verlaufen, die eine \textbf{geringere Ätzrate} haben und daher \textbf{als schräge Flächen erhalten} bleiben. Der \textbf{Winkel zwischen} der \textbf{\{100\}- und} der \textbf{\{111\}-Ebene} beträgt \textbf{54,74°}. Dieser Winkel \textbf{ist charakteristisch} für das KOH-Ätzen in \{100\}-Silizium und wird \textbf{durch} die \textbf{Anordnung der Atome} entlang der \{111\}-Ebene \textbf{bestimmt} \cite{madou2002}.
+
+\subparagraph{b) \uline{\{110\}-Silizium-Wafer:}} Beim \{110\}-orientierten Silizium-Wafer verlaufen die eitenwände ebenfalls entlang der \{111\}-Ebenen. Im Gegensatz zum \{100\}-Wafer beträgt der \textbf{Winkel zwischen} der \textbf{\{110\}-Ebene (oben) und} der \textbf{\{111\}-Ebene (Seitenwände)} jedoch \textbf{35,26°}. Dieser Winkel \textbf{ergibt sich aus} der \textbf{unterschiedlichen Kristallstruktur des \{110\}-Wafers} im Vergleich zum \{100\}-Wafers und führt zu einer \textbf{anderen Orientierung der \{111\}-Ebenen relativ zur Oberfläche} \cite{seidel1990, kittel2004}.
+
+\paragraph{Zusammenfassung:} Die \autoref{fig:koh-aetzgraeben} zeigt, wie die Kristallorientierung des Siliziums die Struktur der Ätzprofile beeinflusst. Der Winkel zwischen den Ebenen hängt von der Kristallorientierung ab, und das anisotrope KOH-Ätzen nutzt dies, um präzise Geometrien und schräge Wände zu erzeugen. Die \{111\}-Ebenen bieten aufgrund ihrer geringeren Ätzrate die stabilen Wände, während die Orientierung des Wafers (entweder \{100\} oder \{110\}) die spezifischen Winkel der Grabenwände bestimmt \cite{madou2002, seidel1990, kittel2004}.
+
+
 
 % END ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
