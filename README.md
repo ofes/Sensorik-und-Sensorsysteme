@@ -1,5 +1,5 @@
 # sensorik-und-sensorsysteme
-Dieses Repo beinhaltet eine Zusammenfassung von MEMS Herstellungsverfahren der Vorlesung Sensorik und Sensorsysteme an der TU Wien.
+Dieses Repository enthält eine übersichtliche Zusammenfassung der MEMS-Herstellungsverfahren aus der Vorlesung *Sensorik und Sensorsysteme* an der TU Wien.
 
 ## License
 
