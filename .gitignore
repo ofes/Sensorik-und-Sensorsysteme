@@ -12,5 +12,6 @@ images/
 *.toc
 *.lot
 *.lof
+*.synctex(busy)
 
 .DS_Store
